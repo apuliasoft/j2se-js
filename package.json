@@ -1,0 +1,54 @@
+{
+  "name": "j2se-js",
+  "version": "1.0.0",
+  "description": "j2se-js : a JavaScript porting of j2se framework",
+  "main": "src/index.ts",
+  "directories": {
+    "src": "src",
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "test": "mocha -r ts-node/register test/**/* --watch-extensions ts --watch",
+    "test:single": "mocha -r ts-node/register test/**/*",
+    "docs": "typedoc --out ./docs ./src --exclude ./test",
+    "build": "tsc --project tsconfig.prod.json",
+    "dev": "tsc --project tsconfig.dev.json",
+    "lint": "",
+    "postinstall": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apuliasoft/j2se-js.git"
+  },
+  "keywords": [
+    "j2se",
+    "java",
+    "util"
+  ],
+  "author": "Carlotta Dimatteo <carlotta.dimatteo@apuliasoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apuliasoft/j2se-js/issues"
+  },
+  "homepage": "https://github.com/apuliasoft/j2se-js#readme",
+  "devDependencies": {
+    "@types/chai": "3.4.35",
+    "@types/mocha": "2.2.40",
+    "chai": "3.5.0",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "mocha": "3.2.0",
+    "nyc": "10.2.0",
+    "ts-node": "3.0.2",
+    "typedoc": "0.5.10",
+    "typescript": "2.2.2",
+    "typings": "2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
