@@ -1,6 +1,6 @@
 {
   "name": "j2se-js",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "j2se-js : a JavaScript porting of j2se framework",
   "main": "src/index.ts",
   "directories": {
@@ -16,11 +16,12 @@
     "build": "tsc --project tsconfig.prod.json",
     "dev": "tsc --project tsconfig.dev.json",
     "lint": "",
-    "postinstall": ""
+    "postinstall": "",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apuliasoft/j2se-js.git"
+    "url": "https://github.com/apuliasoft/j2se-js.git"
   },
   "keywords": [
     "j2se",
@@ -44,7 +45,8 @@
     "ts-node": "3.0.2",
     "typedoc": "0.5.10",
     "typescript": "2.2.2",
-    "typings": "2.1.0"
+    "typings": "2.1.0",
+    "semantic-release": "6.3.2"
   },
   "config": {
     "commitizen": {
