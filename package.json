@@ -13,8 +13,8 @@
     "test": "mocha -r ts-node/register test/**/* --watch-extensions ts --watch",
     "test:single": "mocha -r ts-node/register test/**/*",
     "docs": "typedoc --out ./docs ./src --exclude ./test",
-    "build": "tsc --project tsconfig.prod.json",
-    "dev": "tsc --project tsconfig.dev.json",
+    "build": "tsc --project tsconfig.prod.json && webpack",
+    "build-dev": "tsc --project tsconfig.dev.json && webpack",
     "lint": "",
     "postinstall": "",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -42,11 +42,13 @@
     "cz-conventional-changelog": "2.0.0",
     "mocha": "3.2.0",
     "nyc": "10.2.0",
+    "semantic-release": "6.3.2",
+    "ts-loader": "2.0.3",
     "ts-node": "3.0.2",
     "typedoc": "0.5.10",
     "typescript": "2.2.2",
     "typings": "2.1.0",
-    "semantic-release": "6.3.2"
+    "webpack": "2.3.3"
   },
   "config": {
     "commitizen": {
