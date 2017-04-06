@@ -10,11 +10,11 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha -r ts-node/register test/**/* --watch-extensions ts --watch",
-    "test:single": "mocha -r ts-node/register test/**/*",
+    "test": "mocha -r ts-node/register **/*.spec.ts --watch-extensions ts --watch",
+    "test:single": "nyc -e .ts -x **/*.spec.ts mocha -r ts-node/register **/*.spec.ts",
     "docs": "typedoc --out ./docs ./src --exclude ./test",
-    "build": "tsc --project tsconfig.prod.json && webpack",
-    "build-dev": "tsc --project tsconfig.dev.json && webpack",
+    "build": "rimraf dist && tsc --project tsconfig.prod.json && webpack",
+    "build-dev": "rimraf dist && tsc --project tsconfig.dev.json && webpack",
     "lint": "",
     "postinstall": "",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -42,6 +42,7 @@
     "cz-conventional-changelog": "2.0.0",
     "mocha": "3.2.0",
     "nyc": "10.2.0",
+    "rimraf": "2.6.1",
     "semantic-release": "6.3.2",
     "ts-loader": "2.0.3",
     "ts-node": "3.0.2",
