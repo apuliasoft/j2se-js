@@ -12,6 +12,7 @@ before_script:
   - npm prune
 script:
   - npm run build
+  - npm t
   - npm run coverage
 after_success:
   - npm run docs

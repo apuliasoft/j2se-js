@@ -12,7 +12,7 @@
     "commit": "git-cz",
     "test:watch": "mocha -r ts-node/register **/*.spec.ts --watch-extensions ts --watch",
     "test": "nyc -e .ts -x **/*.spec.ts mocha -r ts-node/register **/*.spec.ts",
-    "coverage": "nyc -e .ts -x **/*.spec.ts mocha -r ts-node/register **/*.spec.ts nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "docs": "typedoc --out ./docs ./src --exclude ./test",
     "build": "rimraf dist && tsc --project tsconfig.prod.json && webpack",
     "build-dev": "rimraf dist && tsc --project tsconfig.dev.json",
