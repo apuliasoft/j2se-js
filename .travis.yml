@@ -10,7 +10,11 @@ node_js:
   - '4'
 before_script:
   - npm prune
+script:
+  - npm run build
+  - npm run coverage
 after_success:
+  - npm run docs
   - npm run semantic-release
 branches:
   except:
