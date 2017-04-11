@@ -2,7 +2,13 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "baseUrl": ".",
+        "paths": {
+            "j2se-js/*": [
+                "src/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules"
