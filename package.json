@@ -36,8 +36,8 @@
   },
   "homepage": "https://github.com/apuliasoft/j2se-js#readme",
   "devDependencies": {
-    "@types/chai": "3.4.35",
-    "@types/mocha": "2.2.40",
+    "@types/chai": "3.5.0",
+    "@types/mocha": "2.2.41",
     "chai": "3.5.0",
     "commitizen": "2.9.6",
     "coveralls": "2.13.0",
@@ -51,8 +51,8 @@
     "ts-node": "3.0.2",
     "typedoc": "0.5.10",
     "typescript": "2.2.2",
-    "typings": "2.1.0",
-    "webpack": "2.3.3"
+    "typings": "2.1.1",
+    "webpack": "2.4.1"
   },
   "config": {
     "commitizen": {
