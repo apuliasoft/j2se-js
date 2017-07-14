@@ -2,7 +2,7 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
         "outDir": "dist/prod",
-        "rootDir": "src"
+        "rootDir": "packages"
     },
     "exclude": [
         "node_modules",
