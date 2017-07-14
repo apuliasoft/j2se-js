@@ -1,3 +1,4 @@
+import {Jboolean} from "./jboolean_primitive";
 /**
  * Class {@code JObject} is the root of the class hierarchy.
  * Every class has {@code JObject} as a superclass. All objects,
@@ -127,9 +128,8 @@ export class JObject {
      * @see     #hashCode()
      * @see     java.util.HashMap
      */
-    public equals(obj: JObject): boolean {
-        // TODO return JBoolean (extends JObject --> circular dependency!)
-        return this === obj;
+    public equals(obj: JObject): Jboolean {
+        return new Jboolean(this === obj);
     }
 
     /**
