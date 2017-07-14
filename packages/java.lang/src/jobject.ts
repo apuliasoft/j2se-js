@@ -8,7 +8,7 @@
  * @since   JDK1.0
  */
 export class JObject {
-    private static uidGenerator: number = 0;
+    private static uidGenerator = 0;
     private uid: number;
 
     constructor() {

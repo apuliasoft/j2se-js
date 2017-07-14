@@ -16,7 +16,7 @@
     "docs": "typedoc --out docs --exclude **/*.spec.ts ./packages",
     "build": "rimraf dist && tsc --project tsconfig.prod.json",
     "build-dev": "rimraf dist && tsc --project tsconfig.dev.json",
-    "lint": "",
+    "lint": "tslint -p tsconfig.dev.json",
     "postinstall": "",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -49,6 +49,8 @@
     "semantic-release": "~6.3.0",
     "ts-loader": "~2.2.0",
     "ts-node": "~3.2.0",
+    "tslint": "^5.5.0",
+    "tslint-no-unused-expression-chai": "^0.0.2",
     "typedoc": "~0.7.0",
     "typescript": "~2.4.0"
   },
