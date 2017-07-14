@@ -29,7 +29,7 @@
     "java",
     "util"
   ],
-  "author": "Carlotta Dimatteo <carlotta.dimatteo@apuliasoft.com>",
+  "author": "ApuliaSoft <info@apuliasoft.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apuliasoft/j2se-js/issues"
@@ -49,8 +49,8 @@
     "semantic-release": "~6.3.0",
     "ts-loader": "~2.2.0",
     "ts-node": "~3.2.0",
-    "tslint": "^5.5.0",
-    "tslint-no-unused-expression-chai": "^0.0.2",
+    "tslint": "~5.5.0",
+    "tslint-no-unused-expression-chai": "~0.0.2",
     "typedoc": "~0.7.0",
     "typescript": "~2.4.0"
   },
@@ -58,8 +58,5 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "browser-sync": "2.18.12"
   }
 }
