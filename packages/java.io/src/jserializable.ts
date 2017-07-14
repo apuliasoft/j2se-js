@@ -140,4 +140,5 @@
  * @since   JDK1.1
  */
 export interface JSerializable {
+
 }
