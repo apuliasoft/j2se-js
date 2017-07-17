@@ -10,10 +10,6 @@ class FakeJObject extends JObject {
 }
 
 describe('JObject', () => {
-    it(`getClass should return the Class object that represents its runtime class`, () => {
-        const obj = new JObject();
-        obj.getClass();
-    });
 
     it(`equals should return false if it is called with another JObject as argument`, () => {
         const obj = new JObject();
