@@ -1,5 +1,6 @@
 import { JObject } from '../src/jobject';
 import { expect } from 'chai';
+import { is } from '../src/jboolean_primitive';
 
 class FakeJObject extends JObject {
     clone(): JObject {
@@ -83,6 +84,22 @@ describe('JObject', () => {
         const obj = new JObject();
         const objhash = obj.hashCode();
         expect(obj.toString()).to.be.equal(`java.lang.Object@${objhash.toString(16)}`);
+    });
+
+    it('is(obj1.eq(obj1) == true', () => {
+        const obj = new JObject();
+
+        expect(is(obj.eq(obj))).to.be.true;
+        expect(is(obj.ne(obj))).to.be.false;
+    });
+
+
+    it('is(obj1.eq(obj2) == false', () => {
+        const obj1 = new JObject();
+        const obj2 = new JObject();
+
+        expect(is(obj1.eq(obj2))).to.be.false;
+        expect(is(obj1.ne(obj2))).to.be.true;
     });
 
 });

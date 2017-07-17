@@ -1,4 +1,5 @@
 import { Jboolean } from './jboolean_primitive';
+import { JCondition } from './jcondition';
 /**
  * Class {@code JObject} is the root of the class hierarchy.
  * Every class has {@code JObject} as a superclass. All objects,
@@ -8,7 +9,7 @@ import { Jboolean } from './jboolean_primitive';
  * @see     java.lang.Class
  * @since   JDK1.0
  */
-export class JObject {
+export class JObject implements JCondition<JObject> {
     private static uidGenerator = 0;
     private uid: number;
 
@@ -224,5 +225,13 @@ export class JObject {
         // TODO must use getClass
         // TODO must return String type
         return `java.lang.Object@${this.hashCode().toString(16)}`;
+    }
+
+    public eq(expr: JObject): Jboolean {
+        return new Jboolean(this == expr);
+    }
+
+    public ne(expr: JObject): Jboolean {
+        return new Jboolean(this != expr);
     }
 }

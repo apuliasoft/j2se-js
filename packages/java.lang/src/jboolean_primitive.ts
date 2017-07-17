@@ -1,3 +1,5 @@
+import { JCondition } from './jcondition';
+import { JObject } from './jobject';
 /**
  * The Jboolean data type has only two possible values: true and false.
  * Use this data type for simple flags that track true/false conditions.
@@ -7,7 +9,7 @@
  *
  * Note: To retrieve the actual boolean value of a Jboolean you have to use {@code .value} syntax.
  */
-export class Jboolean {
+export class Jboolean implements JCondition<Jboolean> {
     private _value: boolean;
 
     constructor(value: boolean = false) {
@@ -22,4 +24,20 @@ export class Jboolean {
         this._value = value;
     }
 
+    public eq(expr: Jboolean): Jboolean {
+        return new Jboolean(this.value == expr.value);
+    }
+
+    public ne(expr: Jboolean): Jboolean {
+        return new Jboolean(this.value != expr.value);
+    }
+
+}
+
+/**
+ * returns the boolean value of a Jboolean.
+ * Usefull in if statement: if(is(a.lt(b)))
+ */
+export function is(expr: Jboolean) {
+    return expr.value;
 }
