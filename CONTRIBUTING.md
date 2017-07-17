@@ -6,11 +6,19 @@ You should make a pull request if you want:
 - to add a function that is a rappresentation of a class in `java.util`
 - to implement an issue 
 
-In the case of addding a new function, that function must:
-- be documented
-- be tested (see the `test` directory; we use `mocha` and `chai`)
+In the case of addding a new function, that function must follow the Definition of Done.
 
 A previous discussion in issues section is preferred before working on a PR, to avoid wasting of time working on something useless.
+
+## Definition of Done
+
+* no build issue
+* no lint issue
+* at least one spec file per unit
+* all tests green
+* full code coverage
+* full public API documented
+* at least one demo scenario per unit
 
 ## Set up instructions
 
