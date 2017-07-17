@@ -228,10 +228,10 @@ export class JObject implements JEquality<JObject> {
     }
 
     public eq(expr: JObject): Jboolean {
-        return new Jboolean(this == expr);
+        return new Jboolean(this === expr);
     }
 
     public ne(expr: JObject): Jboolean {
-        return new Jboolean(this != expr);
+        return new Jboolean(this !== expr);
     }
 }
