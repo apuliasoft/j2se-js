@@ -1,7 +1,6 @@
-import { Jboolean } from "../../java.lang/src/jboolean_primitive";
+import { Jboolean } from '../../java.lang/src/jboolean_primitive';
 
 export interface JRelational<T> {
-    
     /** Emulate the operator < */
     lt(expr: T): Jboolean;
 
