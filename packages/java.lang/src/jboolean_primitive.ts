@@ -25,11 +25,11 @@ export class Jboolean implements JEquality<Jboolean> {
     }
 
     public eq(expr: Jboolean): Jboolean {
-        return new Jboolean(this.value == expr.value);
+        return new Jboolean(this.value === expr.value);
     }
 
     public ne(expr: Jboolean): Jboolean {
-        return new Jboolean(this.value != expr.value);
+        return new Jboolean(this.value !== expr.value);
     }
 
 }
