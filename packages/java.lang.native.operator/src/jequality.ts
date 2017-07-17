@@ -1,6 +1,6 @@
 import { Jboolean } from './jboolean_primitive';
 
-export interface JCondition<T> {
+export interface JEquality<T> {
     
     /** Emulate the operator == */
     eq(expr: T): Jboolean;

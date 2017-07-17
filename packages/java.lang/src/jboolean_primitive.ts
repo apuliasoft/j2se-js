@@ -1,5 +1,5 @@
-import { JCondition } from './jcondition';
 import { JObject } from './jobject';
+import { JEquality } from 'packages/java.lang.native.operator/src/jequality';
 /**
  * The Jboolean data type has only two possible values: true and false.
  * Use this data type for simple flags that track true/false conditions.
@@ -9,7 +9,7 @@ import { JObject } from './jobject';
  *
  * Note: To retrieve the actual boolean value of a Jboolean you have to use {@code .value} syntax.
  */
-export class Jboolean implements JCondition<Jboolean> {
+export class Jboolean implements JEquality<Jboolean> {
     private _value: boolean;
 
     constructor(value: boolean = false) {

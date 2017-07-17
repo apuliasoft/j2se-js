@@ -1,5 +1,5 @@
 import { Jboolean } from './jboolean_primitive';
-import { JCondition } from './jcondition';
+import { JEquality } from 'packages/java.lang.native.operator/src/jequality';
 /**
  * Class {@code JObject} is the root of the class hierarchy.
  * Every class has {@code JObject} as a superclass. All objects,
@@ -9,7 +9,7 @@ import { JCondition } from './jcondition';
  * @see     java.lang.Class
  * @since   JDK1.0
  */
-export class JObject implements JCondition<JObject> {
+export class JObject implements JEquality<JObject> {
     private static uidGenerator = 0;
     private uid: number;
 
