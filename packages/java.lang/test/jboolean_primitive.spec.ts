@@ -1,3 +1,4 @@
+/* tslint:disable:no-unused-expression */
 import { expect } from 'chai';
 import { Jboolean, is } from '../src/jboolean_primitive';
 

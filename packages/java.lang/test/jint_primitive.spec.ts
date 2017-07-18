@@ -1,6 +1,7 @@
+/* tslint:disable:no-unused-expression */
 import { expect } from 'chai';
-import { is } from '../src/jboolean_primitive';
 import { Jint } from '../src/jint_primitive';
+import { is } from '../src/jboolean_primitive';
 
 describe('Jint', () => {
 

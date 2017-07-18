@@ -1,5 +1,6 @@
-import { JObject } from '../src/jobject';
+/* tslint:disable:no-unused-expression */
 import { expect } from 'chai';
+import { JObject } from '../src/jobject';
 import { is } from '../src/jboolean_primitive';
 
 class FakeJObject extends JObject {
