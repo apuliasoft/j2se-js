@@ -2,3 +2,6 @@ engines:
   tslint:
     enabled: true
     channel: beta
+ratings:
+  paths:
+  - packages/**
