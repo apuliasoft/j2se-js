@@ -13,7 +13,7 @@
     "test:watch": "mocha -r ts-node/register **/*.spec.ts --watch-extensions ts --watch",
     "test": "nyc -e .ts -x **/*.spec.ts mocha -r ts-node/register **/*.spec.ts",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "docs": "typedoc --out docs --exclude **/*.spec.ts ./packages",
+    "docs": "rimraf docs && compodoc -p tsconfig.json -d docs -n \"J2SE to JavaScript\" --theme readthedocs --disableGraph --disablePrivateOrInternalSupport",
     "build": "rimraf dist && tsc --project tsconfig.prod.json",
     "build-dev": "rimraf dist && tsc --project tsconfig.dev.json",
     "lint": "tslint -p tsconfig.dev.json",
@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/apuliasoft/j2se-js#readme",
   "devDependencies": {
+    "@compodoc/compodoc": "1.0.0-beta.13",
     "@types/chai": "~4.0.0",
     "@types/mocha": "~2.2.0",
     "chai": "~4.1.0",
@@ -50,7 +51,6 @@
     "ts-loader": "~2.3.0",
     "ts-node": "~3.2.0",
     "tslint": "~5.5.0",
-    "typedoc": "~0.7.0",
     "typescript": "~2.4.0"
   },
   "config": {
