@@ -16,3 +16,10 @@ script:
 after_success:
   - npm run docs
   - npm run semantic-release
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  local_dir: docs
+  on:
+    branch: master
