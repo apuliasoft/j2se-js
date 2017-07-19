@@ -10,8 +10,7 @@ node_js:
 before_script:
   - npm prune
 script:
-  - npm run lint
-  - npm t
+  - npm run test
   - npm run coverage
   - npm run build
 after_success:
