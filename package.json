@@ -13,7 +13,7 @@
     "test:watch": "mocha -r ts-node/register **/*.spec.ts --watch-extensions ts --watch",
     "test": "nyc -e .ts -x **/*.spec.ts mocha -r ts-node/register **/*.spec.ts",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "docs": "rimraf docs && compodoc -p tsconfig.json -d docs -n \"J2SE to JavaScript\" --theme readthedocs --disableGraph --disablePrivateOrInternalSupport",
+    "docs": "rimraf docs && compodoc -t -p tsconfig.json -d docs -n \"J2SE to JavaScript\" --theme readthedocs --disableGraph --disablePrivateOrInternalSupport",
     "build": "rimraf dist && tsc --project tsconfig.prod.json",
     "build-dev": "rimraf dist && tsc --project tsconfig.dev.json",
     "lint": "tslint -p tsconfig.dev.json",
