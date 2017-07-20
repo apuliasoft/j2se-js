@@ -1,5 +1,6 @@
+import { JEquality } from '@j2se-js/java.lang.native.operator';
 import { JObject } from './jobject';
-import { JEquality } from 'packages/java.lang.native.operator/src/jequality';
+
 /**
  * The Jboolean data type has only two possible values: true and false.
  * Use this data type for simple flags that track true/false conditions.

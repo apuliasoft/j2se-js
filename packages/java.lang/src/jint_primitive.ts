@@ -1,7 +1,7 @@
+import { JEquality } from '@j2se-js/java.lang.native.operator';
+import { JRelational } from '@j2se-js/java.lang.native.operator';
+import { Jboolean } from './jboolean_primitive';
 import { JObject } from './jobject';
-import { JEquality } from '../../java.lang.native.operator/src/jequality';
-import { Jboolean } from '../../java.lang/src/jboolean_primitive';
-import { JRelational } from '../../java.lang.native.operator/src/jrelational';
 
 /**
  * By default, the jint data type is a 32-bit signed two's complement integer,

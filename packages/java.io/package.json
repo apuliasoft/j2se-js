@@ -1,0 +1,20 @@
+{
+  "name": "@j2se-js/java.io",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Provides for system input and output through data streams, serialization and the file system",
+  "main": "./bundles/java.io.umd.js",
+  "module": "./@j2se-js/java.io.es5.js",
+  "es2015": "./@j2se-js/java.io.js",
+  "typings": "./index.d.ts",
+  "author": "ApuliaSoft <info@apuliasoft.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  },
+  "peerDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apuliasoft/j2se-js.git"
+  }
+}

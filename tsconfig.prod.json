@@ -1,11 +1,14 @@
 {
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-        "outDir": "dist/prod",
-        "rootDir": "packages"
-    },
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
-    ]
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist/packages-dist",
+    "outDir": "dist/packages",
+    "removeComments": false
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
+  ]
 }

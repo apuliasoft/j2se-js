@@ -1,0 +1,21 @@
+{
+  "name": "@j2se-js/java.lang",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Provides classes that are fundamental to the design of the Java programming language",
+  "main": "./bundles/java.lang.umd.js",
+  "module": "./@j2se-js/java.lang.es5.js",
+  "es2015": "./@j2se-js/java.lang.js",
+  "typings": "./index.d.ts",
+  "author": "ApuliaSoft <info@apuliasoft.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  },
+  "peerDependencies": {
+    "@j2se-js/java.lang.native.operator": "0.0.0-PLACEHOLDER"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apuliasoft/j2se-js.git"
+  }
+}

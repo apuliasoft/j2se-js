@@ -1,5 +1,6 @@
+import { JEquality } from '@j2se-js/java.lang.native.operator';
 import { Jboolean } from './jboolean_primitive';
-import { JEquality } from 'packages/java.lang.native.operator/src/jequality';
+
 /**
  * Class {@code JObject} is the root of the class hierarchy.
  * Every class has {@code JObject} as a superclass. All objects,
