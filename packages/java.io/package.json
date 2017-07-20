@@ -1,6 +1,6 @@
 {
   "name": "@j2se-js/java.io",
-  "version": "0.0.0-PLACEHOLDER",
+  "version": "${PACKAGE_VERSION}",
   "description": "Provides for system input and output through data streams, serialization and the file system",
   "main": "./bundles/java.io.umd.js",
   "module": "./@j2se-js/java.io.es5.js",

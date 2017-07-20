@@ -1,6 +1,6 @@
 {
   "name": "@j2se-js/java.lang.reflect",
-  "version": "0.0.0-PLACEHOLDER",
+  "version": "${PACKAGE_VERSION}",
   "description": "Provides classes and interfaces for obtaining reflective information about classes and objects",
   "main": "./bundles/java.lang.reflect.umd.js",
   "module": "./@j2se-js/java.lang.reflect.es5.js",

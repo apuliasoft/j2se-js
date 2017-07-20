@@ -1,6 +1,6 @@
 {
   "name": "@j2se-js/java.lang.native.operator",
-  "version": "0.0.0-PLACEHOLDER",
+  "version": "${PACKAGE_VERSION}",
   "description": "Provides interfaces that are usefull to impose operator definition",
   "main": "./bundles/java.lang.native.operator.umd.js",
   "module": "./@j2se-js/java.lang.native.operator.es5.js",
@@ -12,7 +12,7 @@
     "tslib": "^1.7.1"
   },
   "peerDependencies": {
-    "@j2se-js/java.lang": "0.0.0-PLACEHOLDER"
+    "@j2se-js/java.lang": "${PACKAGE_VERSION}"
   },
   "repository": {
     "type": "git",

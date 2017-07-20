@@ -31,6 +31,4 @@ do
   $ROLLUP -c -i "${ENTRY}" -o "${UMD_DST}" --environment umd --name "${PACKAGE}"
   $ROLLUP -c -i "${ENTRY}" -o "${UMDMIN_DST}" --environment min --name "${PACKAGE}"
 
-  cp ${PACKAGE} ${DST_DIR}
-
 done

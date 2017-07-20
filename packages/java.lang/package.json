@@ -1,6 +1,6 @@
 {
   "name": "@j2se-js/java.lang",
-  "version": "0.0.0-PLACEHOLDER",
+  "version": "${PACKAGE_VERSION}",
   "description": "Provides classes that are fundamental to the design of the Java programming language",
   "main": "./bundles/java.lang.umd.js",
   "module": "./@j2se-js/java.lang.es5.js",
@@ -12,7 +12,7 @@
     "tslib": "^1.7.1"
   },
   "peerDependencies": {
-    "@j2se-js/java.lang.native.operator": "0.0.0-PLACEHOLDER"
+    "@j2se-js/java.lang.native.operator": "${PACKAGE_VERSION}"
   },
   "repository": {
     "type": "git",
