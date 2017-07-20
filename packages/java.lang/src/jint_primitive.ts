@@ -16,14 +16,15 @@ import { JObject } from './jobject';
  * Note: To retrieve the actual boolean value of a jint you have to use {@code .value} syntax.
  */
 export class Jint implements JEquality<Jint>, JRelational<Jint> {
-    private _value: number;
+    private _value: Int32Array;
 
     constructor(value: number = 0) {
+        this._value = new Int32Array(1);
         this.value = value;
     }
 
     get value() {
-        return this._value;
+        return this._value[0];
     }
 
     /**
@@ -32,7 +33,7 @@ export class Jint implements JEquality<Jint>, JRelational<Jint> {
      * bitwise operation `| 0`.
      */
     set value(value: number) {
-        this._value = value | 0;
+        this._value[0] = value;
     }
 
     public eq(expr: Jint): Jboolean {

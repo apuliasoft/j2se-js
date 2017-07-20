@@ -11,6 +11,12 @@ describe('Jint', () => {
         expect(i.value).to.be.eq(0);
     });
 
+    it('should be 1 when set to 1.9', () => {
+        const i = new Jint(1.9);
+
+        expect(i.value).to.be.eq(1);
+    });
+
     it('should overflow when a number grater then 2^31-1 is set.', () => {
         const i = new Jint(Math.pow(2, 31));
 
