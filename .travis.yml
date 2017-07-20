@@ -19,7 +19,7 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
-    deploy:
+deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
