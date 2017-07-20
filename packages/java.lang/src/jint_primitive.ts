@@ -29,8 +29,8 @@ export class Jint implements JEquality<Jint>, JRelational<Jint> {
 
     /**
      * Set int value in respect of the Java int costraint.
-     * In order to simulate 32 bit signed int, is used the
-     * bitwise operation `| 0`.
+     * In order to simulate 32 bit signed int, is used a
+     * Int32Array with just 1 element.
      */
     set value(value: number) {
         this._value[0] = value;
