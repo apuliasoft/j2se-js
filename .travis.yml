@@ -16,7 +16,10 @@ script:
   - npm run docs
 after_success:
   - npm run semantic-release
-deploy:
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+    deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
