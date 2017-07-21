@@ -5,9 +5,6 @@ PACKAGES=(java.io
   java.lang.native.operator
   java.lang.reflect)
 
-SR=`pwd`/node_modules/.bin/semantic-release
-$SR pre
-
 PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 
 for PACKAGE in ${PACKAGES[@]}
@@ -29,5 +26,3 @@ do
   npm publish "${DST_DIR}"
 
 done
-
-$SR post

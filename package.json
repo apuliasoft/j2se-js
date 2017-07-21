@@ -16,7 +16,7 @@
     "docs": "typedoc --out docs --exclude \"**/+(*.spec|public_api).ts\" --mode file --theme minimal --excludePrivate ./packages",
     "build": "./build.sh",
     "lint": "tslint -p tsconfig.json",
-    "release": "./release.sh"
+    "release": "semantic-release pre && ./release.sh && semantic-release post"
   },
   "repository": {
     "type": "git",
