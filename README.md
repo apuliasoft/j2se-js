@@ -13,3 +13,12 @@ JavaScript porting of J2SE framework
 
 # Notes
 
+# Contributors
+
+[<img alt="nsanitate" src="https://avatars1.githubusercontent.com/u/666044?v=4&s=117" width="117">](https://github.com/nsanitate) |[<img alt="giuseppe-santoro" src="https://avatars0.githubusercontent.com/u/2903836?v=4&s=117" width="117">](https://github.com/giuseppe-santoro) |[<img alt="ciccio86" src="https://avatars1.githubusercontent.com/u/1651252?v=4&s=117" width="117">](https://github.com/ciccio86) |[<img alt="ZorbaDimatteo" src="https://avatars1.githubusercontent.com/u/18332250?v=4&s=117" width="117">](https://github.com/ZorbaDimatteo) |[<img alt="fdammacco" src="https://avatars2.githubusercontent.com/u/29536117?v=4&s=117" width="117">](https://github.com/fdammacco) |[<img alt="Gigitsu" src="https://avatars1.githubusercontent.com/u/3147882?v=4&s=117" width="117">](https://github.com/Gigitsu) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[nsanitate](https://github.com/nsanitate) |[giuseppe-santoro](https://github.com/giuseppe-santoro) |[ciccio86](https://github.com/ciccio86) |[ZorbaDimatteo](https://github.com/ZorbaDimatteo) |[fdammacco](https://github.com/fdammacco) |[Gigitsu](https://github.com/Gigitsu)
+
+[<img alt="valeriocomo" src="https://avatars1.githubusercontent.com/u/7393493?v=4&s=117" width="117">](https://github.com/valeriocomo) |[<img alt="gpiccolo" src="https://avatars0.githubusercontent.com/u/8842625?v=4&s=117" width="117">](https://github.com/gpiccolo) |[<img alt="paolo-tomeo" src="https://avatars1.githubusercontent.com/u/7068099?v=4&s=117" width="117">](https://github.com/paolo-tomeo) |
+:---: |:---: |:---: |
+[valeriocomo](https://github.com/valeriocomo) |[gpiccolo](https://github.com/gpiccolo) |[paolo-tomeo](https://github.com/paolo-tomeo) |
