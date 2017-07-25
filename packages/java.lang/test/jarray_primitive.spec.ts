@@ -95,6 +95,6 @@ describe('Jarray', () => {
     array.set(index2, value2);
     array.set(index3, value3);
 
-    expect(array.toString()).to.be.equal(`[I@${arrayhash.unwrap().toString(16)}`);
+    expect(array.toString()).to.be.equal(`[I@${arrayhash}`);
   });
 });

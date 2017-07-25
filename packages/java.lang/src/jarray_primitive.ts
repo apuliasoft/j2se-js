@@ -70,6 +70,6 @@ export class Jarray<T> extends JObject {
 
   // TODO mock, remove when getClass() in JObject is implemented
   public toString(): string {
-    return `[I@${this.hashCode().unwrap().toString(16)}`;
+    return `[I@${this.hashCode()}`;
   }
 }
