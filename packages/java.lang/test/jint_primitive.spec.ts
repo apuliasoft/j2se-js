@@ -150,4 +150,10 @@ describe('Jint', () => {
 
     expect(is(i1.mod(i2).eq(res))).to.be.true;
   });
+
+  it('toString should convert a Jint in a string for printing', () => {
+    const i = jint(5);
+
+    expect(i.toString()).to.be.eq('5');
+  });
 });

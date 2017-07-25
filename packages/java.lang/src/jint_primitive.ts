@@ -59,7 +59,7 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
     return this._value[0];
   }
 
-  /**
+  /*
    * Set int value in respect of the Java int costraint.
    * In order to simulate 32 bit signed int, is used a
    * Int32Array with just 1 element.
@@ -120,23 +120,23 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
     return jint(-(this.value));
   }
 
-  add(expr: Jint): Jint {
+  public add(expr: Jint): Jint {
     return jint(this.value + expr.value);
   }
 
-  sub(expr: Jint): Jint {
+  public sub(expr: Jint): Jint {
     return jint(this.value - expr.value);
   }
 
-  mul(expr: Jint): Jint {
+  public mul(expr: Jint): Jint {
     return jint(this.value * expr.value);
   }
 
-  div(expr: Jint): Jint {
+  public div(expr: Jint): Jint {
     return jint(this.value / expr.value);
   }
 
-  mod(expr: Jint): Jint {
+  public mod(expr: Jint): Jint {
     return jint(this.value % expr.value);
   }
 
