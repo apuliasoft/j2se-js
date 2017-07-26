@@ -14,7 +14,8 @@ export interface JRelational<T> {
   /** Emulate the operator >= */
   ge(expr: T): Jboolean;
 
-  /** Emulate the operator instanceof */
-  instanceof(t: Function): Jboolean;
+  // TODO conviene spostarlo in JObject dato che instanceof in Java si applica solo agli oggetti?
+  // /** Emulate the operator instanceof */
+  // instanceof(t: Function): Jboolean;
 
 }
