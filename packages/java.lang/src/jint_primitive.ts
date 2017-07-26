@@ -1,20 +1,20 @@
 import {JEquality} from '@j2se-js/java.lang.native.operator';
 import {JRelational} from '@j2se-js/java.lang.native.operator';
-import {Jboolean} from './jboolean_primitive';
+import {Jboolean, jboolean} from './jboolean_primitive';
 import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
 import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
 
 /**
  * By default, the Jint data type is a 32-bit signed two's complement integer,
- * which has a minimum value of -2^31 and a maximum value of 2^31-1.
+ * which has a minimum _value of -2^31 and a maximum _value of 2^31-1.
  * In Java SE 8 and later, you can use the jint data type to represent an unsigned
- * 32-bit integer, which has a minimum value of 0 and a maximum value of 2^32-1.
+ * 32-bit integer, which has a minimum _value of 0 and a maximum _value of 2^32-1.
  * Use the Integer class to use jint data type as an unsigned integer.
  * See the section The Number Classes for more information.
  * Static methods like compareUnsigned, divideUnsigned etc have been added to
  * the Integer class to support the arithmetic operations for unsigned integers.
  *
- * Note: To retrieve the actual numeric value wrapped in a Jint you have to use {@link Jint#unwrap()} method.
+ * Note: To retrieve the actual numeric value wrapped in a Jint you have to use <code>.value</code> syntax.
  */
 export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, JArithmetic<Jint> {
   /**
@@ -36,27 +36,23 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
     }
   }
 
-  private _value: Int32Array;
+  private _values: Int32Array;
 
   private constructor(value: number | string = 0) {
-    this._value = new Int32Array(1);
+    this._values = new Int32Array(1);
 
     if (typeof value === 'number') {
-      this.value = value;
+      this._value = value;
     } else if (typeof value === 'string') {
       const isNegative = value.charAt(0) === '-';
 
       if (isNegative) {
         value = value.slice(1, value.length);
-        this.value = -Jint.parse(value);
+        this._value = -Jint.parse(value);
       } else {
-        this.value = Jint.parse(value);
+        this._value = Jint.parse(value);
       }
     }
-  }
-
-  private get value(): number {
-    return this._value[0];
   }
 
   /*
@@ -64,80 +60,80 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
    * In order to simulate 32 bit signed int, is used a
    * Int32Array with just 1 element.
    */
-  private set value(value: number) {
-    this._value[0] = value;
+  private set _value(value: number) {
+    this._values[0] = value;
+  }
+
+  private get _value(): number {
+    return this._values[0];
   }
 
   /**
    * Retrieve the numeric value wrapped by this Jint.
    * @returns {number} numeric value wrapped by this Jint.
    */
-  public unwrap(): number {
-    return this.value;
+  public get value(): number {
+    return this._value;
   }
 
   public eq(expr: Jint): Jboolean {
-    return new Jboolean(this.value === expr.value);
+    return jboolean(this._value === expr._value);
   }
 
   public ne(expr: Jint): Jboolean {
-    return new Jboolean(this.value !== expr.value);
+    return jboolean(this._value !== expr._value);
   }
 
   public lt(expr: Jint): Jboolean {
-    return new Jboolean(this.value < expr.value);
+    return jboolean(this._value < expr._value);
   }
 
   public gt(expr: Jint): Jboolean {
-    return new Jboolean(this.value > expr.value);
+    return jboolean(this._value > expr._value);
   }
 
   public le(expr: Jint): Jboolean {
-    return new Jboolean(this.value <= expr.value);
+    return jboolean(this._value <= expr._value);
   }
 
   public ge(expr: Jint): Jboolean {
-    return new Jboolean(this.value >= expr.value);
-  }
-
-  public instanceof(t: Function): Jboolean {
-    throw new Error('Method instanceof not implemented.');
+    return jboolean(this._value >= expr._value);
   }
 
   public plus(): Jint {
-    return jint(+(this.value));
+    return jint(+(this._value));
   }
 
   public inc(): Jint {
-    return jint(this.value + 1);
+    return jint(this._value + 1);
   }
 
   public dec(): Jint {
-    return jint(this.value - 1);
+    return jint(this._value - 1);
   }
 
   public minus(): Jint {
-    return jint(-(this.value));
+    return jint(-(this._value));
   }
 
   public add(expr: Jint): Jint {
-    return jint(this.value + expr.value);
+    return jint(this._value + expr._value);
   }
 
   public sub(expr: Jint): Jint {
-    return jint(this.value - expr.value);
+    return jint(this._value - expr._value);
   }
 
   public mul(expr: Jint): Jint {
-    return jint(this.value * expr.value);
+    return jint(this._value * expr._value);
   }
 
   public div(expr: Jint): Jint {
-    return jint(this.value / expr.value);
+    return jint(this._value / expr._value);
   }
 
   public mod(expr: Jint): Jint {
-    return jint(this.value % expr.value);
+    return jint(this._value % expr._value);
   }
 
   public toString(): string {
@@ -153,3 +149,4 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
 export function jint(value: number | string = 0): Jint {
   return Jint.create(value);
 }
+

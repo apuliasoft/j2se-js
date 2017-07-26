@@ -5,10 +5,10 @@ import {is} from '../src/jboolean_primitive';
 
 describe('Jint', () => {
 
-  it('should have 0 as default value.', () => {
+  it('should have 0 as default _value', () => {
     const i = jint();
 
-    expect(i.unwrap()).to.be.eq(0);
+    expect(i.value).to.be.eq(0);
   });
 
   it('should be 1 when set to 1.9', () => {
@@ -17,39 +17,39 @@ describe('Jint', () => {
     const im = jint(-1.9);
     const jm = jint('-1.9');
 
-    expect(i.unwrap()).to.be.eq(1);
-    expect(j.unwrap()).to.be.eq(1);
-    expect(im.unwrap()).to.be.eq(-1);
-    expect(jm.unwrap()).to.be.eq(-1);
+    expect(i.value).to.be.eq(1);
+    expect(j.value).to.be.eq(1);
+    expect(im.value).to.be.eq(-1);
+    expect(jm.value).to.be.eq(-1);
   });
 
   it('should be initializable with hexadecimal', () => {
     const i = jint('0x1a');
     const j = jint('-0x1a');
 
-    expect(i.unwrap()).to.be.eq(26);
-    expect(j.unwrap()).to.be.eq(-26);
+    expect(i.value).to.be.eq(26);
+    expect(j.value).to.be.eq(-26);
   });
 
   it('should be initializable with binary', () => {
     const i = jint('0b11010');
     const j = jint('-0b11010');
 
-    expect(i.unwrap()).to.be.eq(26);
-    expect(j.unwrap()).to.be.eq(-26);
+    expect(i.value).to.be.eq(26);
+    expect(j.value).to.be.eq(-26);
   });
 
 
-  it('should overflow when a number grater then 2^31-1 is set.', () => {
+  it('should overflow when a number grater then 2^31-1 is set', () => {
     const i = jint(Math.pow(2, 31));
 
-    expect(i.unwrap()).to.be.eq(-Math.pow(2, 31));
+    expect(i.value).to.be.eq(-Math.pow(2, 31));
   });
 
-  it('should overflow when a number lower then -2^31 is set.', () => {
+  it('should overflow when a number lower then -2^31 is set', () => {
     const i = jint(-Math.pow(2, 31) - 1);
 
-    expect(i.unwrap()).to.be.eq(Math.pow(2, 31) - 1);
+    expect(i.value).to.be.eq(Math.pow(2, 31) - 1);
   });
 
   it('jint(24) should be equal to jint(24)', () => {

@@ -33,24 +33,24 @@ export class Jarray<T> extends JObject {
       this._array = arg;
       this.length = jint(arg.length);
     } else {
-      this._array = new Array<T>(arg.unwrap());
+      this._array = new Array<T>(arg.value);
       this.length = arg;
     }
   }
 
   /**
-   * Sets the specified value in the specified index of the array. The index bust be greater or equal to zero and less than the array size.
+   * Sets the specified _value in the specified index of the array. The index bust be greater or equal to zero and less than the array size.
    * If index exceedes these bounds a JArrayOutOfBoundsException is thrown.
    * @param {Jint} index the position index of the array in which insert the new element.
-   * @param {T} value the value to insert.
+   * @param {T} value the _value to insert.
    */
   public set(index: Jint, value: T) {
-    if (is(index.gt(jint(this.length.unwrap() - 1))) || is(index.lt(jint(0)))) {
+    if (is(index.gt(jint(this.length.value - 1))) || is(index.lt(jint(0)))) {
       // TODO JArrayOutOfBoundsException
-      throw Error(`JArrayOutOfBoundsException: ${index.unwrap()}`);
+      throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`);
     }
 
-    this._array[index.unwrap()] = value;
+    this._array[index.value] = value;
   }
 
   /**
@@ -60,12 +60,12 @@ export class Jarray<T> extends JObject {
    * @returns {T} the array element retrieved in the specified position index.
    */
   public get(index: Jint): T {
-    if (is(index.gt(jint(this.length.unwrap() - 1))) || is(index.lt(jint(0)))) {
+    if (is(index.gt(jint(this.length.value - 1))) || is(index.lt(jint(0)))) {
       // TODO JArrayOutOfBoundsException
-      throw Error(`JArrayOutOfBoundsException: ${index.unwrap()}`);
+      throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`);
     }
 
-    return this._array[index.unwrap()]; // Se togliamo .unwrap(), come faccio gli accessi?
+    return this._array[index.value]; // Se togliamo .valueOf(), come faccio gli accessi?
   }
 
   // TODO mock, remove when getClass() in JObject is implemented

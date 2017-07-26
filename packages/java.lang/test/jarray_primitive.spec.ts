@@ -32,7 +32,7 @@ describe('Jarray', () => {
     expect(is(array.length.eq(valuesSize))).to.be.true;
   });
 
-  xit('should return default value for non initialized array', () => {
+  xit('should return default _value for non initialized array', () => {
     const array = new Jarray<Jint>(jint(3));
     const index = jint(0);
     const defaultValue = jint(0);
@@ -69,13 +69,13 @@ describe('Jarray', () => {
     const invalidIndex2 = jint(3);
     const invalidIndex3 = jint(4);
 
-    expect(() => array.set(invalidIndex1, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex1.unwrap()}`);
-    expect(() => array.set(invalidIndex2, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex2.unwrap()}`);
-    expect(() => array.set(invalidIndex3, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex3.unwrap()}`);
+    expect(() => array.set(invalidIndex1, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex1.valueOf()}`);
+    expect(() => array.set(invalidIndex2, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex2.valueOf()}`);
+    expect(() => array.set(invalidIndex3, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex3.valueOf()}`);
 
-    expect(() => array.get(invalidIndex1)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex1.unwrap()}`);
-    expect(() => array.get(invalidIndex2)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex2.unwrap()}`);
-    expect(() => array.get(invalidIndex3)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex3.unwrap()}`);
+    expect(() => array.get(invalidIndex1)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex1.valueOf()}`);
+    expect(() => array.get(invalidIndex2)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex2.valueOf()}`);
+    expect(() => array.get(invalidIndex3)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex3.valueOf()}`);
   });
 
   // TODO remove when getClass() in JObject is implemented, already tested in JObject
