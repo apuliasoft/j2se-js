@@ -1,3 +1,5 @@
+import {Jint} from './jint_primitive';
+
 /**
  * This interface imposes a total ordering on the objects of each class that
  * implements it.  This ordering is referred to as the class's <i>natural
@@ -105,6 +107,5 @@ export interface JComparable<T> {
      * @throws ClassCastException if the specified object's type prevents it
      *         from being compared to this object.
      */
-    compareTo(o: T): number;
-    // TODO must return Integer type
+    compareTo(o: T): Jint;
 }

@@ -129,7 +129,7 @@
  * class--serialVersionUID fields are not useful as inherited members. Array
  * classes cannot declare an explicit serialVersionUID, so they always have
  * the default computed value, but the requirement for matching
- * * serialVersionUID values is waived for array classes.
+ * serialVersionUID values is waived for array classes.
  *
  * @author  unascribed
  * @see java.io.ObjectOutputStream
