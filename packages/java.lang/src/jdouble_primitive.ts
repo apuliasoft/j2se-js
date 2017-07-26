@@ -1,7 +1,6 @@
-import { JObject } from './jobject';
-import { JEquality } from '../../java.lang.native.operator/src/jequality';
-import { Jboolean } from '../../java.lang/src/jboolean_primitive';
-import { JRelational } from '../../java.lang.native.operator/src/jrelational';
+import {JEquality} from '../../java.lang.native.operator/src/jequality';
+import {Jboolean, jboolean} from '../../java.lang/src/jboolean_primitive';
+import {JRelational} from '../../java.lang.native.operator/src/jrelational';
 
 /**
  * The double data type is a double-precision 64-bit IEEE 754 floating point.
@@ -11,49 +10,44 @@ import { JRelational } from '../../java.lang.native.operator/src/jrelational';
  * choice. As mentioned above, this data type should never be used for precise
  * values, such as currency.
  *
- * Note: To retrieve the actual boolean value of a Jdouble you have to use {@code .value} syntax.
+ * Note: To retrieve the actual numeric _value of a Jdouble you have to use {@code ._value} syntax.
  */
 export class Jdouble implements JEquality<Jdouble>, JRelational<Jdouble> {
-    private _value: number;
+  private _value: number;
 
-    constructor(value: number = 0) {
-        this.value = value;
-    }
+  constructor(value: number = 0) {
+    this.value = value;
+  }
 
-    get value() {
-        return this._value;
-    }
+  get value() {
+    return this._value;
+  }
 
-    set value(value: number) {
-        this._value = value;
-    }
+  set value(value: number) {
+    this._value = value;
+  }
 
-    public eq(expr: Jdouble): Jboolean {
-        return new Jboolean(this.value === expr.value);
-    }
+  public eq(expr: Jdouble): Jboolean {
+    return jboolean(this.value === expr.value);
+  }
 
-    public ne(expr: Jdouble): Jboolean {
-        return new Jboolean(this.value !== expr.value);
-    }
+  public ne(expr: Jdouble): Jboolean {
+    return jboolean(this.value !== expr.value);
+  }
 
-    public lt(expr: Jdouble): Jboolean {
-        return new Jboolean(this.value < expr.value);
-    }
+  public lt(expr: Jdouble): Jboolean {
+    return jboolean(this.value < expr.value);
+  }
 
-    public gt(expr: Jdouble): Jboolean {
-        return new Jboolean(this.value > expr.value);
-    }
+  public gt(expr: Jdouble): Jboolean {
+    return jboolean(this.value > expr.value);
+  }
 
-    public le(expr: Jdouble): Jboolean {
-        return new Jboolean(this.value <= expr.value);
-    }
+  public le(expr: Jdouble): Jboolean {
+    return jboolean(this.value <= expr.value);
+  }
 
-    public ge(expr: Jdouble): Jboolean {
-        return new Jboolean(this.value >= expr.value);
-    }
-
-    public instanceof(t: Function): Jboolean {
-        throw new Error('Method instanceof not implemented.');
-    }
-
+  public ge(expr: Jdouble): Jboolean {
+    return jboolean(this.value >= expr.value);
+  }
 }

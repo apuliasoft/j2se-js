@@ -5,7 +5,7 @@ import { is } from '../src/jboolean_primitive';
 
 describe('Jdouble', () => {
 
-    it('should have 0 as default value.', () => {
+    it('should have 0 as default _value', () => {
         const i = new Jdouble();
 
         expect(i.value).to.be.eq(0);
