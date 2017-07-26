@@ -1,5 +1,7 @@
 import {JEquality} from '@j2se-js/java.lang.native.operator';
 
+const booleanRegex = /^true$|^false$/i;
+
 /**
  * The Jboolean data type has only two possible values: true and false.
  * Use this data type for simple flags that track true/false conditions.
@@ -25,6 +27,10 @@ export class Jboolean implements JEquality<Jboolean> {
     if (typeof value === 'boolean') {
       this._value = value;
     } else if (typeof  value === 'string') {
+      if (!value.match(booleanRegex)) {
+        throw Error('incompatible types: string cannot be converted to boolean');
+      }
+
       this._value = value.toLowerCase() === 'true';
     }
   }
