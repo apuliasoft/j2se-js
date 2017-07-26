@@ -3,6 +3,16 @@ import {JRelational} from '@j2se-js/java.lang.native.operator';
 import {Jboolean, jboolean} from './jboolean_primitive';
 import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
 import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
+import {isNegativeNumberLiteral} from 'tslint';
+
+// TODO check all possibilities in Java!
+const longRegex = /^-?\d+l$/i;
+const doubleRegex = /^-?\d+\.\d*d?$|^-?\d*\.\d+d?$|^-?\d+d$/i;
+const floatRegex = /^-?\d+\.?\d*f$|^-?\d*\.?\d+f$/i;
+
+const binaryRegex = /^-?0b[01]+$/i;
+const hexRegex = /^-?0x[0123456789abcdef]+$/i;
+const intRegex = /^-?\d+$/;
 
 /**
  * By default, the Jint data type is a 32-bit signed two's complement integer,
@@ -26,13 +36,15 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
     return new Jint(value);
   }
 
-  private static parse(value: string): number {
-    if (value.match('0b.*')) {
-      return parseInt(value.slice(2, value.length), 2);
-    } else if (value.match('0x.*')) {
-      return parseInt(value.slice(2, value.length), 16);
-    } else {
-      return parseInt(value, 10);
+  private static validate(value: string) {
+    if (value.match(longRegex)) {
+      throw Error('incompatible types: possible lossy conversion from long to int');
+    } else if (value.match(doubleRegex)) {
+      throw Error('incompatible types: possible lossy conversion from double to int');
+    } else if (value.match(floatRegex)) {
+      throw Error('incompatible types: possible lossy conversion from float to int');
+    } else if (!value.match(binaryRegex) && !value.match(hexRegex) && !value.match(intRegex)) {
+      throw Error('incompatible types: string cannot be converted to int');
     }
   }
 
@@ -41,18 +53,13 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
   private constructor(value: number | string = 0) {
     this._values = new Int32Array(1);
 
-    if (typeof value === 'number') {
-      this._value = value;
-    } else if (typeof value === 'string') {
-      const isNegative = value.charAt(0) === '-';
-
-      if (isNegative) {
-        value = value.slice(1, value.length);
-        this._value = -Jint.parse(value);
-      } else {
-        this._value = Jint.parse(value);
-      }
+    let isNegative = false;
+    if (typeof value === 'string') {
+      isNegative = value.charAt(0) === '-';
+      Jint.validate(isNegative ? value = value.slice(1, value.length) : value);
     }
+
+    this._value = isNegative ? -value : +value;
   }
 
   /*

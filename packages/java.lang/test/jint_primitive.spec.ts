@@ -11,34 +11,93 @@ describe('Jint', () => {
     expect(i.value).to.be.eq(0);
   });
 
-  it('should be 1 when set to 1.9', () => {
-    const i = jint(1.9);
-    const j = jint('1.9');
-    const im = jint(-1.9);
-    const jm = jint('-1.9');
-
-    expect(i.value).to.be.eq(1);
-    expect(j.value).to.be.eq(1);
-    expect(im.value).to.be.eq(-1);
-    expect(jm.value).to.be.eq(-1);
-  });
-
-  it('should be initializable with hexadecimal', () => {
-    const i = jint('0x1a');
-    const j = jint('-0x1a');
+  it('should be initializable with number (positive or negative)', () => {
+    const i = jint(26);
+    const j = jint(-26);
+    const i2 = jint('26');
+    const j2 = jint('-26');
 
     expect(i.value).to.be.eq(26);
     expect(j.value).to.be.eq(-26);
+    expect(i2.value).to.be.eq(26);
+    expect(j2.value).to.be.eq(-26);
   });
 
-  it('should be initializable with binary', () => {
-    const i = jint('0b11010');
-    const j = jint('-0b11010');
+  it('should be initializable with hexadecimal (positive or negative)', () => {
+    const i = jint(0x1a);
+    const j = jint(-0x1a);
+    const i2 = jint('0X1a');
+    const j2 = jint('-0x1a');
 
     expect(i.value).to.be.eq(26);
     expect(j.value).to.be.eq(-26);
+    expect(i2.value).to.be.eq(26);
+    expect(j2.value).to.be.eq(-26);
   });
 
+  it('should be initializable with binary (positive or negative)', () => {
+    const i = jint(0b11010);
+    const j = jint(-0b11010);
+    const i2 = jint('0B11010');
+    const j2 = jint('-0b11010');
+
+    expect(i.value).to.be.eq(26);
+    expect(j.value).to.be.eq(-26);
+    expect(i2.value).to.be.eq(26);
+    expect(j2.value).to.be.eq(-26);
+  });
+
+  it('should not be initializable with long (positive or negative)', () => {
+    const errorMessage = 'incompatible types: possible lossy conversion from long to int';
+    expect(() => jint('26L')).to.throw(errorMessage);
+    expect(() => jint('-26l')).to.throw(errorMessage);
+  });
+
+  it('should not be initializable with float (positive or negative)', () => {
+    const errorMessage = 'incompatible types: possible lossy conversion from float to int';
+    expect(() => jint('26F')).to.throw(errorMessage);
+    expect(() => jint('-26F')).to.throw(errorMessage);
+
+    expect(() => jint('2.6f')).to.throw(errorMessage);
+    expect(() => jint('-2.6f')).to.throw(errorMessage);
+
+    expect(() => jint('.6F')).to.throw(errorMessage);
+    expect(() => jint('-.6f')).to.throw(errorMessage);
+
+    expect(() => jint('2.f')).to.throw(errorMessage);
+    expect(() => jint('-2.f')).to.throw(errorMessage);
+  });
+
+  it('should not be initializable with double (positive or negative)', () => {
+    const errorMessage = 'incompatible types: possible lossy conversion from double to int';
+    expect(() => jint('26d')).to.throw(errorMessage);
+    expect(() => jint('-26D')).to.throw(errorMessage);
+
+    expect(() => jint('2.6D')).to.throw(errorMessage);
+    expect(() => jint('-2.6D')).to.throw(errorMessage);
+
+    expect(() => jint('.6d')).to.throw(errorMessage);
+    expect(() => jint('-.6d')).to.throw(errorMessage);
+
+    expect(() => jint('2.d')).to.throw(errorMessage);
+    expect(() => jint('-2.D')).to.throw(errorMessage);
+
+    expect(() => jint('2.6')).to.throw(errorMessage);
+    expect(() => jint('-2.6')).to.throw(errorMessage);
+
+    expect(() => jint('.6')).to.throw(errorMessage);
+    expect(() => jint('-.6')).to.throw(errorMessage);
+
+    expect(() => jint('2.')).to.throw(errorMessage);
+    expect(() => jint('-2.')).to.throw(errorMessage);
+  });
+
+  it('should not be initializable with an invalid string', () => {
+    expect(() => jint('hello world')).to.throw('incompatible types: string cannot be converted to int');
+    expect(() => jint('3.0.2')).to.throw('incompatible types: string cannot be converted to int');
+    expect(() => jint('.f')).to.throw('incompatible types: string cannot be converted to int');
+    expect(() => jint('a26')).to.throw('incompatible types: string cannot be converted to int');
+  });
 
   it('should overflow when a number grater then 2^31-1 is set', () => {
     const i = jint(Math.pow(2, 31));
