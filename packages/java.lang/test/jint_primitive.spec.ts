@@ -5,7 +5,7 @@ import {is} from '../src/jboolean_primitive';
 
 describe('Jint', () => {
 
-  it('should have 0 as default _value', () => {
+  it('should have 0 as default value', () => {
     const i = jint();
 
     expect(i.value).to.be.eq(0);
@@ -93,10 +93,11 @@ describe('Jint', () => {
   });
 
   it('should not be initializable with an invalid string', () => {
-    expect(() => jint('hello world')).to.throw('incompatible types: string cannot be converted to int');
-    expect(() => jint('3.0.2')).to.throw('incompatible types: string cannot be converted to int');
-    expect(() => jint('.f')).to.throw('incompatible types: string cannot be converted to int');
-    expect(() => jint('a26')).to.throw('incompatible types: string cannot be converted to int');
+    const errorMessage = 'incompatible types: string cannot be converted to int';
+    expect(() => jint('hello world')).to.throw(errorMessage);
+    expect(() => jint('3.0.2')).to.throw(errorMessage);
+    expect(() => jint('.f')).to.throw(errorMessage);
+    expect(() => jint('a26')).to.throw(errorMessage);
   });
 
   it('should overflow when a number grater then 2^31-1 is set', () => {
