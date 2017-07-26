@@ -14,7 +14,7 @@ import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
  * Static methods like compareUnsigned, divideUnsigned etc have been added to
  * the Integer class to support the arithmetic operations for unsigned integers.
  *
- * Note: To retrieve the actual numeric value of a Jint you have to use {@code .value} syntax.
+ * Note: To retrieve the actual numeric value wrapped in a Jint you have to use {@link Jint#unwrap()} method.
  */
 export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, JArithmetic<Jint> {
   /**
