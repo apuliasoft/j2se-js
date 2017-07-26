@@ -2,11 +2,11 @@
 
 You should make a pull request if you want:
 - to fix bug for existing functions
-- to enanche the API or implementation of an existing function
-- to add a function that is a rappresentation of a class in `java.util`
+- to enhance the API or implementation of an existing function
+- to add a function that is a representation of a class in `java.util`
 - to implement an issue 
 
-In the case of addding a new function, that function must follow the Definition of Done.
+In the case of adding a new function, that function must follow the Definition of Done.
 
 A previous discussion in issues section is preferred before working on a PR, to avoid wasting of time working on something useless.
 
