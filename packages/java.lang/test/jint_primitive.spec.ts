@@ -59,7 +59,7 @@ describe('Jint', () => {
     expect(() => jint('-26F')).to.throw(errorMessage);
 
     expect(() => jint('2.6f')).to.throw(errorMessage);
-    expect(() => jint('-2.6f')).to.throw(errorMessage);
+    expect(() => jint('-2.6e1f')).to.throw(errorMessage);
 
     expect(() => jint('.6F')).to.throw(errorMessage);
     expect(() => jint('-.6f')).to.throw(errorMessage);
@@ -77,7 +77,7 @@ describe('Jint', () => {
     expect(() => jint('-2.6D')).to.throw(errorMessage);
 
     expect(() => jint('.6d')).to.throw(errorMessage);
-    expect(() => jint('-.6d')).to.throw(errorMessage);
+    expect(() => jint('-.6e1d')).to.throw(errorMessage);
 
     expect(() => jint('2.d')).to.throw(errorMessage);
     expect(() => jint('-2.D')).to.throw(errorMessage);
