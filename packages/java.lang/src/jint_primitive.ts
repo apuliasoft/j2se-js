@@ -3,11 +3,9 @@ import {JRelational} from '@j2se-js/java.lang.native.operator';
 import {Jboolean, jboolean} from './jboolean_primitive';
 import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
 import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
-import {isNegativeNumberLiteral} from 'tslint';
 
-// TODO check all possibilities in Java!
 const longRegex = /^-?\d+l$/i;
-const doubleRegex = /^-?\d+\.?\d*d?$|^-?\d*\.?\d+d?$/i;
+const doubleRegex = /^-?\d+\.\d*d?$|^-?\d*\.\d+d?$|^-?\d+d$/i;
 const floatRegex = /^-?\d+\.?\d*f$|^-?\d*\.?\d+f$/i;
 
 const binaryRegex = /^-?0b[01]+$/i;
