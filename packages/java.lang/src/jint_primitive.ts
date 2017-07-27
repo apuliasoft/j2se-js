@@ -5,8 +5,8 @@ import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
 import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
 
 const longRegex = /^\d+l$/i;
-const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e\d+)?d?$|^-?\d+d$/i;
-const floatRegex = /^(?:(?:\d*\.?\d+)|(?:\d+\.?\d*))(?:e\d+)?f$/i;
+const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e[+-]?\d+)?d?$|^-?\d+d$/i;
+const floatRegex = /^(?:(?:\d*\.?\d+)|(?:\d+\.?\d*))(?:e[+-]?\d+)?f$/i;
 
 const binaryRegex = /^0b[01]+$/i;
 const hexRegex = /^0x[0123456789abcdef]+$/i;
