@@ -9,7 +9,7 @@ const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e[+-]?\d+)?d?$|^-?\d+d$/i;
 const floatRegex = /^(?:(?:\d*\.?\d+)|(?:\d+\.?\d*))(?:e[+-]?\d+)?f$/i;
 
 const binaryRegex = /^0b[01]+$/i;
-const hexRegex = /^0x[0123456789abcdef]+$/i;
+const hexRegex = /^0x[0-9a-f]+$/i;
 const intRegex = /^\d+$/;
 
 /**
