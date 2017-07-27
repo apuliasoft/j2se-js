@@ -62,7 +62,7 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
   }
 
   /*
-   * Set int value in respect of the Java int costraint.
+   * Set int value in respect of the Java int constraint.
    * In order to simulate 32 bit signed int, is used a
    * Int32Array with just 1 element.
    */
