@@ -4,13 +4,13 @@ import {Jboolean, jboolean} from './jboolean_primitive';
 import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
 import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
 
-const longRegex = /^-?\d+l$/i;
-const doubleRegex = /^-?(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e\d+)?d?$|^-?\d+d$/i;
-const floatRegex = /^-?(?:(?:\d*\.?\d+)|(?:\d+\.?\d*))(?:e\d+)?f$/i;
+const longRegex = /^\d+l$/i;
+const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e\d+)?d?$|^-?\d+d$/i;
+const floatRegex = /^(?:(?:\d*\.?\d+)|(?:\d+\.?\d*))(?:e\d+)?f$/i;
 
-const binaryRegex = /^-?0b[01]+$/i;
-const hexRegex = /^-?0x[0123456789abcdef]+$/i;
-const intRegex = /^-?\d+$/;
+const binaryRegex = /^0b[01]+$/i;
+const hexRegex = /^0x[0123456789abcdef]+$/i;
+const intRegex = /^\d+$/;
 
 /**
  * By default, the Jint data type is a 32-bit signed two's complement integer,
@@ -53,6 +53,7 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
 
     let isNegative = false;
     if (typeof value === 'string') {
+      value = value.replace(/^\+/, '');
       isNegative = value.charAt(0) === '-';
       Jint.validate(isNegative ? value = value.slice(1, value.length) : value);
     }

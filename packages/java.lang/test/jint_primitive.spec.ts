@@ -12,9 +12,9 @@ describe('Jint', () => {
   });
 
   it('should be initializable with number (positive or negative)', () => {
-    const i = jint(26);
+    const i = jint(+26);
     const j = jint(-26);
-    const i2 = jint('26');
+    const i2 = jint('+26');
     const j2 = jint('-26');
 
     expect(i.value).to.be.eq(26);
@@ -26,7 +26,7 @@ describe('Jint', () => {
   it('should be initializable with hexadecimal (positive or negative)', () => {
     const i = jint(0x1a);
     const j = jint(-0x1a);
-    const i2 = jint('0X1a');
+    const i2 = jint('+0X1a');
     const j2 = jint('-0x1a');
 
     expect(i.value).to.be.eq(26);
@@ -36,7 +36,7 @@ describe('Jint', () => {
   });
 
   it('should be initializable with binary (positive or negative)', () => {
-    const i = jint(0b11010);
+    const i = jint(+0b11010);
     const j = jint(-0b11010);
     const i2 = jint('0B11010');
     const j2 = jint('-0b11010');
