@@ -215,7 +215,7 @@ describe('Jdouble', () => {
     expect(is(i1.mod(i2).eq(res))).to.be.true;
   });
 
-  it('toString should convert a Jint in a string for printing', () => {
+  it('toString should convert a Jdouble in a string for printing', () => {
     const i = jdouble(5.6);
 
     expect(i.toString()).to.be.eq('5.6');
