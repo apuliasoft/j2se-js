@@ -7,7 +7,7 @@ import {isNegativeNumberLiteral} from 'tslint';
 
 // TODO check all possibilities in Java!
 const longRegex = /^-?\d+l$/i;
-const doubleRegex = /^-?\d+\.\d*d?$|^-?\d*\.\d+d?$|^-?\d+d$/i;
+const doubleRegex = /^-?\d+\.?\d*d?$|^-?\d*\.?\d+d?$/i;
 const floatRegex = /^-?\d+\.?\d*f$|^-?\d*\.?\d+f$/i;
 
 const binaryRegex = /^-?0b[01]+$/i;
