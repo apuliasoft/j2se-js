@@ -39,7 +39,7 @@ export class JObject implements JEquality<JObject> {
    * @jls 15.8.2 Class Literals
    */
   getClass() {
-    // TODO must return Class type
+    // TODO must return JClass
     throw new Error('Not yet implemented');
   }
 
@@ -183,7 +183,7 @@ export class JObject implements JEquality<JObject> {
    * <p>
    * The class {@code JObject} does not itself implement the interface
    * {@code Cloneable}, so calling the {@code clone} method on an object
-   * whose class is {@code JObject} will result in throwing an
+   * whose class is {@code Object} will result in throwing an
    * exception at run time.
    *
    * @return     a clone of this instance.
@@ -197,8 +197,7 @@ export class JObject implements JEquality<JObject> {
   protected clone(): JObject {
     // if the class of this object does not implement the interface Cloneable,
     // then a CloneNotSupportedException is thrown
-    // TODO  Cloneable check, JCloneNotSupportedException
-    throw new Error('JCloneNotSupportedException');
+    throw new Error('JCloneNotSupportedException')    // TODO JCloneNotSupportedException
   }
 
   /**
@@ -223,8 +222,8 @@ export class JObject implements JEquality<JObject> {
    * @return  a string representation of the object.
    */
   public toString(): string {
-    // TODO must use getClass
-    // TODO must return JString type
+    // TODO must use getClass()
+    // TODO must return JString
     return `java.lang.Object@${this.hashCode()}`;
   }
 
