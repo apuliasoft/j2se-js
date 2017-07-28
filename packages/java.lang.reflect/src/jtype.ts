@@ -5,7 +5,7 @@
  *
  * @since 1.5
  */
-export interface Type {
+export interface JType {
   /**
    * Returns a string describing this type, including information
    * about any type parameters.
