@@ -39,10 +39,10 @@ export class Jarray<T> extends JObject {
   }
 
   /**
-   * Sets the specified _value in the specified index of the array. The index bust be greater or equal to zero and less than the array size.
+   * Sets the specified value in the specified index of the array. The index bust be greater or equal to zero and less than the array size.
    * If index exceedes these bounds a JArrayOutOfBoundsException is thrown.
    * @param {Jint} index the position index of the array in which insert the new element.
-   * @param {T} value the _value to insert.
+   * @param {T} value the value to insert.
    */
   public set(index: Jint, value: T) {
     if (is(index.gt(jint(this.length.value - 1))) || is(index.lt(jint(0)))) {

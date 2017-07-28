@@ -32,7 +32,7 @@ describe('Jarray', () => {
     expect(is(array.length.eq(valuesSize))).to.be.true;
   });
 
-  xit('should return default _value for non initialized array', () => {
+  xit('should return default value for non initialized array', () => {
     const array = new Jarray<Jint>(jint(3));
     const index = jint(0);
     const defaultValue = jint(0);
