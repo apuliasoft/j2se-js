@@ -46,7 +46,7 @@ export class Jdouble implements JEquality<Jdouble>, JRelational<Jdouble>, JUnary
 
   private _value: number;
 
-  private constructor(value: number | string = 0) {
+  private constructor(value: number | string) {
     let isNegative = false;
     if (typeof value === 'string') {
       value = value.replace(/^\+/, '');

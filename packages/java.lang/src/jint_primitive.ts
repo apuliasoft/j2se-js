@@ -48,7 +48,7 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
 
   private _values: Int32Array;
 
-  private constructor(value: number | string = 0) {
+  private constructor(value: number | string) {
     this._values = new Int32Array(1);
 
     let isNegative = false;

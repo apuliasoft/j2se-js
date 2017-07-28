@@ -23,7 +23,7 @@ export class Jboolean implements JEquality<Jboolean> {
 
   private _value: boolean;
 
-  private constructor(value: boolean | string = false) {
+  private constructor(value: boolean | string) {
     if (typeof value === 'boolean') {
       this._value = value;
     } else if (typeof  value === 'string') {
