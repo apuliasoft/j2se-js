@@ -1,7 +1,3 @@
-import {Jboolean} from '../../java.lang/src/jboolean_primitive';
-import {JClass} from '@j2se-js/java.lang/src/jclass';
-import {Jarray} from '@j2se-js/java.lang/src/jarray_primitive';
-
 /**
  * Represents an annotated element of the program currently running in this
  * VM.  This interface allows annotations to be read reflectively.  All
