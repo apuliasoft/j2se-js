@@ -6,7 +6,7 @@ PACKAGES=(java.io
   java.lang.reflect)
 
 TSC=`pwd`/node_modules/.bin/tsc
-$TSC -p tsconfig.prod.json 
+"$TSC" -p tsconfig.prod.json
 
 ROLLUP=`pwd`/node_modules/.bin/rollup
 
@@ -26,9 +26,9 @@ do
   UMD_DST=${BUNDLES_DIR}/${PACKAGE}.umd.js
   UMDMIN_DST=${BUNDLES_DIR}/${PACKAGE}.umd.min.js  
 
-  $ROLLUP -c -i "${ENTRY}" -o "${ES20155_DST}" --environment es2015 --name "${PACKAGE}"
-  $ROLLUP -c -i "${ENTRY}" -o "${ES5_DST}" --environment es5 --name "${PACKAGE}"
-  $ROLLUP -c -i "${ENTRY}" -o "${UMD_DST}" --environment umd --name "${PACKAGE}"
-  $ROLLUP -c -i "${ENTRY}" -o "${UMDMIN_DST}" --environment min --name "${PACKAGE}"
+  "$ROLLUP" -c -i "${ENTRY}" -o "${ES20155_DST}" --environment es2015 --name "${PACKAGE}"
+  "$ROLLUP" -c -i "${ENTRY}" -o "${ES5_DST}" --environment es5 --name "${PACKAGE}"
+  "$ROLLUP" -c -i "${ENTRY}" -o "${UMD_DST}" --environment umd --name "${PACKAGE}"
+  "$ROLLUP" -c -i "${ENTRY}" -o "${UMDMIN_DST}" --environment min --name "${PACKAGE}"
 
 done
