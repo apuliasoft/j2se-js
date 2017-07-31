@@ -2,11 +2,11 @@
 
 Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope and a subject:
 
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
+\<type>(\<scope>): \<subject\>\
+\<BLANK LINE\>\
+\<body\>\
+\<BLANK LINE\>\
+\<footer\>
 
 The header is mandatory and the scope of the header is optional.
 
