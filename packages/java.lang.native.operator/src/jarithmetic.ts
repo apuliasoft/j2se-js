@@ -1,5 +1,3 @@
-import { Jboolean } from '@j2se-js/java.lang';
-
 export interface JArithmetic<T> {
 
   /** Emulate the operator + */
