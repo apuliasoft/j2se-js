@@ -1,4 +1,4 @@
-import {JAnnotatedElement} from './jannotatedelement';
+import {JAnnotatedElement} from '@j2se-js/java.lang.reflect';
 
 /**
  * A common interface for all entities that declare type variables.
