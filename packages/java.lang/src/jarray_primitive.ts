@@ -1,6 +1,6 @@
-import {JObject} from '../src/jobject';
-import {is} from '../src/jboolean_primitive';
-import {Jint, jint} from '../src/jint_primitive';
+import {is} from './jboolean_primitive';
+import {Jint, jint} from './jint_primitive';
+import {JObject} from './jobject';
 
 /**
  * An array is a container object that holds a fixed number of values of a single type.
@@ -20,13 +20,13 @@ export class Jarray<T> extends JObject {
    * Initialize an empty array of the specified size.
    * @param {Jint} size the size of the array.
    */
-  constructor(size: Jint); // TODO Passare default come parametro per inizializzazione? (Advanced)
+  public constructor(size: Jint); // TODO Passare default come parametro per inizializzazione? (Advanced)
   /**
    * Initialize an array with the specified values, inferring its size.
    * @param {T[]} values the values with which initialize the array.
    */
-  constructor(values: T[]);
-  constructor(arg: Jint | T[]) {
+  public constructor(values: T[]);
+  public constructor(arg: Jint | T[]) {
     super();
 
     if (Array.isArray(arg)) {

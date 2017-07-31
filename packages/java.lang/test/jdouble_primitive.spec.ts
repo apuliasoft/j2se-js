@@ -1,7 +1,7 @@
-/* tslint:disable:no-unused-expression */
 import {expect} from 'chai';
-import {Jdouble, jdouble} from '../src/jdouble_primitive';
+/* tslint:disable:no-unused-expression */
 import {is} from '../src/jboolean_primitive';
+import {jdouble} from '../src/jdouble_primitive';
 
 describe('Jdouble', () => {
 

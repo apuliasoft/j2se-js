@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-expression */
 import {expect} from 'chai';
-import {JObject} from '../src/jobject';
 import {is} from '../src/jboolean_primitive';
+import {JObject} from '../src/jobject';
 
 class FakeJObject extends JObject {
   clone(): JObject {
@@ -13,8 +13,8 @@ class FakeJObject extends JObject {
 describe('JObject', () => {
 
   xit('getClass should return the JClass object that represents its runtime class', () => {
-      const obj = new JObject();
-      expect(obj.getClass).to.throw;
+    const obj = new JObject();
+    expect(obj.getClass).to.throw;
   });
 
   it(`equals should return false if it is called with another JObject as argument`, () => {
@@ -102,6 +102,12 @@ describe('JObject', () => {
 
     expect(is(obj1.eq(obj2))).to.be.false;
     expect(is(obj1.ne(obj2))).to.be.true;
+  });
+
+  it('is(obj.instanceOf(JObject) == true', () => {
+    const obj = new JObject();
+
+    expect(is(obj.instanceOf(JObject))).to.be.true;
   });
 
 });

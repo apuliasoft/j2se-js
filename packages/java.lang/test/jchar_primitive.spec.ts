@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-expression */
 import {expect} from 'chai';
-import {Jchar, jchar} from '../src/jchar_primitive';
 import {is} from '../src/jboolean_primitive';
+import {jchar} from '../src/jchar_primitive';
 import {jint} from '../src/jint_primitive';
 
 describe('Jchar', () => {

@@ -12,7 +12,8 @@
     "tslib": "^1.7.1"
   },
   "peerDependencies": {
-    "@j2se-js/java.lang.native.operator": "${PACKAGE_VERSION}"
+    "@j2se-js/java.lang.native.operator": "${PACKAGE_VERSION}",
+    "@j2se-js/java.lang.reflect": "${PACKAGE_VERSION}"
   },
   "repository": {
     "type": "git",

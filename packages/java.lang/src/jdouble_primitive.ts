@@ -1,8 +1,5 @@
-import {JEquality} from '../../java.lang.native.operator/src/jequality';
-import {Jboolean, jboolean} from '../../java.lang/src/jboolean_primitive';
-import {JRelational} from '../../java.lang.native.operator/src/jrelational';
-import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
-import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
+import {JArithmetic, JEquality, JRelational, JUnary} from '@j2se-js/java.lang.native.operator';
+import {Jboolean, jboolean} from './jboolean_primitive';
 
 const longRegex = /^\d+l$/i;
 const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e[+-]?\d+)?d?$|^-?\d+d$/i;
@@ -28,7 +25,7 @@ export class Jdouble implements JEquality<Jdouble>, JRelational<Jdouble>, JUnary
    * @param {number | string} value to be wrapped in the new Jdouble.
    * @returns {Jdouble} the Jdouble created.
    */
-  static create(value: number | string = 0): Jdouble {
+  public static create(value: number | string = 0): Jdouble {
     return new Jdouble(value);
   }
 

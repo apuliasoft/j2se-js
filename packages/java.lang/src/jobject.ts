@@ -15,7 +15,7 @@ export class JObject implements JEquality<JObject> {
   private static uidGenerator = 0;
   private uid: Jint;
 
-  constructor() {
+  public constructor() {
     this.uid = jint(++JObject.uidGenerator);
   }
 
@@ -38,7 +38,7 @@ export class JObject implements JEquality<JObject> {
    *         class of this object.
    * @jls 15.8.2 Class Literals
    */
-  getClass() {
+  public getClass() {
     // TODO must return JClass
     throw new Error('Not yet implemented');
   }
@@ -79,7 +79,7 @@ export class JObject implements JEquality<JObject> {
    * @see     java.lang.JObject#equals(java.lang.JObject)
    * @see     java.lang.System#identityHashCode
    */
-  hashCode(): Jint {
+  public hashCode(): Jint {
     return this.uid;
   }
 
@@ -233,5 +233,10 @@ export class JObject implements JEquality<JObject> {
 
   public ne(expr: JObject): Jboolean {
     return jboolean(this !== expr);
+  }
+
+  /** Emulate the operator instanceof */
+  public instanceOf(expr: Function): Jboolean {
+    return jboolean(this instanceof expr);
   }
 }

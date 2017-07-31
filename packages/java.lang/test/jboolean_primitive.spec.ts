@@ -1,6 +1,6 @@
 /* tslint:disable:no-unused-expression */
 import {expect} from 'chai';
-import {Jboolean, is, jboolean} from '../src/jboolean_primitive';
+import {is, jboolean} from '../src/jboolean_primitive';
 
 describe('Jboolean', () => {
   it('should have false as default value', () => {

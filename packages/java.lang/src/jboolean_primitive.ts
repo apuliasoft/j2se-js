@@ -17,7 +17,7 @@ export class Jboolean implements JEquality<Jboolean> {
    * @param {boolean | string} value to be wrapped in the jboolean.
    * @returns {Jboolean} the Jboolean created.
    */
-  static create(value: boolean | string = false): Jboolean {
+  public static create(value: boolean | string = false): Jboolean {
     return new Jboolean(value);
   }
 

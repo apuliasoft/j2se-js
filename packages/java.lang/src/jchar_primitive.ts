@@ -1,8 +1,5 @@
-import {JEquality} from '@j2se-js/java.lang.native.operator';
-import {JRelational} from '@j2se-js/java.lang.native.operator';
-import {Jboolean, jboolean, is} from './jboolean_primitive';
-import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
-import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
+import {JArithmetic, JEquality, JRelational, JUnary} from '@j2se-js/java.lang.native.operator';
+import {Jboolean, jboolean} from './jboolean_primitive';
 import {Jint, jint} from './jint_primitive';
 
 /**
@@ -17,7 +14,7 @@ export class Jchar implements JEquality<Jchar>, JRelational<Jchar>, JUnary<Objec
    * @param {number | string} value to be wrapped in the new Jchar.
    * @returns {Jchar} the Jchar created.
    */
-  static create(value: string | Jint = jint(0)): Jchar {
+  public static create(value: string | Jint = jint(0)): Jchar {
     return new Jchar(value);
   }
 

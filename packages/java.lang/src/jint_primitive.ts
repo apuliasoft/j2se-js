@@ -1,8 +1,5 @@
-import {JEquality} from '@j2se-js/java.lang.native.operator';
-import {JRelational} from '@j2se-js/java.lang.native.operator';
+import {JArithmetic, JEquality, JRelational, JUnary} from '@j2se-js/java.lang.native.operator';
 import {Jboolean, jboolean} from './jboolean_primitive';
-import {JUnary} from '@j2se-js/java.lang.native.operator/src/junary';
-import {JArithmetic} from '@j2se-js/java.lang.native.operator/src/jarithmetic';
 
 const longRegex = /^\d+l$/i;
 const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e[+-]?\d+)?d?$|^-?\d+d$/i;
@@ -30,7 +27,7 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
    * @param {number | string} value to be wrapped in the new Jint.
    * @returns {Jint} the Jint created.
    */
-  static create(value: number | string = 0): Jint {
+  public static create(value: number | string = 0): Jint {
     return new Jint(value);
   }
 

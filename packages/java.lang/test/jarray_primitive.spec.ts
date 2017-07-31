@@ -1,8 +1,8 @@
 /* tslint:disable:no-unused-expression */
 import {expect} from 'chai';
-import {Jint, jint} from '../src/jint_primitive';
 import {Jarray} from '../src/jarray_primitive';
 import {is} from '../src/jboolean_primitive';
+import {Jint, jint} from '../src/jint_primitive';
 
 describe('Jarray', () => {
   it('should construct an array of the specified size', () => {
