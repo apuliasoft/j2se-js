@@ -21,7 +21,7 @@
       true,
       140
     ],
-    "member-access": true,
+    "member-access": [true, "check-accessor", "check-constructor"],
     "member-ordering": [
       true,
       {
