@@ -6,23 +6,23 @@ import {Jint, jint} from '../src/jint_primitive';
 
 describe('Jarray', () => {
   it('should construct an array of the specified size', () => {
-    const array = new Jarray<Jint>(jint(3));
-    const arraySize = jint(3);
+    const array = new Jarray<Jint>(jint('3'));
+    const arraySize = jint('3');
 
     expect(is(array.length.eq(arraySize))).to.be.true;
   });
 
   it('should construct and initialize an array with specified values, inferring its size', () => {
-    const index1 = jint(0);
-    const index2 = jint(1);
-    const index3 = jint(2);
+    const index1 = jint('0');
+    const index2 = jint('1');
+    const index3 = jint('2');
 
-    const value1 = jint(1);
-    const value2 = jint(2);
-    const value3 = jint(3);
+    const value1 = jint('1');
+    const value2 = jint('2');
+    const value3 = jint('3');
 
     const values = [value1, value2, value3];
-    const valuesSize = jint(values.length);
+    const valuesSize = jint((values.length).toString());
 
     const array = new Jarray<Jint>(values);
 
@@ -33,23 +33,23 @@ describe('Jarray', () => {
   });
 
   xit('should return default value for non initialized array', () => {
-    const array = new Jarray<Jint>(jint(3));
-    const index = jint(0);
-    const defaultValue = jint(0);
+    const array = new Jarray<Jint>(jint('3'));
+    const index = jint('0');
+    const defaultValue = jint('0');
 
     expect(is(array.get(index).eq(defaultValue))).to.be.true;
   });
 
   it('should set and get values in positions less than its size', () => {
-    const array = new Jarray<Jint>(jint(3));
+    const array = new Jarray<Jint>(jint('3'));
 
-    const index1 = jint(0);
-    const index2 = jint(1);
-    const index3 = jint(2);
+    const index1 = jint('0');
+    const index2 = jint('1');
+    const index3 = jint('2');
 
-    const value1 = jint(1);
-    const value2 = jint(2);
-    const value3 = jint(3);
+    const value1 = jint('1');
+    const value2 = jint('2');
+    const value3 = jint('3');
 
     array.set(index1, value1);
     array.set(index2, value2);
@@ -61,13 +61,13 @@ describe('Jarray', () => {
   });
 
   it('should result in throwing an exception when accessing positions beyond its size', () => {
-    const array = new Jarray<Jint>(jint(3));
+    const array = new Jarray<Jint>(jint('3'));
 
-    const defaultValue = jint(0);
+    const defaultValue = jint('0');
 
-    const invalidIndex1 = jint(-1);
-    const invalidIndex2 = jint(3);
-    const invalidIndex3 = jint(4);
+    const invalidIndex1 = jint('-1');
+    const invalidIndex2 = jint('3');
+    const invalidIndex3 = jint('4');
 
     expect(() => array.set(invalidIndex1, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex1.valueOf()}`);
     expect(() => array.set(invalidIndex2, defaultValue)).to.throw(`JArrayOutOfBoundsException: ${invalidIndex2.valueOf()}`);
@@ -80,16 +80,16 @@ describe('Jarray', () => {
 
   // TODO remove when getClass() in JObject is implemented, already tested in JObject
   it('toString should return a string representation of the object', () => {
-    const array = new Jarray<Jint>(jint(3));
+    const array = new Jarray<Jint>(jint('3'));
     const arrayhash = array.hashCode();
 
-    const index1 = jint(0);
-    const index2 = jint(1);
-    const index3 = jint(2);
+    const index1 = jint('0');
+    const index2 = jint('1');
+    const index3 = jint('2');
 
-    const value1 = jint(1);
-    const value2 = jint(2);
-    const value3 = jint(3);
+    const value1 = jint('1');
+    const value2 = jint('2');
+    const value3 = jint('3');
 
     array.set(index1, value1);
     array.set(index2, value2);

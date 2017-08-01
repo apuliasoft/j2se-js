@@ -1,7 +1,9 @@
-import {expect} from 'chai';
 /* tslint:disable:no-unused-expression */
+import {expect} from 'chai';
 import {is} from '../src/jboolean_primitive';
+import {jchar} from '../src/jchar_primitive';
 import {jdouble} from '../src/jdouble_primitive';
+import {jint} from '../src/jint_primitive';
 
 describe('Jdouble', () => {
 
@@ -12,44 +14,33 @@ describe('Jdouble', () => {
   });
 
   it('should be initializable with number (positive or negative)', () => {
-    const i = jdouble(+2.6);
-    const j = jdouble(-2.);
-    const i2 = jdouble('+2');
-    const j2 = jdouble('-2.6');
+    const i = jdouble('+2');
+    const j = jdouble('-2.6');
 
-    expect(i.value).to.be.eq(2.6);
-    expect(j.value).to.be.eq(-2.);
-    expect(i2.value).to.be.eq(2);
-    expect(j2.value).to.be.eq(-2.6);
+    expect(i.value).to.be.eq(2);
+    expect(j.value).to.be.eq(-2.6);
   });
 
   it('should be initializable with hexadecimal (positive or negative)', () => {
-    const i = jdouble(0x1a);
-    const j = jdouble(-0x1a);
-    const i2 = jdouble('+0X1a');
-    const j2 = jdouble('-0x1a');
+    const i = jdouble('+0X1a');
+    const j = jdouble('-0x1a');
 
     expect(i.value).to.be.eq(26);
     expect(j.value).to.be.eq(-26);
-    expect(i2.value).to.be.eq(26);
-    expect(j2.value).to.be.eq(-26);
   });
 
   it('should be initializable with binary (positive or negative)', () => {
-    const i = jdouble(+0b11010);
-    const j = jdouble(-0b11010);
-    const i2 = jdouble('0B11010');
-    const j2 = jdouble('-0b11010');
+    const i = jdouble('0B11010');
+    const j = jdouble('-0b11010');
 
     expect(i.value).to.be.eq(26);
     expect(j.value).to.be.eq(-26);
-    expect(i2.value).to.be.eq(26);
-    expect(j2.value).to.be.eq(-26);
   });
 
   it('should be initializable with long (positive or negative)', () => {
     const i = jdouble('26l');
     const j = jdouble('-26l');
+
     expect(i.value).to.be.eq(26);
     expect(j.value).to.be.eq(-26);
   });
@@ -94,6 +85,12 @@ describe('Jdouble', () => {
     expect(d8.value).to.be.eq(-2.0);
   });
 
+  it('should be initializable with Jchar', () => {
+    const i = jdouble(jchar('a'));
+
+    expect(i.value).to.be.eq(97);
+  });
+
   it('should not be initializable with an invalid string', () => {
     const errorMessage = 'incompatible types: string cannot be converted to double';
     expect(() => jdouble('hello world')).to.throw(errorMessage);
@@ -104,119 +101,323 @@ describe('Jdouble', () => {
 
   it('should be max 1.7976931348623157E308 without overflow', () => {
     const max = 1.7976931348623157E308;
-    const i = jdouble(max + 1);
+    const i = jdouble((max + 1).toString());
 
     expect(i.value).to.be.eq(max);
   });
 
   it('should be min 4.9E-324 and the MIN+1 should be 1', () => {
-    const i = jdouble((4.9E-324) + 1);
+    const i = jdouble((4.9E-324 + 1).toString());
 
     expect(i.value).to.be.eq(1);
   });
 
-  it('jdouble(24) should be equal to jdouble(24)', () => {
-    const i1 = jdouble(24);
-    const i2 = jdouble(24);
+  it('jdouble(\'24\') should be equal to jdouble(\'24\')', () => {
+    const i1 = jdouble('24');
+    const i2 = jdouble('24');
 
     expect(is(i1.eq(i2))).to.be.true;
     expect(is(i1.ne(i2))).to.be.false;
   });
 
-  it('jdouble(5) should be not equal to jdouble(6)', () => {
-    const i1 = jdouble(5);
-    const i2 = jdouble(6);
+  it('jdouble(\'5\') should be not equal to jdouble(\'6\')', () => {
+    const i1 = jdouble('5');
+    const i2 = jdouble('6');
 
     expect(is(i1.eq(i2))).to.be.false;
     expect(is(i1.ne(i2))).to.be.true;
   });
 
-  it('jdouble(5) should be lower then jdouble(6)', () => {
-    const i1 = jdouble(5);
-    const i2 = jdouble(6);
+  it('jdouble(\'5\') should be lower then jdouble(\'6\')', () => {
+    const i1 = jdouble('5');
+    const i2 = jdouble('6');
 
     expect(is(i1.lt(i2))).to.be.true;
     expect(is(i1.ge(i2))).to.be.false;
   });
 
-  it('jdouble(6) should be greater than jdouble(5)', () => {
-    const i1 = jdouble(6);
-    const i2 = jdouble(5);
+  it('jdouble(\'6\') should be greater than jdouble(\'5\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jdouble('5');
 
     expect(is(i1.gt(i2))).to.be.true;
     expect(is(i1.le(i2))).to.be.false;
   });
 
+  it('jdouble(\'24\') should be equal to jint(\'24\')', () => {
+    const i1 = jdouble('24');
+    const i2 = jint('24');
 
-  it('+(jdouble(-1)) should be equal to jdouble(-1)', () => {
-    const i = jdouble(-1);
+    expect(is(i1.eq(i2))).to.be.true;
+    expect(is(i1.ne(i2))).to.be.false;
+  });
+
+  it('jdouble(\'5\') should be not equal to jint(\'6\')', () => {
+    const i1 = jdouble('5');
+    const i2 = jint('6');
+
+    expect(is(i1.eq(i2))).to.be.false;
+    expect(is(i1.ne(i2))).to.be.true;
+  });
+
+  it('jdouble(\'5\') should be lower then jint(\'6\')', () => {
+    const i1 = jdouble('5');
+    const i2 = jint('6');
+
+    expect(is(i1.lt(i2))).to.be.true;
+    expect(is(i1.ge(i2))).to.be.false;
+  });
+
+  it('jdouble(\'6\') should be greater than jint(\'5\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jint('5');
+
+    expect(is(i1.gt(i2))).to.be.true;
+    expect(is(i1.le(i2))).to.be.false;
+  });
+
+  it('jdouble(\'97\') should be equal to jchar(\'a\')', () => {
+    const i1 = jdouble('97');
+    const i2 = jchar('a');
+
+    expect(is(i1.eq(i2))).to.be.true;
+    expect(is(i1.ne(i2))).to.be.false;
+  });
+
+  it('jdouble(\'98\') should be not equal to jchar(\'a\')', () => {
+    const i1 = jdouble('98');
+    const i2 = jchar('a');
+
+    expect(is(i1.eq(i2))).to.be.false;
+    expect(is(i1.ne(i2))).to.be.true;
+  });
+
+  it('jdouble(\'96\') should be lower then jchar(\'a\')', () => {
+    const i1 = jdouble('96');
+    const i2 = jchar('a');
+
+    expect(is(i1.lt(i2))).to.be.true;
+    expect(is(i1.ge(i2))).to.be.false;
+  });
+
+  it('jdouble(\'98\') should be greater than jchar(\'a\')', () => {
+    const i1 = jdouble('98');
+    const i2 = jchar('a');
+
+    expect(is(i1.gt(i2))).to.be.true;
+    expect(is(i1.le(i2))).to.be.false;
+  });
+
+  it('+(jdouble(\'-1\')) should be equal to jdouble(\'-1\')', () => {
+    const i = jdouble('-1');
 
     expect(is(i.plus().eq(i))).to.be.true;
   });
 
-  it('-(jdouble(-1)) should be equal to jdouble(1)', () => {
-    const i = jdouble(-1);
-    const j = jdouble(1);
+  it('-(jdouble(\'-1\')) should be equal to jdouble(\'1\')', () => {
+    const i = jdouble('-1');
+    const j = jdouble('1');
 
     expect(is(i.minus().eq(j))).to.be.true;
   });
 
-  it('++(jdouble(-1)) should be equal to jdouble(0)', () => {
-    const i = jdouble(-1);
-    const j = jdouble(0);
+  it('++(jdouble(\'-1\')) should be equal to jdouble(\'0\')', () => {
+    const i = jdouble('-1');
+    const j = jdouble('0');
 
     expect(is(i.inc().eq(j))).to.be.true;
   });
 
-  it('--(jdouble(-1)) should be equal to jdouble(-2)', () => {
-    const i = jdouble(-1);
-    const j = jdouble(-2);
+  it('--(jdouble(\'-1\')) should be equal to jdouble(\'-2\')', () => {
+    const i = jdouble('-1');
+    const j = jdouble('-2');
 
     expect(is(i.dec().eq(j))).to.be.true;
   });
 
-  it('jdouble(6) + jdouble(5) should be equal to jdouble(11)', () => {
-    const i1 = jdouble(6);
-    const i2 = jdouble(5);
-    const res = jdouble(11);
+
+  it('+(jdouble(\'-1\')) should be equal to jint(\'-1\')', () => {
+    const i = jdouble('-1');
+    const j = jint('-1');
+
+    expect(is(i.plus().eq(j))).to.be.true;
+  });
+
+  it('-(jdouble(\'-1\')) should be equal to jint(\'1\')', () => {
+    const i = jdouble('-1');
+    const j = jint('1');
+
+    expect(is(i.minus().eq(j))).to.be.true;
+  });
+
+  it('++(jdouble(\'-1\')) should be equal to jint(\'0\')', () => {
+    const i = jdouble('-1');
+    const j = jint('0');
+
+    expect(is(i.inc().eq(j))).to.be.true;
+  });
+
+  it('--(jdouble(\'-1\')) should be equal to jint(\'-2\')', () => {
+    const i = jdouble('-1');
+    const j = jint('-2');
+
+    expect(is(i.dec().eq(j))).to.be.true;
+  });
+
+
+  it('+(jdouble(\'97\')) should be equal to jchar(\'a\')', () => {
+    const i = jdouble('97');
+    const j = jchar('a');
+
+    expect(is(i.plus().eq(j))).to.be.true;
+  });
+
+  it('-(jdouble(\'-97\')) should be equal to jchar(\'a\')', () => {
+    const i = jdouble('-97');
+    const j = jchar('a');
+
+
+    expect(is(i.minus().eq(j))).to.be.true;
+  });
+
+  it('++(jdouble(\'96\')) should be equal to jchar(\'a\')', () => {
+    const i = jdouble('96');
+    const j = jchar('a');
+
+
+    expect(is(i.inc().eq(j))).to.be.true;
+  });
+
+  it('--(jdouble(\'98\')) should be equal to jchar(\'a\')', () => {
+    const i = jdouble('98');
+    const j = jchar('a');
+
+
+    expect(is(i.dec().eq(j))).to.be.true;
+  });
+
+  it('jdouble(\'6\') + jdouble(\'5\') should be equal to jdouble(\'11\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jdouble('5');
+    const res = jdouble('11');
 
     expect(is(i1.add(i2).eq(res))).to.be.true;
   });
 
-  it('jdouble(6) - jdouble(5) should be equal to jdouble(1)', () => {
-    const i1 = jdouble(6);
-    const i2 = jdouble(5);
-    const res = jdouble(1);
+  it('jdouble(\'6\') - jdouble(\'5\') should be equal to jdouble(\'1\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jdouble('5');
+    const res = jdouble('1');
 
     expect(is(i1.sub(i2).eq(res))).to.be.true;
   });
 
-  it('jdouble(6) * jdouble(5) should be equal to jdouble(30)', () => {
-    const i1 = jdouble(6);
-    const i2 = jdouble(5);
-    const res = jdouble(30);
+  it('jdouble(\'6\') * jdouble(\'5\') should be equal to jdouble(\'30\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jdouble('5');
+    const res = jdouble('30');
 
     expect(is(i1.mul(i2).eq(res))).to.be.true;
   });
 
-  it('jdouble(12) / jdouble(6) should be equal to jdouble(2)', () => {
-    const i1 = jdouble(12);
-    const i2 = jdouble(6);
-    const res = jdouble(2);
+  it('jdouble(\'12\') / jdouble(\'6\') should be equal to jdouble(\'2\')', () => {
+    const i1 = jdouble('12');
+    const i2 = jdouble('6');
+    const res = jdouble('2');
 
     expect(is(i1.div(i2).eq(res))).to.be.true;
   });
 
-  it('jdouble(12) % jdouble(6) should be equal to jdouble(0)', () => {
-    const i1 = jdouble(12);
-    const i2 = jdouble(6);
-    const res = jdouble(0);
+  it('jdouble(\'12\') % jdouble(\'6\') should be equal to jdouble(\'0\')', () => {
+    const i1 = jdouble('12');
+    const i2 = jdouble('6');
+    const res = jdouble('0');
+
+    expect(is(i1.mod(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'6\') + jint(\'5\') should be equal to jdouble(\'11\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jint('5');
+    const res = jdouble('11');
+
+    expect(is(i1.add(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'6\') - jint(\'5\') should be equal to jdouble(\'1\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jint('5');
+    const res = jdouble('1');
+
+    expect(is(i1.sub(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'6\') * jint(\'5\') should be equal to jdouble(\'30\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jint('5');
+    const res = jdouble('30');
+
+    expect(is(i1.mul(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'12\') / jint(\'6\') should be equal to jdouble(\'2\')', () => {
+    const i1 = jdouble('12');
+    const i2 = jint('6');
+    const res = jdouble('2');
+
+    expect(is(i1.div(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'12\') % jint(\'6\') should be equal to jdouble(\'0\')', () => {
+    const i1 = jdouble('12');
+    const i2 = jint('6');
+    const res = jdouble('0');
+
+    expect(is(i1.mod(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'6\') + jchar(\'a\') should be equal to jdouble(\'103\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jchar('a');
+    const res = jdouble('103');
+
+    expect(is(i1.add(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'6\') - jchar(\'a\') should be equal to jdouble(\'-91\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jchar('a');
+    const res = jdouble('-91');
+
+    expect(is(i1.sub(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'6\') * jchar(\'a\') should be equal to jdouble(\'582\')', () => {
+    const i1 = jdouble('6');
+    const i2 = jchar('a');
+    const res = jdouble('582');
+
+    expect(is(i1.mul(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'12\') / jchar(\'d\') should be equal to jdouble(\'0.12\')', () => {
+    const i1 = jdouble('12');
+    const i2 = jchar('d');
+    const res = jdouble('0.12');
+
+    expect(is(i1.div(i2).eq(res))).to.be.true;
+  });
+
+  it('jdouble(\'12\') % jchar(\'a\') should be equal to jdouble(\'12\')', () => {
+    const i1 = jdouble('12');
+    const i2 = jchar('a');
+    const res = jdouble('12');
 
     expect(is(i1.mod(i2).eq(res))).to.be.true;
   });
 
   it('toString should convert a Jdouble in a string for printing', () => {
-    const i = jdouble(5.6);
+    const i = jdouble('5.6');
 
     expect(i.toString()).to.be.eq('5.6');
   });

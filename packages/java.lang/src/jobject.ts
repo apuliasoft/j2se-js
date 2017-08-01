@@ -16,7 +16,7 @@ export class JObject implements JEquality<JObject> {
   private uid: Jint;
 
   public constructor() {
-    this.uid = jint(++JObject.uidGenerator);
+    this.uid = jint((++JObject.uidGenerator).toString());
   }
 
   /**
@@ -228,15 +228,15 @@ export class JObject implements JEquality<JObject> {
   }
 
   public eq(expr: JObject): Jboolean {
-    return jboolean(this === expr);
+    return jboolean((this === expr).toString());
   }
 
   public ne(expr: JObject): Jboolean {
-    return jboolean(this !== expr);
+    return jboolean((this !== expr).toString());
   }
 
   /** Emulate the operator instanceof */
   public instanceOf(expr: Function): Jboolean {
-    return jboolean(this instanceof expr);
+    return jboolean((this instanceof expr).toString());
   }
 }

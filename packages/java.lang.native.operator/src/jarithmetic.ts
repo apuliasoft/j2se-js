@@ -1,17 +1,17 @@
-export interface JArithmetic<T> {
+export interface JArithmetic<P, R> {
 
   /** Emulate the operator + */
-  add(expr: T): T;
+  add(expr: P): R;
 
   /** Emulate the operator - */
-  sub(expr: T): T;
+  sub(expr: P): R;
 
   /** Emulate the operator * */
-  mul(expr: T): T;
+  mul(expr: P): R;
 
   /** Emulate the operator / */
-  div(expr: T): T;
+  div(expr: P): R;
 
   /** Emulate the operator % */
-  mod(expr: T): T;
+  mod(expr: P): R;
 }

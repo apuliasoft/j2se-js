@@ -1,5 +1,7 @@
 import {JArithmetic, JEquality, JRelational, JUnary} from '@j2se-js/java.lang.native.operator';
 import {Jboolean, jboolean} from './jboolean_primitive';
+import {Jchar} from './jchar_primitive';
+import {Jint} from './jint_primitive';
 
 const longRegex = /^\d+l$/i;
 const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e[+-]?\d+)?d?$|^-?\d+d$/i;
@@ -19,15 +21,10 @@ const intRegex = /^\d+$/;
  *
  * Note: To retrieve the actual numeric value wrapped in a Jdouble you have to use <code>.value</code> syntax.
  */
-export class Jdouble implements JEquality<Jdouble>, JRelational<Jdouble>, JUnary<Jdouble>, JArithmetic<Jdouble> {
-  /**
-   * Internal factory for constructing a Jdouble without use the new keyword.
-   * @param {number | string} value to be wrapped in the new Jdouble.
-   * @returns {Jdouble} the Jdouble created.
-   */
-  public static create(value: number | string = 0): Jdouble {
-    return new Jdouble(value);
-  }
+export class Jdouble implements JEquality<Jchar | Jint | Jdouble>,
+                                JRelational<Jchar | Jint | Jdouble>,
+                                JUnary<Jdouble>,
+                                JArithmetic<Jchar | Jint | Jdouble, Jdouble> {
 
   private static validate(value: string) {
     if (!value.match(longRegex) &&
@@ -43,92 +40,97 @@ export class Jdouble implements JEquality<Jdouble>, JRelational<Jdouble>, JUnary
 
   private _value: number;
 
-  private constructor(value: number | string) {
+  public constructor(value: string | Jchar = '0.0') {
     let isNegative = false;
     if (typeof value === 'string') {
       value = value.replace(/^\+/, '');
       isNegative = value.charAt(0) === '-';
       Jdouble.validate(isNegative ? value = value.slice(1, value.length) : value);
       value = value.replace(/[dfl]$/i, '');
+      this._value = isNegative ? -value : +value;
+    } else {
+      this._value = value.value;
     }
-
-    this._value = isNegative ? -value : +value;
   }
 
   public get value() {
     return this._value;
   }
 
-  public eq(expr: Jdouble): Jboolean {
-    return jboolean(this.value === expr.value);
+  public toString(): string {
+    return this._value.toString();
   }
 
-  public ne(expr: Jdouble): Jboolean {
-    return jboolean(this.value !== expr.value);
+  // JEquality
+  public eq(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value === expr.value).toString());
   }
 
-  public lt(expr: Jdouble): Jboolean {
-    return jboolean(this.value < expr.value);
+  public ne(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value !== expr.value).toString());
   }
 
-  public gt(expr: Jdouble): Jboolean {
-    return jboolean(this.value > expr.value);
+  // JRelational
+  public lt(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value < expr.value).toString());
   }
 
-  public le(expr: Jdouble): Jboolean {
-    return jboolean(this.value <= expr.value);
+  public gt(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value > expr.value).toString());
   }
 
-  public ge(expr: Jdouble): Jboolean {
-    return jboolean(this.value >= expr.value);
+  public le(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value <= expr.value).toString());
   }
 
+  public ge(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value >= expr.value).toString());
+  }
+
+  // JUnary
   public plus(): Jdouble {
-    return jdouble(+(this._value));
+    return jdouble((+this._value).toString());
   }
 
   public inc(): Jdouble {
-    return jdouble(this._value + 1);
+    return jdouble((this._value + 1).toString());
   }
 
   public dec(): Jdouble {
-    return jdouble(this._value - 1);
+    return jdouble((this._value - 1).toString());
   }
 
   public minus(): Jdouble {
-    return jdouble(-(this._value));
+    return jdouble((-this._value).toString());
   }
 
-  public add(expr: Jdouble): Jdouble {
-    return jdouble(this._value + expr._value);
+  // JArithmetic
+  public add(expr: Jchar | Jint | Jdouble): Jdouble {
+    return jdouble((this.value + expr.value).toString());
   }
 
-  public sub(expr: Jdouble): Jdouble {
-    return jdouble(this._value - expr._value);
+  public sub(expr: Jchar | Jint | Jdouble): Jdouble {
+    return jdouble((this.value - expr.value).toString());
   }
 
-  public mul(expr: Jdouble): Jdouble {
-    return jdouble(this._value * expr._value);
+  public mul(expr: Jchar | Jint | Jdouble): Jdouble {
+    return jdouble((this.value * expr.value).toString());
   }
 
-  public div(expr: Jdouble): Jdouble {
-    return jdouble(this._value / expr._value);
+  public div(expr: Jchar | Jint | Jdouble): Jdouble {
+    return jdouble((this.value / expr.value).toString());
   }
 
-  public mod(expr: Jdouble): Jdouble {
-    return jdouble(this._value % expr._value);
-  }
-
-  public toString(): string {
-    return this._value.toString();
+  public mod(expr: Jchar | Jint | Jdouble): Jdouble {
+    return jdouble((this.value % expr.value).toString());
   }
 }
 
 /**
- * Factory for constructing a Jdouble without use the new keyword. It calls {@link Jdouble#create} method.
+ * Factory for constructing a Jdouble without use the new keyword.
  * @param {number | string} value to be wrapped in the new Jdouble.
  * @returns {Jdouble} the Jdouble created.
  */
-export function jdouble(value: number | string = 0): Jdouble {
-  return Jdouble.create(value);
+export function jdouble(value: string | Jchar = '0.0'): Jdouble {
+  return new Jdouble(value);
 }

@@ -12,18 +12,9 @@ const booleanRegex = /^true$|^false$/i;
  * Note: To retrieve the actual boolean value wrapped in a Jboolean you have to use <code>.value</code> syntax.
  */
 export class Jboolean implements JEquality<Jboolean> {
-  /**
-   * Internal factory for constructing a Jboolean without use the new keyword.
-   * @param {boolean | string} value to be wrapped in the jboolean.
-   * @returns {Jboolean} the Jboolean created.
-   */
-  public static create(value: boolean | string = false): Jboolean {
-    return new Jboolean(value);
-  }
-
   private _value: boolean;
 
-  private constructor(value: boolean | string) {
+  public constructor(value: string) {
     if (typeof value === 'boolean') {
       this._value = value;
     } else if (typeof  value === 'string') {
@@ -43,22 +34,32 @@ export class Jboolean implements JEquality<Jboolean> {
     return this._value;
   }
 
+  public toString(): string {
+    return this._value.toString();
+  }
+
+  // JEquality
   public eq(expr: Jboolean): Jboolean {
-    return jboolean(this._value === expr._value);
+    return jboolean((this._value === expr._value).toString());
   }
 
   public ne(expr: Jboolean): Jboolean {
-    return jboolean(this._value !== expr._value);
+    return jboolean((this._value !== expr._value).toString());
   }
 
   /** Emulate the operator ! */
   public not(): Jboolean {
-    return jboolean(!this._value);
+    return jboolean((!this._value).toString());
   }
+}
 
-  public toString(): string {
-    return this._value.toString();
-  }
+/**
+ * Factory for constructing a Jboolean without use the new keyword.
+ * @param {boolean | string} value to be wrapped in the jboolean.
+ * @returns {Jboolean} the Jboolean created.
+ */
+export function jboolean(value: string = 'false'): Jboolean {
+  return new Jboolean(value);
 }
 
 /**
@@ -67,13 +68,4 @@ export class Jboolean implements JEquality<Jboolean> {
  */
 export function is(expr: Jboolean): boolean {
   return expr.value;
-}
-
-/**
- * Factory for constructing a Jboolean without use the new keyword. It calls {@link Jboolean#create} method.
- * @param {boolean | string} value to be wrapped in the jboolean.
- * @returns {Jboolean} the Jboolean created.
- */
-export function jboolean(value: boolean | string = false): Jboolean {
-  return Jboolean.create(value);
 }

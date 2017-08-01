@@ -1,13 +1,15 @@
 import {JArithmetic, JEquality, JRelational, JUnary} from '@j2se-js/java.lang.native.operator';
 import {Jboolean, jboolean} from './jboolean_primitive';
+import {Jchar} from './jchar_primitive';
+import {Jdouble, jdouble} from './jdouble_primitive';
 
-const longRegex = /^\d+l$/i;
-const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e[+-]?\d+)?d?$|^-?\d+d$/i;
-const floatRegex = /^(?:(?:\d*\.?\d+)|(?:\d+\.?\d*))(?:e[+-]?\d+)?f$/i;
+export const longRegex = /^\d+l$/i;
+export const doubleRegex = /^(?:(?:\d*\.\d+)|(?:\d+\.\d*))(?:e[+-]?\d+)?d?$|^-?\d+d$/i;
+export const floatRegex = /^(?:(?:\d*\.?\d+)|(?:\d+\.?\d*))(?:e[+-]?\d+)?f$/i;
 
-const binaryRegex = /^0b[01]+$/i;
-const hexRegex = /^0x[0-9a-f]+$/i;
-const intRegex = /^\d+$/;
+export const binaryRegex = /^0b[01]+$/i;
+export const hexRegex = /^0x[0-9a-f]+$/i;
+export const intRegex = /^\d+$/;
 
 /**
  * By default, the Jint data type is a 32-bit signed two's complement integer,
@@ -21,15 +23,10 @@ const intRegex = /^\d+$/;
  *
  * Note: To retrieve the actual numeric value wrapped in a Jint you have to use <code>.value</code> syntax.
  */
-export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, JArithmetic<Jint> {
-  /**
-   * Internal factory for constructing a Jint without use the new keyword.
-   * @param {number | string} value to be wrapped in the new Jint.
-   * @returns {Jint} the Jint created.
-   */
-  public static create(value: number | string = 0): Jint {
-    return new Jint(value);
-  }
+export class Jint implements JEquality<Jchar | Jint | Jdouble>,
+                             JRelational<Jchar | Jint | Jdouble>,
+                             JUnary<Jint>,
+                             JArithmetic<Jchar | Jint | Jdouble, Jint | Jdouble> {
 
   private static validate(value: string) {
     if (value.match(longRegex)) {
@@ -45,7 +42,7 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
 
   private _values: Int32Array;
 
-  private constructor(value: number | string) {
+  public constructor(value: string | Jchar = '0') {
     this._values = new Int32Array(1);
 
     let isNegative = false;
@@ -53,9 +50,10 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
       value = value.replace(/^\+/, '');
       isNegative = value.charAt(0) === '-';
       Jint.validate(isNegative ? value = value.slice(1, value.length) : value);
+      this._value = isNegative ? -value : +value;
+    } else {
+      this._value = value.value;
     }
-
-    this._value = isNegative ? -value : +value;
   }
 
   /*
@@ -79,77 +77,115 @@ export class Jint implements JEquality<Jint>, JRelational<Jint>, JUnary<Jint>, J
     return this._value;
   }
 
-  public eq(expr: Jint): Jboolean {
-    return jboolean(this._value === expr._value);
+  public toString(): string {
+    return this._value.toString();
   }
 
-  public ne(expr: Jint): Jboolean {
-    return jboolean(this._value !== expr._value);
+  // JEquality
+  public eq(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value === expr.value).toString());
   }
 
-  public lt(expr: Jint): Jboolean {
-    return jboolean(this._value < expr._value);
+  public ne(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value !== expr.value).toString());
   }
 
-  public gt(expr: Jint): Jboolean {
-    return jboolean(this._value > expr._value);
+  // JRelational
+  public lt(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value < expr.value).toString());
   }
 
-  public le(expr: Jint): Jboolean {
-    return jboolean(this._value <= expr._value);
+  public gt(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value > expr.value).toString());
   }
 
-  public ge(expr: Jint): Jboolean {
-    return jboolean(this._value >= expr._value);
+  public le(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value <= expr.value).toString());
   }
 
+  public ge(expr: Jchar | Jint | Jdouble): Jboolean {
+    return jboolean((this.value >= expr.value).toString());
+  }
+
+  // JUnary
   public plus(): Jint {
-    return jint(+(this._value));
+    return jint((+this._value).toString());
   }
 
   public inc(): Jint {
-    return jint(this._value + 1);
+    return jint((this._value + 1).toString());
   }
 
   public dec(): Jint {
-    return jint(this._value - 1);
+    return jint((this._value - 1).toString());
   }
 
   public minus(): Jint {
-    return jint(-(this._value));
+    return jint((-this._value).toString());
   }
 
-  public add(expr: Jint): Jint {
-    return jint(this._value + expr._value);
+  // JArithmetic
+  public add(expr: Jchar | Jint): Jint;
+  public add(expr: Jdouble): Jdouble;
+
+  public add(expr: Jchar | Jint | Jdouble): Jint | Jdouble {
+    if (expr instanceof Jdouble) {
+      return jdouble((this.value + expr.value).toString());
+    } else {
+      return jint((this.value + expr.value).toString());
+    }
   }
 
-  public sub(expr: Jint): Jint {
-    return jint(this._value - expr._value);
+  public sub(expr: Jchar | Jint): Jint;
+  public sub(expr: Jdouble): Jdouble;
+
+  public sub(expr: Jchar | Jint | Jdouble): Jint | Jdouble {
+    if (expr instanceof Jdouble) {
+      return jdouble((this.value - expr.value).toString());
+    } else {
+      return jint((this.value - expr.value).toString());
+    }
   }
 
-  public mul(expr: Jint): Jint {
-    return jint(this._value * expr._value);
+  public mul(expr: Jchar | Jint): Jint;
+  public mul(expr: Jdouble): Jdouble;
+
+  public mul(expr: Jchar | Jint | Jdouble): Jint | Jdouble {
+    if (expr instanceof Jdouble) {
+      return jdouble((this.value * expr.value).toString());
+    } else {
+      return jint((this.value * expr.value).toString());
+    }
   }
 
-  public div(expr: Jint): Jint {
-    return jint(this._value / expr._value);
+  public div(expr: Jchar | Jint): Jint;
+  public div(expr: Jdouble): Jdouble;
+
+  public div(expr: Jchar | Jint | Jdouble): Jint | Jdouble {
+    if (expr instanceof Jdouble) {
+      return jdouble((this.value / expr.value).toString());
+    } else {
+      return jint((Math.floor(this.value / expr.value)).toString());
+    }
   }
 
-  public mod(expr: Jint): Jint {
-    return jint(this._value % expr._value);
-  }
+  public mod(expr: Jchar | Jint): Jint;
+  public mod(expr: Jdouble): Jdouble;
 
-  public toString(): string {
-    return this._value.toString();
+  public mod(expr: Jchar | Jint | Jdouble): Jint | Jdouble {
+    if (expr instanceof Jdouble) {
+      return jdouble((this.value % expr.value).toString());
+    } else {
+      return jint((this.value % expr.value).toString());
+    }
   }
 }
 
 /**
- * Factory for constructing a Jint without use the new keyword. It calls {@link Jint#create} method.
+ * Factory for constructing a Jint without use the new keyword.
  * @param {number | string} value to be wrapped in the new Jint.
  * @returns {Jint} the Jint created.
  */
-export function jint(value: number | string = 0): Jint {
-  return Jint.create(value);
+export function jint(value: string | Jchar = '0'): Jint {
+  return new Jint(value);
 }
-

@@ -20,18 +20,19 @@ export class Jarray<T> extends JObject {
    * Initialize an empty array of the specified size.
    * @param {Jint} size the size of the array.
    */
-  public constructor(size: Jint); // TODO Passare default come parametro per inizializzazione? (Advanced)
+  public constructor(size: Jint);
   /**
    * Initialize an array with the specified values, inferring its size.
    * @param {T[]} values the values with which initialize the array.
    */
   public constructor(values: T[]);
+
   public constructor(arg: Jint | T[]) {
     super();
 
     if (Array.isArray(arg)) {
       this._array = arg;
-      this.length = jint(arg.length);
+      this.length = jint(arg.length.toString());
     } else {
       this._array = new Array<T>(arg.value);
       this.length = arg;
@@ -45,9 +46,8 @@ export class Jarray<T> extends JObject {
    * @param {T} value the value to insert.
    */
   public set(index: Jint, value: T) {
-    if (is(index.gt(jint(this.length.value - 1))) || is(index.lt(jint(0)))) {
-      // TODO JArrayOutOfBoundsException
-      throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`);
+    if (is(index.ge(this.length)) || is(index.lt(jint('0')))) {
+      throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`); // TODO JArrayOutOfBoundsException
     }
 
     this._array[index.value] = value;
@@ -60,12 +60,11 @@ export class Jarray<T> extends JObject {
    * @returns {T} the array element retrieved in the specified position index.
    */
   public get(index: Jint): T {
-    if (is(index.gt(jint(this.length.value - 1))) || is(index.lt(jint(0)))) {
-      // TODO JArrayOutOfBoundsException
-      throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`);
+    if (is(index.ge(this.length)) || is(index.lt(jint('0')))) {
+      throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`); // TODO JArrayOutOfBoundsException
     }
 
-    return this._array[index.value]; // Se togliamo .valueOf(), come faccio gli accessi?
+    return this._array[index.value];
   }
 
   // TODO mock, remove when getClass() in JObject is implemented
