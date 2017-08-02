@@ -1,6 +1,9 @@
-import {is} from './jboolean_primitive';
+import {is, Jboolean, jboolean} from './jboolean_primitive';
+import {jchar, Jchar} from './jchar_primitive';
+import {jdouble, Jdouble} from './jdouble_primitive';
 import {Jint, jint} from './jint_primitive';
 import {JObject} from './jobject';
+
 
 /**
  * An array is a container object that holds a fixed number of values of a single type.
@@ -10,7 +13,7 @@ import {JObject} from './jobject';
  * All methods of class JObject may be invoked on an array.
  */
 export class Jarray<T> extends JObject {
-  private _array: T[];
+  protected _array: Array<T>;
   /**
    * The size of the array.
    */
@@ -34,7 +37,7 @@ export class Jarray<T> extends JObject {
       this._array = arg;
       this.length = jint(arg.length.toString());
     } else {
-      this._array = new Array<T>(arg.value);
+      this._array = Array.apply(null, Array(arg.value)).map((): null => null);
       this.length = arg;
     }
   }
@@ -70,5 +73,33 @@ export class Jarray<T> extends JObject {
   // TODO mock, remove when getClass() in JObject is implemented
   public toString(): string {
     return `[I@${this.hashCode()}`;
+  }
+}
+
+export class Jintarray extends Jarray<Jint> {
+  public constructor(size: Jint) {
+    super(size);
+    this._array = this._array.map(() => jint());
+  }
+}
+
+export class Jdoublearray extends Jarray<Jdouble> {
+  public constructor(size: Jint) {
+    super(size);
+    this._array = this._array.map(() => jdouble());
+  }
+}
+
+export class Jchararray extends Jarray<Jchar> {
+  public constructor(size: Jint) {
+    super(size);
+    this._array = this._array.map(() => jchar());
+  }
+}
+
+export class Jbooleanarray extends Jarray<Jboolean> {
+  public constructor(size: Jint) {
+    super(size);
+    this._array = this._array.map(() => jboolean());
   }
 }

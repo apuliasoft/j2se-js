@@ -1,8 +1,11 @@
 /* tslint:disable:no-unused-expression */
 import {expect} from 'chai';
-import {Jarray} from '../src/jarray_primitive';
-import {is} from '../src/jboolean_primitive';
+import {Jarray, Jbooleanarray, Jchararray, Jdoublearray, Jintarray} from '../src/jarray_primitive';
+import {is, jboolean, Jboolean} from '../src/jboolean_primitive';
+import {jchar, Jchar} from '../src/jchar_primitive';
+import {jdouble, Jdouble} from '../src/jdouble_primitive';
 import {Jint, jint} from '../src/jint_primitive';
+import {JObject} from '../src/jobject';
 
 describe('Jarray', () => {
   it('should construct an array of the specified size', () => {
@@ -32,12 +35,26 @@ describe('Jarray', () => {
     expect(is(array.length.eq(valuesSize))).to.be.true;
   });
 
-  xit('should return default value for non initialized array', () => {
-    const array = new Jarray<Jint>(jint('3'));
-    const index = jint('0');
-    const defaultValue = jint('0');
+  it('should return default value for non initialized array', () => {
+    const iArray: Jarray<Jint> = new Jintarray(jint('3'));
+    const cArray: Jarray<Jchar> = new Jchararray(jint('3'));
+    const dArray: Jarray<Jdouble> = new Jdoublearray(jint('3'));
+    const bArray: Jarray<Jboolean> = new Jbooleanarray(jint('3'));
+    const oArray: Jarray<JObject> = new Jarray<JObject>(jint('3'));
 
-    expect(is(array.get(index).eq(defaultValue))).to.be.true;
+    const index = jint('0');
+
+    const defaultJintValue = jint();
+    const defaultJcharValue = jchar();
+    const defaultJdoubleValue = jdouble();
+    const defaultJbooleanValue = jboolean();
+    const defaultJobjectValue: JObject = null;
+
+    expect(is(iArray.get(index).eq(defaultJintValue))).to.be.true;
+    expect(is(cArray.get(index).eq(defaultJcharValue))).to.be.true;
+    expect(is(dArray.get(index).eq(defaultJdoubleValue))).to.be.true;
+    expect(is(bArray.get(index).eq(defaultJbooleanValue))).to.be.true;
+    expect(oArray.get(index)).to.be.eq(defaultJobjectValue);
   });
 
   it('should set and get values in positions less than its size', () => {
