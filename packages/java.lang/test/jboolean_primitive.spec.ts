@@ -43,6 +43,26 @@ describe('Jboolean', () => {
     expect(is(bool1.ne(bool2))).to.be.true;
   });
 
+  it('jboolean a and  jboolean b should be equal to jboolean(\'true\') if and only if both a and b are jboolean(\'true\')', () => {
+    const bool1 = jboolean('true');
+    const bool2 = jboolean('false');
+
+    expect(is(bool1.and(bool2))).to.be.false;
+    expect(is(bool2.and(bool1))).to.be.false;
+    expect(is(bool2.and(bool2))).to.be.false;
+    expect(is(bool1.and(bool1))).to.be.true;
+  });
+
+  it('jboolean a or jboolean b should be equal to jboolean(\'true\') if at least one between a or b is jboolean(\'true\')', () => {
+    const bool1 = jboolean('true');
+    const bool2 = jboolean('false');
+
+    expect(is(bool1.or(bool2))).to.be.true;
+    expect(is(bool2.or(bool1))).to.be.true;
+    expect(is(bool1.or(bool1))).to.be.true;
+    expect(is(bool2.or(bool2))).to.be.false;
+  });
+
   it('!jboolean(\'true\') should be equal to jboolean(\'false\')', () => {
     const bool1 = jboolean('true');
     const bool2 = jboolean('false');

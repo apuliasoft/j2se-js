@@ -49,7 +49,7 @@ export class Jarray<T> extends JObject {
    * @param {T} value the value to insert.
    */
   public set(index: Jint, value: T) {
-    if (is(index.ge(this.length)) || is(index.lt(jint('0')))) {
+    if (is(index.ge(this.length).or(index.lt(jint('0'))))) {
       throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`); // TODO JArrayOutOfBoundsException
     }
 
@@ -63,7 +63,7 @@ export class Jarray<T> extends JObject {
    * @returns {T} the array element retrieved in the specified position index.
    */
   public get(index: Jint): T {
-    if (is(index.ge(this.length)) || is(index.lt(jint('0')))) {
+    if (is(index.ge(this.length).or(index.lt(jint('0'))))) {
       throw Error(`JArrayOutOfBoundsException: ${index.valueOf()}`); // TODO JArrayOutOfBoundsException
     }
 

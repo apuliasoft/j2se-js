@@ -47,6 +47,16 @@ export class Jboolean implements JEquality<Jboolean> {
     return jboolean((this._value !== expr._value).toString());
   }
 
+  /** Emulate the operator && */
+  public and(expr: Jboolean): Jboolean {
+    return jboolean((this._value && expr.value).toString());
+  }
+
+  /** Emulate the operator || */
+  public or(expr: Jboolean): Jboolean {
+    return jboolean((this._value || expr.value).toString());
+  }
+
   /** Emulate the operator ! */
   public not(): Jboolean {
     return jboolean((!this._value).toString());
