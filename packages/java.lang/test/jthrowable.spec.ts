@@ -63,7 +63,12 @@ describe('JThrowable', () => {
     const message1 = 'from throwable1'; // TODO JString
     const throwable1: JThrowable = new JThrowable(message1);
     const message2 = 'from throwable2'; // TODO JString
-    const throwable2: JThrowable = new JThrowable(message2, throwable1, jboolean(), jboolean('true'));
+    let throwable2: JThrowable = new JThrowable(message2, throwable1, jboolean(), jboolean('true'));
+
+    expect(throwable2.getCause()).to.be.eq(throwable1);
+    expect(throwable2.getMessage()).to.be.eq(message2);
+
+    throwable2 = new JThrowable(message2, throwable1, jboolean('true'), jboolean());
 
     expect(throwable2.getCause()).to.be.eq(throwable1);
     expect(throwable2.getMessage()).to.be.eq(message2);
