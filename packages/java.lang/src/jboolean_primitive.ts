@@ -15,15 +15,11 @@ export class Jboolean implements JEquality<Jboolean> {
   private _value: boolean;
 
   public constructor(value: string) {
-    if (typeof value === 'boolean') {
-      this._value = value;
-    } else if (typeof  value === 'string') {
-      if (!value.match(booleanRegex)) {
-        throw Error('incompatible types: string cannot be converted to boolean');
-      }
-
-      this._value = value.toLowerCase() === 'true';
+    if (!value.match(booleanRegex)) {
+      throw Error('incompatible types: string cannot be converted to boolean');
     }
+
+    this._value = value.toLowerCase() === 'true';
   }
 
   /**
