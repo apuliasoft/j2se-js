@@ -1,6 +1,6 @@
 import {JEquality} from '@j2se-js/java.lang.native.operator';
 
-const booleanRegex = /^true$|^false$/i;
+const booleanRegex = /^true$|^false$/;
 
 /**
  * The Jboolean data type has only two possible values: true and false.

@@ -12,19 +12,17 @@ describe('Jboolean', () => {
   it('should have only two possible values: true and false', () => {
     const trueBool = jboolean('true');
     const falseBool = jboolean('false');
-    const trueBool2 = jboolean('TRUE');
-    const falseBool2 = jboolean('FALSE');
 
     expect(trueBool.value).to.be.true;
     expect(falseBool.value).to.be.false;
-    expect(trueBool2.value).to.be.true;
-    expect(falseBool2.value).to.be.false;
   });
 
   it('should not be initializable with an invalid string', () => {
     const errorMessage = 'incompatible types: string cannot be converted to boolean';
     expect(() => jboolean('hello world')).to.throw(errorMessage);
     expect(() => jboolean('not true')).to.throw(errorMessage);
+    expect(() => jboolean('TRUE')).to.throw(errorMessage);
+    expect(() => jboolean('False')).to.throw(errorMessage);
   });
 
   it('jboolean(\'true\') should be equal to jboolean(\'true\')', () => {
