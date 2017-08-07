@@ -95,7 +95,6 @@
       }
     ],
     "typeof-compare": true,
-    "unified-signatures": true,
     "variable-name": false,
     "whitespace": [
       true,
