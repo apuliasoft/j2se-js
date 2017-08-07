@@ -1,6 +1,8 @@
 import {JEquality} from '@j2se-js/java.lang.native.operator';
+
 import {Jboolean, jboolean} from './jboolean_primitive';
 import {Jint, jint} from './jint_primitive';
+import {JClass} from './jclass';
 
 /**
  * Class {@code JObject} is the root of the class hierarchy.
@@ -16,6 +18,10 @@ export class JObject implements JEquality<JObject> {
   private uid: Jint;
 
   public constructor() {
+    // if (JClassLoader[this.constructor.toString()] === undefined) {
+    //   JClassLoader[this.constructor.toString()] = JClass.get(this.constructor);
+    // }
+
     this.uid = jint((++JObject.uidGenerator).toString());
   }
 
@@ -38,9 +44,9 @@ export class JObject implements JEquality<JObject> {
    *         class of this object.
    * @jls 15.8.2 Class Literals
    */
-  public getClass() {
-    // TODO must return JClass
-    throw new Error('Not yet implemented');
+  public getClass(): JClass<JObject> {
+    // return JClassLoader[this.constructor.toString()];
+    throw Error('not yet implemented');
   }
 
 
@@ -236,7 +242,7 @@ export class JObject implements JEquality<JObject> {
   }
 
   /** Emulate the operator instanceof */
-  public instanceOf(expr: Function): Jboolean {
+  public instanceof(expr: typeof JObject): Jboolean {
     return jboolean((this instanceof expr).toString());
   }
 }
