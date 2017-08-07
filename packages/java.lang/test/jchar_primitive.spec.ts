@@ -192,14 +192,32 @@ describe('Jchar', () => {
     const aChar = jchar('a');
     const bChar = jchar('b');
 
-    expect(is(aChar.inc().eq(bChar))).to.be.true;
+    aChar.inc();
+    expect(is(aChar.eq(bChar))).to.be.true;
   });
 
   it('--(jchar(\'b\')) should be equal to jchar(\'a\')', () => {
     const aChar = jchar('a');
     const bChar = jchar('b');
 
-    expect(is(bChar.dec().eq(aChar))).to.be.true;
+    bChar.dec();
+    expect(is(bChar.eq(aChar))).to.be.true;
+  });
+
+  it('++(jchar(\'\\uffff\')) should be equal to jchar(\'\\u0000\')', () => {
+    const aChar = jchar('\uffff');
+    const bChar = jchar('\u0000');
+
+    aChar.inc();
+    expect(is(aChar.eq(bChar))).to.be.true;
+  });
+
+  it('--(jchar(\'\\u0000\')) should be equal to jchar(\'\\uffff\')', () => {
+    const aChar = jchar('\uffff');
+    const bChar = jchar('\u0000');
+
+    bChar.dec();
+    expect(is(bChar.eq(aChar))).to.be.true;
   });
 
   it('+(jchar(\'a\')) should be equal to jchar(\'a\')', () => {

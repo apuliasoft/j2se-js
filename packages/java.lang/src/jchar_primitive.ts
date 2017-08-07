@@ -82,11 +82,13 @@ export class Jchar implements JEquality<Jchar | Jint | Jdouble>,
   }
 
   public inc(): Jchar {
-    return jchar(jint((this.value + 1).toString()));
+    this._value = String.fromCharCode(this.value + 1);
+    return jchar(this._value);
   }
 
   public dec(): Jchar {
-    return jchar(jint((this.value - 1).toString()));
+    this._value = String.fromCharCode(this.value - 1);
+    return jchar(this._value);
   }
 
   public minus(): Jint {
