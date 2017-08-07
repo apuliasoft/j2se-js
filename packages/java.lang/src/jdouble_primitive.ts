@@ -93,11 +93,13 @@ export class Jdouble implements JEquality<Jchar | Jint | Jdouble>,
   }
 
   public inc(): Jdouble {
-    return jdouble((this._value + 1).toString());
+    this._value = this._value + 1;
+    return jdouble(this._value.toString());
   }
 
   public dec(): Jdouble {
-    return jdouble((this._value - 1).toString());
+    this._value = this._value - 1;
+    return jdouble(this._value.toString());
   }
 
   public minus(): Jdouble {
