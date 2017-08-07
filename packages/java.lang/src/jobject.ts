@@ -2,7 +2,6 @@ import {JEquality} from '@j2se-js/java.lang.native.operator';
 
 import {Jboolean, jboolean} from './jboolean_primitive';
 import {Jint, jint} from './jint_primitive';
-import {JClass} from './jclass';
 
 /**
  * Class {@code JObject} is the root of the class hierarchy.
@@ -44,8 +43,8 @@ export class JObject implements JEquality<JObject> {
    *         class of this object.
    * @jls 15.8.2 Class Literals
    */
-  public getClass(): JClass<JObject> {
-    // return JClassLoader[this.constructor.toString()];
+  public getClass() {
+    // TODO must return JClass
     throw Error('not yet implemented');
   }
 
