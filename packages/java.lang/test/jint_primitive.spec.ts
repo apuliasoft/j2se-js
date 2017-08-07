@@ -221,14 +221,16 @@ describe('Jint', () => {
     const i = jint('-1');
     const j = jint('0');
 
-    expect(is(i.inc().eq(j))).to.be.true;
+    i.inc();
+    expect(is(i.eq(j))).to.be.true;
   });
 
   it('--(jint(\'-1\')) should be equal to jint(\'-2\')', () => {
     const i = jint('-1');
     const j = jint('-2');
 
-    expect(is(i.dec().eq(j))).to.be.true;
+    i.dec();
+    expect(is(i.eq(j))).to.be.true;
   });
 
   it('+(jint(\'-1\')) should be equal to jdouble(\'-1.0\')', () => {

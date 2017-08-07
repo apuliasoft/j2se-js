@@ -113,11 +113,13 @@ export class Jint implements JEquality<Jchar | Jint | Jdouble>,
   }
 
   public inc(): Jint {
-    return jint((this._value + 1).toString());
+    this._value = this._value + 1;
+    return jint(this._value.toString());
   }
 
   public dec(): Jint {
-    return jint((this._value - 1).toString());
+    this._value = this._value - 1;
+    return jint(this._value.toString());
   }
 
   public minus(): Jint {
