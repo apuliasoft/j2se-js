@@ -13,7 +13,7 @@
     "test:watch": "mocha -r ts-node/register **/*.spec.ts --watch-extensions ts --watch",
     "test": "nyc -e .ts -x **/*.spec.ts mocha -r ts-node/register **/*.spec.ts",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "docs": "typedoc --out docs --exclude \"**/+(*.spec|public_api).ts\" --mode file --theme minimal --excludePrivate ./packages",
+    "docs": "compodoc -t -p tsconfig.json -d docs -n \"J2SE to JavaScript\" --theme readthedocs --disableGraph --disablePrivateOrInternalSupport",
     "build": "./build.sh",
     "lint": "tslint -p tsconfig.json",
     "release": "semantic-release pre && ./release.sh && semantic-release post"
@@ -38,6 +38,7 @@
     "@types/mocha": "~2.2.0",
     "chai": "~4.1.0",
     "commitizen": "~2.9.0",
+    "compodoc": "0.0.41",
     "coveralls": "~2.13.0",
     "cz-conventional-changelog": "~2.0.0",
     "mocha": "~3.4.0",
@@ -50,7 +51,6 @@
     "ts-loader": "~2.3.0",
     "ts-node": "~3.3.0",
     "tslint": "~5.5.0",
-    "typedoc": "~0.7.1",
     "typescript": "~2.4.0",
     "yargs": "~8.0.2"
   },
