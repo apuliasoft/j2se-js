@@ -10,8 +10,8 @@ PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 for PACKAGE in ${PACKAGES[@]}
 do
 
-  SRC_DIR=`pwd`/packages/${PACKAGE}
-  DST_DIR=`pwd`/dist/packages-dist/${PACKAGE}
+  SRC_DIR=$(pwd)/packages/${PACKAGE}
+  DST_DIR=$(pwd)/dist/packages-dist/${PACKAGE}
 
   PACKAGE_SRC=${SRC_DIR}/package.json
   PACKAGE_DST=${DST_DIR}/package.json
@@ -19,7 +19,7 @@ do
   while read line
   do  
 
-    echo ${line/'${PACKAGE_VERSION}'/$PACKAGE_VERSION}
+    echo ${line/"${PACKAGE_VERSION}"/$PACKAGE_VERSION}
   
   done < $PACKAGE_SRC > $PACKAGE_DST
 

@@ -5,15 +5,15 @@ PACKAGES=(java.io
   java.lang.native.operator
   java.lang.reflect)
 
-TSC=`pwd`/node_modules/.bin/tsc
+TSC=$(pwd)/node_modules/.bin/tsc
 "$TSC" -p tsconfig.prod.json
 
-ROLLUP=`pwd`/node_modules/.bin/rollup
+ROLLUP=$(pwd)/node_modules/.bin/rollup
 
 for PACKAGE in ${PACKAGES[@]}
 do
-  SRC_DIR=`pwd`/packages/${PACKAGE}
-  DST_DIR=`pwd`/dist/packages-dist/${PACKAGE}
+  SRC_DIR=$(pwd)/packages/${PACKAGE}
+  DST_DIR=$(pwd)/dist/packages-dist/${PACKAGE}
 
   ENTRY=${SRC_DIR}/index.ts
   PACKAGE=${SRC_DIR}/package.json
