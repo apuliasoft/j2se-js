@@ -19,6 +19,6 @@ JavaScript porting of J2SE framework
 :---: |:---: |:---: |:---: |:---: |:---: |
 [nsanitate](https://github.com/nsanitate) |[giuseppe-santoro](https://github.com/giuseppe-santoro) |[ciccio86](https://github.com/ciccio86) |[ZorbaDimatteo](https://github.com/ZorbaDimatteo) |[fdammacco](https://github.com/fdammacco) |[Gigitsu](https://github.com/Gigitsu)
 
-[<img alt="valeriocomo" src="https://avatars1.githubusercontent.com/u/7393493?v=4&s=117" width="117">](https://github.com/valeriocomo) |[<img alt="gpiccolo" src="https://avatars0.githubusercontent.com/u/8842625?v=4&s=117" width="117">](https://github.com/gpiccolo) |[<img alt="paolo-tomeo" src="https://avatars1.githubusercontent.com/u/7068099?v=4&s=117" width="117">](https://github.com/paolo-tomeo) |
+[<img alt="valeriocomo" src="https://avatars1.githubusercontent.com/u/7393493?v=4&s=117" width="117">](https://github.com/valeriocomo) |[<img alt="gpiccolo" src="https://avatars0.githubusercontent.com/u/8842625?v=4&s=117" width="117">](https://github.com/gpiccolo) |[<img alt="snack-eater" src="https://user-images.githubusercontent.com/666044/37143841-96404fc0-22bc-11e8-8f04-188160ea06cf.jpg" width="117">](https://github.com/snack-eater) |
 :---: |:---: |:---: |
-[valeriocomo](https://github.com/valeriocomo) |[gpiccolo](https://github.com/gpiccolo) |[paolo-tomeo](https://github.com/paolo-tomeo) |
+[valeriocomo](https://github.com/valeriocomo) |[gpiccolo](https://github.com/gpiccolo) |[snack-eater](https://github.com/snack-eater) |
