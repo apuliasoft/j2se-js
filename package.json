@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/apuliasoft/j2se-js/issues"
   },
-  "homepage": "https://github.com/apuliasoft/j2se-js#readme",
+  "homepage": "https://apuliasoft.github.io/j2se-js",
   "devDependencies": {
     "@types/chai": "~4.1.0",
     "@types/mocha": "~2.2.0",
@@ -44,12 +44,12 @@
     "mocha": "~5.0.0",
     "mocha-lcov-reporter": "~1.3.0",
     "nyc": "~11.4.0",
-    "rollup": "~0.55.0",
+    "rollup": "~0.56.0",
     "rollup-plugin-typescript": "~0.8.0",
     "rollup-plugin-uglify": "~3.0.0",
-    "semantic-release": "~12.4.0",
-    "ts-loader": "~3.5.0",
-    "ts-node": "~4.1.0",
+    "semantic-release": "~15.0.0",
+    "ts-loader": "~4.0.0",
+    "ts-node": "~5.0.0",
     "tslint": "~5.9.0",
     "typescript": "~2.7.0",
     "yargs": "~11.0.0"
