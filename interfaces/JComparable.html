@@ -1,0 +1,578 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>J2SE to JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+                 <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">J2SE to JavaScript</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">J2SE to JavaScript</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/JObject.html" >JObject</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/JThrowable.html" >JThrowable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jarray.html" >Jarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jboolean.html" >Jboolean</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchar.html" >Jchar</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchararray.html" >Jchararray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdouble.html" >Jdouble</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jint.html" >Jint</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jintarray.html" >Jintarray</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JComparable.html"  class="active" >JComparable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JEquality.html" >JEquality</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JRelational.html" >JRelational</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JType.html" >JType</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JUnary.html" >JUnary</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">J2SE to JavaScript</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/JObject.html" >JObject</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/JThrowable.html" >JThrowable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jarray.html" >Jarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jboolean.html" >Jboolean</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchar.html" >Jchar</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchararray.html" >Jchararray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdouble.html" >Jdouble</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jint.html" >Jint</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jintarray.html" >Jintarray</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JComparable.html"  class="active" >JComparable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JEquality.html" >JEquality</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JRelational.html" >JRelational</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JType.html" >JType</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JUnary.html" >JUnary</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>JComparable</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>packages/java.lang/src/jcomparable.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This interface imposes a total ordering on the objects of each class that<br>implements it.  This ordering is referred to as the class&#39;s <i>natural<br>ordering</i>, and the class&#39;s <tt>compareTo</tt> method is referred to as<br>its <i>natural comparison method</i>.<p></p>
+<p>Lists (and arrays) of objects that implement this interface can be sorted<br>automatically by <a href="Collections#sort(List">Collections.sort</a>) (and<br><a href="Arrays#sort(Object[]">Arrays.sort</a>)).  Objects that implement this<br>interface can be used as keys in a {@linkplain SortedMap sorted map} or as<br>elements in a {@linkplain SortedSet sorted set}, without the need to<br>specify a {@linkplain Comparator comparator}.<p></p>
+<p>The natural ordering for a class <tt>C</tt> is said to be <i>consistent<br>with equals</i> if and only if <tt>e1.compareTo(e2) == 0</tt> has<br>the same boolean value as <tt>e1.equals(e2)</tt> for every</p>
+<p><tt>e1</tt> and <tt>e2</tt> of class <tt>C</tt>.  Note that <tt>null</tt><br>is not an instance of any class, and <tt>e.compareTo(null)</tt> should<br>throw a <tt>NullPointerException</tt> even though <tt>e.equals(null)</tt><br>returns <tt>false</tt>.<p></p>
+<p>It is strongly recommended (though not required) that natural orderings be<br>consistent with equals.  This is so because sorted sets (and sorted maps)<br>without explicit comparators behave &quot;strangely&quot; when they are used with<br>elements (or keys) whose natural ordering is inconsistent with equals.  In<br>particular, such a sorted set (or sorted map) violates the general contract<br>for set (or map), which is defined in terms of the <tt>equals</tt><br>method.<p></p>
+<p>For example, if one adds two keys <tt>a</tt> and <tt>b</tt> such that<br>{@code (!a.equals(b) &amp;&amp; a.compareTo(b) == 0)} to a sorted<br>set that does not use an explicit comparator, the second <tt>add</tt><br>operation returns false (and the size of the sorted set does not increase)<br>because <tt>a</tt> and <tt>b</tt> are equivalent from the sorted set&#39;s<br>perspective.<p></p>
+<p>Virtually all Java core classes that implement <tt>Comparable</tt> have natural<br>orderings that are consistent with equals.  One exception is</p>
+<p><tt>java.math.BigDecimal</tt>, whose natural ordering equates</p>
+<p><tt>BigDecimal</tt> objects with equal values and different precisions<br>(such as 4.0 and 4.00).<p></p>
+<p>For the mathematically inclined, the <i>relation</i> that defines<br>the natural ordering on a given class C is:<pre><br>       {(x, y) such that x.compareTo(y) &lt;= 0}.<br></pre> The <i>quotient</i> for this total order is: <pre><br>       {(x, y) such that x.compareTo(y) == 0}.<br></pre></p>
+<p>It follows immediately from the contract for <tt>compareTo</tt> that the<br>quotient is an <i>equivalence relation</i> on <tt>C</tt>, and that the<br>natural ordering is a <i>total order</i> on <tt>C</tt>.  When we say that a<br>class&#39;s natural ordering is <i>consistent with equals</i>, we mean that the<br>quotient for the natural ordering is the equivalence relation defined by<br>the class&#39;s <a href="Object#equals(Object">equals(Object)</a>) method:<pre><br>     {(x, y) such that x.equals(y)}. </pre><p></p>
+<p>This interface is a member of the<br><a href="{@docRoot}/../technotes/guides/collections/index.html"><br>Java Collections Framework</a>.<T> the type of objects that this object may be compared to</p>
+
+            </p>
+
+            <section>
+                <h3 id="methods">Methods</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> compareTo</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+            <code>compareTo(o: T)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Compares this object with the specified object for order.  Returns a<br>negative integer, zero, or a positive integer as this object is less<br>than, equal to, or greater than the specified object.</p>
+            <p><p>The implementor must ensure <tt>sgn(x.compareTo(y)) ==<br>-sgn(y.compareTo(x))</tt> for all <tt>x</tt> and <tt>y</tt>.  (This<br>implies that <tt>x.compareTo(y)</tt> must throw an exception iff</p>
+            <p><tt>y.compareTo(x)</tt> throws an exception.)</p>
+            <p><p>The implementor must also ensure that the relation is transitive:</p>
+            <p><tt>(x.compareTo(y)&gt;0 &amp;&amp; y.compareTo(z)&gt;0)</tt> implies</p>
+            <p><tt>x.compareTo(z)&gt;0</tt>.</p>
+            <p><p>Finally, the implementor must ensure that <tt>x.compareTo(y)==0</tt><br>implies that <tt>sgn(x.compareTo(z)) == sgn(y.compareTo(z))</tt>, for<br>all <tt>z</tt>.</p>
+            <p><p>It is strongly recommended, but <i>not</i> strictly required that</p>
+            <p><tt>(x.compareTo(y)==0) == (x.equals(y))</tt>.  Generally speaking, any<br>class that implements the <tt>Comparable</tt> interface and violates<br>this condition should clearly indicate this fact.  The recommended<br>language is &quot;Note: this class has a natural ordering that is<br>inconsistent with equals.&quot;</p>
+            <p><p>In the foregoing description, the notation</p>
+            <p><tt>sgn(</tt><i>expression</i><tt>)</tt> designates the mathematical<br><i>signum</i> function, which is defined to return one of <tt>-1</tt>,</p>
+            <p><tt>0</tt>, or <tt>1</tt> according to whether the value of<br><i>expression</i> is negative, zero or positive.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>o</b>
+                                                            </div>
+                                                            <div>
+                                                                <p>the object to be compared.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/Jint.html" target="_self" >Jint</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+
+    </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import {Jint} from &#x27;./jint_primitive&#x27;;
+
+/**
+ * This interface imposes a total ordering on the objects of each class that
+ * implements it.  This ordering is referred to as the class&#x27;s &lt;i&gt;natural
+ * ordering&lt;/i&gt;, and the class&#x27;s &lt;tt&gt;compareTo&lt;/tt&gt; method is referred to as
+ * its &lt;i&gt;natural comparison method&lt;/i&gt;.&lt;p&gt;
+ *
+ * Lists (and arrays) of objects that implement this interface can be sorted
+ * automatically by {@link Collections#sort(List) Collections.sort} (and
+ * {@link Arrays#sort(Object[]) Arrays.sort}).  Objects that implement this
+ * interface can be used as keys in a {@linkplain SortedMap sorted map} or as
+ * elements in a {@linkplain SortedSet sorted set}, without the need to
+ * specify a {@linkplain Comparator comparator}.&lt;p&gt;
+ *
+ * The natural ordering for a class &lt;tt&gt;C&lt;/tt&gt; is said to be &lt;i&gt;consistent
+ * with equals&lt;/i&gt; if and only if &lt;tt&gt;e1.compareTo(e2) &#x3D;&#x3D; 0&lt;/tt&gt; has
+ * the same boolean value as &lt;tt&gt;e1.equals(e2)&lt;/tt&gt; for every
+ * &lt;tt&gt;e1&lt;/tt&gt; and &lt;tt&gt;e2&lt;/tt&gt; of class &lt;tt&gt;C&lt;/tt&gt;.  Note that &lt;tt&gt;null&lt;/tt&gt;
+ * is not an instance of any class, and &lt;tt&gt;e.compareTo(null)&lt;/tt&gt; should
+ * throw a &lt;tt&gt;NullPointerException&lt;/tt&gt; even though &lt;tt&gt;e.equals(null)&lt;/tt&gt;
+ * returns &lt;tt&gt;false&lt;/tt&gt;.&lt;p&gt;
+ *
+ * It is strongly recommended (though not required) that natural orderings be
+ * consistent with equals.  This is so because sorted sets (and sorted maps)
+ * without explicit comparators behave &quot;strangely&quot; when they are used with
+ * elements (or keys) whose natural ordering is inconsistent with equals.  In
+ * particular, such a sorted set (or sorted map) violates the general contract
+ * for set (or map), which is defined in terms of the &lt;tt&gt;equals&lt;/tt&gt;
+ * method.&lt;p&gt;
+ *
+ * For example, if one adds two keys &lt;tt&gt;a&lt;/tt&gt; and &lt;tt&gt;b&lt;/tt&gt; such that
+ * {@code (!a.equals(b) &amp;&amp; a.compareTo(b) &#x3D;&#x3D; 0)} to a sorted
+ * set that does not use an explicit comparator, the second &lt;tt&gt;add&lt;/tt&gt;
+ * operation returns false (and the size of the sorted set does not increase)
+ * because &lt;tt&gt;a&lt;/tt&gt; and &lt;tt&gt;b&lt;/tt&gt; are equivalent from the sorted set&#x27;s
+ * perspective.&lt;p&gt;
+ *
+ * Virtually all Java core classes that implement &lt;tt&gt;Comparable&lt;/tt&gt; have natural
+ * orderings that are consistent with equals.  One exception is
+ * &lt;tt&gt;java.math.BigDecimal&lt;/tt&gt;, whose natural ordering equates
+ * &lt;tt&gt;BigDecimal&lt;/tt&gt; objects with equal values and different precisions
+ * (such as 4.0 and 4.00).&lt;p&gt;
+ *
+ * For the mathematically inclined, the &lt;i&gt;relation&lt;/i&gt; that defines
+ * the natural ordering on a given class C is:&lt;pre&gt;
+ *       {(x, y) such that x.compareTo(y) &amp;lt;&#x3D; 0}.
+ * &lt;/pre&gt; The &lt;i&gt;quotient&lt;/i&gt; for this total order is: &lt;pre&gt;
+ *       {(x, y) such that x.compareTo(y) &#x3D;&#x3D; 0}.
+ * &lt;/pre&gt;
+ *
+ * It follows immediately from the contract for &lt;tt&gt;compareTo&lt;/tt&gt; that the
+ * quotient is an &lt;i&gt;equivalence relation&lt;/i&gt; on &lt;tt&gt;C&lt;/tt&gt;, and that the
+ * natural ordering is a &lt;i&gt;total order&lt;/i&gt; on &lt;tt&gt;C&lt;/tt&gt;.  When we say that a
+ * class&#x27;s natural ordering is &lt;i&gt;consistent with equals&lt;/i&gt;, we mean that the
+ * quotient for the natural ordering is the equivalence relation defined by
+ * the class&#x27;s {@link Object#equals(Object) equals(Object)} method:&lt;pre&gt;
+ *     {(x, y) such that x.equals(y)}. &lt;/pre&gt;&lt;p&gt;
+ *
+ * This interface is a member of the
+ * &lt;a href&#x3D;&quot;{@docRoot}/../technotes/guides/collections/index.html&quot;&gt;
+ * Java Collections Framework&lt;/a&gt;.
+ *
+ * @param &lt;T&gt; the type of objects that this object may be compared to
+ *
+ * @author  Josh Bloch
+ * @see java.util.Comparator
+ * @since 1.2
+ */
+export interface JComparable&lt;T&gt; {
+  /**
+   * Compares this object with the specified object for order.  Returns a
+   * negative integer, zero, or a positive integer as this object is less
+   * than, equal to, or greater than the specified object.
+   *
+   * &lt;p&gt;The implementor must ensure &lt;tt&gt;sgn(x.compareTo(y)) &#x3D;&#x3D;
+   * -sgn(y.compareTo(x))&lt;/tt&gt; for all &lt;tt&gt;x&lt;/tt&gt; and &lt;tt&gt;y&lt;/tt&gt;.  (This
+   * implies that &lt;tt&gt;x.compareTo(y)&lt;/tt&gt; must throw an exception iff
+   * &lt;tt&gt;y.compareTo(x)&lt;/tt&gt; throws an exception.)
+   *
+   * &lt;p&gt;The implementor must also ensure that the relation is transitive:
+   * &lt;tt&gt;(x.compareTo(y)&amp;gt;0 &amp;amp;&amp;amp; y.compareTo(z)&amp;gt;0)&lt;/tt&gt; implies
+   * &lt;tt&gt;x.compareTo(z)&amp;gt;0&lt;/tt&gt;.
+   *
+   * &lt;p&gt;Finally, the implementor must ensure that &lt;tt&gt;x.compareTo(y)&#x3D;&#x3D;0&lt;/tt&gt;
+   * implies that &lt;tt&gt;sgn(x.compareTo(z)) &#x3D;&#x3D; sgn(y.compareTo(z))&lt;/tt&gt;, for
+   * all &lt;tt&gt;z&lt;/tt&gt;.
+   *
+   * &lt;p&gt;It is strongly recommended, but &lt;i&gt;not&lt;/i&gt; strictly required that
+   * &lt;tt&gt;(x.compareTo(y)&#x3D;&#x3D;0) &#x3D;&#x3D; (x.equals(y))&lt;/tt&gt;.  Generally speaking, any
+   * class that implements the &lt;tt&gt;Comparable&lt;/tt&gt; interface and violates
+   * this condition should clearly indicate this fact.  The recommended
+   * language is &quot;Note: this class has a natural ordering that is
+   * inconsistent with equals.&quot;
+   *
+   * &lt;p&gt;In the foregoing description, the notation
+   * &lt;tt&gt;sgn(&lt;/tt&gt;&lt;i&gt;expression&lt;/i&gt;&lt;tt&gt;)&lt;/tt&gt; designates the mathematical
+   * &lt;i&gt;signum&lt;/i&gt; function, which is defined to return one of &lt;tt&gt;-1&lt;/tt&gt;,
+   * &lt;tt&gt;0&lt;/tt&gt;, or &lt;tt&gt;1&lt;/tt&gt; according to whether the value of
+   * &lt;i&gt;expression&lt;/i&gt; is negative, zero or positive.
+   *
+   * @param   o the object to be compared.
+   * @return  a negative integer, zero, or a positive integer as this object
+   *          is less than, equal to, or greater than the specified object.
+   *
+   * @throws NullPointerException if the specified object is null
+   * @throws ClassCastException if the specified object&#x27;s type prevents it
+   *         from being compared to this object.
+   */
+  compareTo(o: T): Jint;
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
+
+    </body>
+</html>

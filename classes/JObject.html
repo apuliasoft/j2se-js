@@ -1,0 +1,956 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>J2SE to JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+                 <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">J2SE to JavaScript</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">J2SE to JavaScript</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/JObject.html"  class="active" >JObject</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/JThrowable.html" >JThrowable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jarray.html" >Jarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jboolean.html" >Jboolean</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchar.html" >Jchar</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchararray.html" >Jchararray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdouble.html" >Jdouble</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jint.html" >Jint</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jintarray.html" >Jintarray</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JComparable.html" >JComparable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JEquality.html" >JEquality</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JRelational.html" >JRelational</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JType.html" >JType</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JUnary.html" >JUnary</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">J2SE to JavaScript</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/JObject.html"  class="active" >JObject</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/JThrowable.html" >JThrowable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jarray.html" >Jarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jboolean.html" >Jboolean</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchar.html" >Jchar</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchararray.html" >Jchararray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdouble.html" >Jdouble</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jint.html" >Jint</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jintarray.html" >Jintarray</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JComparable.html" >JComparable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JEquality.html" >JEquality</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JRelational.html" >JRelational</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JType.html" >JType</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JUnary.html" >JUnary</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>JObject</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>packages/java.lang/src/jobject.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Class {@code JObject} is the root of the class hierarchy.<br>Every class has {@code JObject} as a superclass. All objects,<br>including arrays, implement the methods of this class.</p>
+
+            </p>
+
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor()</code>
+                                </td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                <h3 id="methods">Methods</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> getClass</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>getClass()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns the runtime class of this {@code JObject}. The returned<br>{@code Class} object is the object that is locked by {@code<br>static synchronized} methods of the represented class.</p>
+            <p><b>The actual result type is {@code Class&lt;? extends |X|&gt;}<br>where {@code |X|} is the erasure of the static type of the<br>expression on which {@code getClass} is called.</b> For<br>example, no cast is required in this code fragment:</p>
+            
+            <p><br>{@code Number n = 0;                             }<br><br>{@code Class&lt;? extends Number&gt; c = n.getClass(); }<br></p></div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>void</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> hashCode</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>hashCode()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns a hash code _value for the object. This method is<br>supported for the benefit of hash tables such as those provided by<br>{@link java.util.HashMap}.</p>
+            <p><p><br>The general contract of {@code hashCode} is:</p>
+            <p><ul></p>
+            <p><li>Whenever it is invoked on the same object more than once during<br>     an execution of a Java application, the {@code hashCode} method<br>     must consistently return the same integer, provided no information<br>     used in {@code equals} comparisons on the object is modified.<br>     This integer need not remain consistent from one execution of an<br>     application to another execution of the same application.</p>
+            <p><li>If two objects are equal according to the {@code equals(JObject)}<br>     method, then calling the {@code hashCode} method on each of<br>     the two objects must produce the same integer result.</p>
+            <p><li>It is <em>not</em> required that if two objects are unequal<br>     according to the {@link java.lang.JObject#equals(java.lang.JObject)}<br>     method, then calling the {@code hashCode} method on each of the<br>     two objects must produce distinct integer results.  However, the<br>     programmer should be aware that producing distinct integer results<br>     for unequal objects may improve the performance of hash tables.<br></ul></p>
+            <p><p><br>As much as is reasonably practical, the hashCode method defined by<br>class {@code JObject} does return distinct integers for distinct<br>objects. (This is typically implemented by converting the internal<br>address of the object into an integer, but this implementation<br>technique is not required by the<br>Java&trade; programming language.)</p>
+            </div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/Jint.html" target="_self" >Jint</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> equals</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>equals(obj: <a href="../classes/JObject.html" >JObject</a>)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Indicates whether some other object is &quot;equal to&quot; this one.</p>
+            <p><p><br>The {@code equals} method implements an equivalence relation<br>on non-null object references:</p>
+            <p><ul></p>
+            <p><li>It is <i>reflexive</i>: for any non-null reference _value<br>     {@code x}, {@code x.equals(x)} should return<br>     {@code true}.</p>
+            <p><li>It is <i>symmetric</i>: for any non-null reference values<br>     {@code x} and {@code y}, {@code x.equals(y)}<br>     should return {@code true} if and only if<br>     {@code y.equals(x)} returns {@code true}.</p>
+            <p><li>It is <i>transitive</i>: for any non-null reference values<br>     {@code x}, {@code y}, and {@code z}, if<br>     {@code x.equals(y)} returns {@code true} and<br>     {@code y.equals(z)} returns {@code true}, then<br>     {@code x.equals(z)} should return {@code true}.</p>
+            <p><li>It is <i>consistent</i>: for any non-null reference values<br>     {@code x} and {@code y}, multiple invocations of<br>     {@code x.equals(y)} consistently return {@code true}<br>     or consistently return {@code false}, provided no<br>     information used in {@code equals} comparisons on the<br>     objects is modified.</p>
+            <p><li>For any non-null reference _value {@code x},<br>     {@code x.equals(null)} should return {@code false}.<br></ul></p>
+            <p><p><br>The {@code equals} method for class {@code JObject} implements<br>the most discriminating possible equivalence relation on objects;<br>that is, for any non-null reference values {@code x} and<br>{@code y}, this method returns {@code true} if and only<br>if {@code x} and {@code y} refer to the same object<br>({@code x == y} has the _value {@code true}).</p>
+            <p><p><br>Note that it is generally necessary to override the {@code hashCode}<br>method whenever this method is overridden, so as to maintain the<br>general contract for the {@code hashCode} method, which states<br>that equal objects must have equal hash codes.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>obj</b>
+                                                            </div>
+                                                            <div>
+                                                                <p>the reference object with which to compare.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/Jboolean.html" target="_self" >Jboolean</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Protected</span> clone</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play lock">
+                                            <span class="fa fa-lock"></span>
+                                        </span>
+                                    <code>clone()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Creates and returns a copy of this object.  The precise meaning<br>of &quot;copy&quot; may depend on the class of the object. The general<br>intent is that, for any object {@code x}, the expression:</p>
+            <p><blockquote></p>
+            <p><pre><br>x.clone() != x</pre></blockquote><br>will be true, and that the expression:</p>
+            <p><blockquote></p>
+            <p><pre><br>x.clone().getClass() == x.getClass()</pre></blockquote><br>will be {@code true}, but these are not absolute requirements.<br>While it is typically the case that:</p>
+            <p><blockquote></p>
+            <p><pre><br>x.clone().equals(x)</pre></blockquote><br>will be {@code true}, this is not an absolute requirement.</p>
+            <p><p><br>By convention, the returned object should be obtained by calling<br>{@code super.clone}.  If a class and all of its superclasses (except<br>{@code JObject}) obey this convention, it will be the case that<br>{@code x.clone().getClass() == x.getClass()}.</p>
+            <p><p><br>By convention, the object returned by this method should be independent<br>of this object (which is being cloned).  To achieve this independence,<br>it may be necessary to modify one or more fields of the object returned<br>by {@code super.clone} before returning it.  Typically, this means<br>copying any mutable objects that comprise the internal &quot;deep structure&quot;<br>of the object being cloned and replacing the references to these<br>objects with references to the copies.  If a class contains only<br>primitive fields or references to immutable objects, then it is usually<br>the case that no fields in the object returned by {@code super.clone}<br>need to be modified.</p>
+            <p><p><br>The method {@code clone} for class {@code JObject} performs a<br>specific cloning operation. First, if the class of this object does<br>not implement the interface {@code Cloneable}, then a<br>{@code CloneNotSupportedException} is thrown. Note that all arrays<br>are considered to implement the interface {@code Cloneable} and that<br>the return type of the {@code clone} method of an array type {@code T[]}<br>is {@code T[]} where T is any reference or primitive type.<br>Otherwise, this method creates a new instance of the class of this<br>object and initializes all its fields with exactly the contents of<br>the corresponding fields of this object, as if by assignment; the<br>contents of the fields are not themselves cloned. Thus, this method<br>performs a &quot;shallow copy&quot; of this object, not a &quot;deep copy&quot; operation.</p>
+            <p><p><br>The class {@code JObject} does not itself implement the interface<br>{@code Cloneable}, so calling the {@code clone} method on an object<br>whose class is {@code Object} will result in throwing an<br>exception at run time.</p>
+            </div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/JObject.html" target="_self" >JObject</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> toString</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>toString()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns a string representation of the object. In general, the<br>{@code toString} method returns a string that<br>&quot;textually represents&quot; this object. The result should<br>be a concise but informative representation that is easy for a<br>person to read.<br>It is recommended that all subclasses override this method.</p>
+            <p><p><br>The {@code toString} method for class {@code JObject}<br>returns a string consisting of the name of the class of which the<br>object is an instance, the at-sign character `{@code @}&#39;, and<br>the unsigned hexadecimal representation of the hash code of the<br>object. In other words, this method returns a string equal to the<br>_value of:</p>
+            <blockquote><br><pre><br>getClass().getName() + &#39;@&#39; + Integer.toHexString(hashCode())<br></pre></blockquote></div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>string</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> eq</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>eq(expr: <a href="../classes/JObject.html" >JObject</a>)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/Jboolean.html" target="_self" >Jboolean</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> ne</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>ne(expr: <a href="../classes/JObject.html" >JObject</a>)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/Jboolean.html" target="_self" >Jboolean</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> instanceof</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>instanceof(expr: <a href="../classes/JObject.html" >typeof JObject</a>)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Emulate the operator instanceof </p>
+            </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/Jboolean.html" target="_self" >Jboolean</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+
+    </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import {JEquality} from &#x27;@j2se-js/java.lang.native.operator&#x27;;
+
+import {Jboolean, jboolean} from &#x27;./jboolean_primitive&#x27;;
+import {Jint, jint} from &#x27;./jint_primitive&#x27;;
+
+/**
+ * Class {@code JObject} is the root of the class hierarchy.
+ * Every class has {@code JObject} as a superclass. All objects,
+ * including arrays, implement the methods of this class.
+ *
+ * @author  unascribed
+ * @see     java.lang.Class
+ * @since   JDK1.0
+ */
+export class JObject implements JEquality&lt;JObject&gt; {
+  private static uidGenerator &#x3D; 0;
+  private uid: Jint;
+
+  public constructor() {
+    // if (JClassLoader[this.constructor.toString()] &#x3D;&#x3D;&#x3D; undefined) {
+    //   JClassLoader[this.constructor.toString()] &#x3D; JClass.get(this.constructor);
+    // }
+
+    this.uid &#x3D; jint((++JObject.uidGenerator).toString());
+  }
+
+  /**
+   * Returns the runtime class of this {@code JObject}. The returned
+   * {@code Class} object is the object that is locked by {@code
+   * static synchronized} methods of the represented class.
+   *
+   * &lt;p&gt;&lt;b&gt;The actual result type is {@code Class&lt;? extends |X|&gt;}
+   * where {@code |X|} is the erasure of the static type of the
+   * expression on which {@code getClass} is called.&lt;/b&gt; For
+   * example, no cast is required in this code fragment:&lt;/p&gt;
+   *
+   * &lt;p&gt;
+   * {@code Number n &#x3D; 0;                             }&lt;br&gt;
+   * {@code Class&lt;? extends Number&gt; c &#x3D; n.getClass(); }
+   * &lt;/p&gt;
+   *
+   * @return The {@code Class} object that represents the runtime
+   *         class of this object.
+   * @jls 15.8.2 Class Literals
+   */
+  public getClass() {
+    // TODO must return JClass
+    throw Error(&#x27;not yet implemented&#x27;);
+  }
+
+
+  /**
+   * Returns a hash code _value for the object. This method is
+   * supported for the benefit of hash tables such as those provided by
+   * {@link java.util.HashMap}.
+   * &lt;p&gt;
+   * The general contract of {@code hashCode} is:
+   * &lt;ul&gt;
+   * &lt;li&gt;Whenever it is invoked on the same object more than once during
+   *     an execution of a Java application, the {@code hashCode} method
+   *     must consistently return the same integer, provided no information
+   *     used in {@code equals} comparisons on the object is modified.
+   *     This integer need not remain consistent from one execution of an
+   *     application to another execution of the same application.
+   * &lt;li&gt;If two objects are equal according to the {@code equals(JObject)}
+   *     method, then calling the {@code hashCode} method on each of
+   *     the two objects must produce the same integer result.
+   * &lt;li&gt;It is &lt;em&gt;not&lt;/em&gt; required that if two objects are unequal
+   *     according to the {@link java.lang.JObject#equals(java.lang.JObject)}
+   *     method, then calling the {@code hashCode} method on each of the
+   *     two objects must produce distinct integer results.  However, the
+   *     programmer should be aware that producing distinct integer results
+   *     for unequal objects may improve the performance of hash tables.
+   * &lt;/ul&gt;
+   * &lt;p&gt;
+   * As much as is reasonably practical, the hashCode method defined by
+   * class {@code JObject} does return distinct integers for distinct
+   * objects. (This is typically implemented by converting the internal
+   * address of the object into an integer, but this implementation
+   * technique is not required by the
+   * Java&amp;trade; programming language.)
+   *
+   * @return  a hash code _value for this object.
+   * @see     java.lang.JObject#equals(java.lang.JObject)
+   * @see     java.lang.System#identityHashCode
+   */
+  public hashCode(): Jint {
+    return this.uid;
+  }
+
+
+  /**
+   * Indicates whether some other object is &quot;equal to&quot; this one.
+   * &lt;p&gt;
+   * The {@code equals} method implements an equivalence relation
+   * on non-null object references:
+   * &lt;ul&gt;
+   * &lt;li&gt;It is &lt;i&gt;reflexive&lt;/i&gt;: for any non-null reference _value
+   *     {@code x}, {@code x.equals(x)} should return
+   *     {@code true}.
+   * &lt;li&gt;It is &lt;i&gt;symmetric&lt;/i&gt;: for any non-null reference values
+   *     {@code x} and {@code y}, {@code x.equals(y)}
+   *     should return {@code true} if and only if
+   *     {@code y.equals(x)} returns {@code true}.
+   * &lt;li&gt;It is &lt;i&gt;transitive&lt;/i&gt;: for any non-null reference values
+   *     {@code x}, {@code y}, and {@code z}, if
+   *     {@code x.equals(y)} returns {@code true} and
+   *     {@code y.equals(z)} returns {@code true}, then
+   *     {@code x.equals(z)} should return {@code true}.
+   * &lt;li&gt;It is &lt;i&gt;consistent&lt;/i&gt;: for any non-null reference values
+   *     {@code x} and {@code y}, multiple invocations of
+   *     {@code x.equals(y)} consistently return {@code true}
+   *     or consistently return {@code false}, provided no
+   *     information used in {@code equals} comparisons on the
+   *     objects is modified.
+   * &lt;li&gt;For any non-null reference _value {@code x},
+   *     {@code x.equals(null)} should return {@code false}.
+   * &lt;/ul&gt;
+   * &lt;p&gt;
+   * The {@code equals} method for class {@code JObject} implements
+   * the most discriminating possible equivalence relation on objects;
+   * that is, for any non-null reference values {@code x} and
+   * {@code y}, this method returns {@code true} if and only
+   * if {@code x} and {@code y} refer to the same object
+   * ({@code x &#x3D;&#x3D; y} has the _value {@code true}).
+   * &lt;p&gt;
+   * Note that it is generally necessary to override the {@code hashCode}
+   * method whenever this method is overridden, so as to maintain the
+   * general contract for the {@code hashCode} method, which states
+   * that equal objects must have equal hash codes.
+   *
+   * @param   obj   the reference object with which to compare.
+   * @return  {@code true} if this object is the same as the obj
+   *          argument; {@code false} otherwise.
+   * @see     #hashCode()
+   * @see     java.util.HashMap
+   */
+  public equals(obj: JObject): Jboolean {
+    return this.eq(obj);
+  }
+
+  /**
+   * Creates and returns a copy of this object.  The precise meaning
+   * of &quot;copy&quot; may depend on the class of the object. The general
+   * intent is that, for any object {@code x}, the expression:
+   * &lt;blockquote&gt;
+   * &lt;pre&gt;
+   * x.clone() !&#x3D; x&lt;/pre&gt;&lt;/blockquote&gt;
+   * will be true, and that the expression:
+   * &lt;blockquote&gt;
+   * &lt;pre&gt;
+   * x.clone().getClass() &#x3D;&#x3D; x.getClass()&lt;/pre&gt;&lt;/blockquote&gt;
+   * will be {@code true}, but these are not absolute requirements.
+   * While it is typically the case that:
+   * &lt;blockquote&gt;
+   * &lt;pre&gt;
+   * x.clone().equals(x)&lt;/pre&gt;&lt;/blockquote&gt;
+   * will be {@code true}, this is not an absolute requirement.
+   * &lt;p&gt;
+   * By convention, the returned object should be obtained by calling
+   * {@code super.clone}.  If a class and all of its superclasses (except
+   * {@code JObject}) obey this convention, it will be the case that
+   * {@code x.clone().getClass() &#x3D;&#x3D; x.getClass()}.
+   * &lt;p&gt;
+   * By convention, the object returned by this method should be independent
+   * of this object (which is being cloned).  To achieve this independence,
+   * it may be necessary to modify one or more fields of the object returned
+   * by {@code super.clone} before returning it.  Typically, this means
+   * copying any mutable objects that comprise the internal &quot;deep structure&quot;
+   * of the object being cloned and replacing the references to these
+   * objects with references to the copies.  If a class contains only
+   * primitive fields or references to immutable objects, then it is usually
+   * the case that no fields in the object returned by {@code super.clone}
+   * need to be modified.
+   * &lt;p&gt;
+   * The method {@code clone} for class {@code JObject} performs a
+   * specific cloning operation. First, if the class of this object does
+   * not implement the interface {@code Cloneable}, then a
+   * {@code CloneNotSupportedException} is thrown. Note that all arrays
+   * are considered to implement the interface {@code Cloneable} and that
+   * the return type of the {@code clone} method of an array type {@code T[]}
+   * is {@code T[]} where T is any reference or primitive type.
+   * Otherwise, this method creates a new instance of the class of this
+   * object and initializes all its fields with exactly the contents of
+   * the corresponding fields of this object, as if by assignment; the
+   * contents of the fields are not themselves cloned. Thus, this method
+   * performs a &quot;shallow copy&quot; of this object, not a &quot;deep copy&quot; operation.
+   * &lt;p&gt;
+   * The class {@code JObject} does not itself implement the interface
+   * {@code Cloneable}, so calling the {@code clone} method on an object
+   * whose class is {@code Object} will result in throwing an
+   * exception at run time.
+   *
+   * @return     a clone of this instance.
+   * @throws  CloneNotSupportedException  if the object&#x27;s class does not
+   *               support the {@code Cloneable} interface. Subclasses
+   *               that override the {@code clone} method can also
+   *               throw this exception to indicate that an instance cannot
+   *               be cloned.
+   * @see java.lang.Cloneable
+   */
+  protected clone(): JObject {
+    // if the class of this object does not implement the interface Cloneable,
+    // then a CloneNotSupportedException is thrown
+    throw new Error(&#x27;JCloneNotSupportedException&#x27;)    // TODO JCloneNotSupportedException
+  }
+
+  /**
+   * Returns a string representation of the object. In general, the
+   * {@code toString} method returns a string that
+   * &quot;textually represents&quot; this object. The result should
+   * be a concise but informative representation that is easy for a
+   * person to read.
+   * It is recommended that all subclasses override this method.
+   * &lt;p&gt;
+   * The {@code toString} method for class {@code JObject}
+   * returns a string consisting of the name of the class of which the
+   * object is an instance, the at-sign character &#x60;{@code @}&#x27;, and
+   * the unsigned hexadecimal representation of the hash code of the
+   * object. In other words, this method returns a string equal to the
+   * _value of:
+   * &lt;blockquote&gt;
+   * &lt;pre&gt;
+   * getClass().getName() + &#x27;@&#x27; + Integer.toHexString(hashCode())
+   * &lt;/pre&gt;&lt;/blockquote&gt;
+   *
+   * @return  a string representation of the object.
+   */
+  public toString(): string {
+    // TODO must use getClass()
+    // TODO must return JString
+    return &#x60;java.lang.Object@${this.hashCode()}&#x60;;
+  }
+
+  public eq(expr: JObject): Jboolean {
+    return jboolean((this &#x3D;&#x3D;&#x3D; expr).toString());
+  }
+
+  public ne(expr: JObject): Jboolean {
+    return jboolean((this !&#x3D;&#x3D; expr).toString());
+  }
+
+  /** Emulate the operator instanceof */
+  public instanceof(expr: typeof JObject): Jboolean {
+    return jboolean((this instanceof expr).toString());
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
+
+    </body>
+</html>

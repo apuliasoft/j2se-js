@@ -1,0 +1,573 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>J2SE to JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+                 <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">J2SE to JavaScript</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">J2SE to JavaScript</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/JObject.html" >JObject</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/JThrowable.html" >JThrowable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jarray.html" >Jarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jboolean.html" >Jboolean</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchar.html" >Jchar</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchararray.html" >Jchararray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdouble.html" >Jdouble</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jint.html" >Jint</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jintarray.html" >Jintarray</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/JAnnotatedElement.html"  class="active" >JAnnotatedElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JComparable.html" >JComparable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JEquality.html" >JEquality</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JRelational.html" >JRelational</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JType.html" >JType</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JUnary.html" >JUnary</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">J2SE to JavaScript</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/JObject.html" >JObject</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/JThrowable.html" >JThrowable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jarray.html" >Jarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jboolean.html" >Jboolean</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchar.html" >Jchar</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchararray.html" >Jchararray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdouble.html" >Jdouble</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jint.html" >Jint</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jintarray.html" >Jintarray</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/JAnnotatedElement.html"  class="active" >JAnnotatedElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JComparable.html" >JComparable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JEquality.html" >JEquality</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JRelational.html" >JRelational</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JType.html" >JType</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JUnary.html" >JUnary</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>JAnnotatedElement</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>packages/java.lang.reflect/src/jannotatedelement.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Represents an annotated element of the program currently running in this<br>VM.  This interface allows annotations to be read reflectively.  All<br>annotations returned by methods in this interface are immutable and<br>serializable. The arrays returned by methods of this interface may be modified<br>by callers without affecting the arrays returned to other callers.</p>
+<p><p>The {@link #getAnnotationsByType(Class)} and {@link#getDeclaredAnnotationsByType(Class)}<br>methods support multiple annotations of the same type on an element.<br>If the argument to either method is a repeatable annotation type (JLS 9.6),<br>then the method will &quot;look through&quot; a container annotation (JLS 9.7),<br>if present, and return any annotations inside the container.<br>Container annotations may be generated at compile-time to wrap multiple<br>annotations of the argument type.</p>
+<p><p>The terms <em>directly present</em>, <em>indirectly present</em>,<br><em>present</em>, and <em>associated</em> are used throughout this<br>interface to describe precisely which annotations are returned by<br>methods:</p>
+<ul><br><br><li> An annotation <i>A</i> is <em>directly present</em> on an<br>element <i>E</i> if <i>E</i> has a {@code<br>RuntimeVisibleAnnotations} or {@code<br>RuntimeVisibleParameterAnnotations} or {@code<br>RuntimeVisibleTypeAnnotations} attribute, and the attribute<br>contains <i>A</i>.<br><br><li>An annotation <i>A</i> is <em>indirectly present</em> on an<br>element <i>E</i> if <i>E</i> has a {@code RuntimeVisibleAnnotations} or<br>{@code RuntimeVisibleParameterAnnotations} or {@code RuntimeVisibleTypeAnnotations}<br>attribute, and <i>A</i> &#39;s type is repeatable, and the attribute contains<br>exactly one annotation whose _value element contains <i>A</i> and whose<br>type is the containing annotation type of <i>A</i> &#39;s type.<br><br><li>An annotation <i>A</i> is present on an element <i>E</i> if either:<br><br><ul><br><br><li><i>A</i> is directly present on <i>E</i>; or<br><br><li>No annotation of <i>A</i> &#39;s type is directly present on<br><i>E</i>, and <i>E</i> is a class, and <i>A</i> &#39;s type is<br>inheritable, and <i>A</i> is present on the superclass of <i>E</i>.<br><br></ul>
+
+<p><li>An annotation <i>A</i> is <em>associated</em> with an element <i>E</i><br>if either:</p>
+<ul><br><br><li><i>A</i> is directly or indirectly present on <i>E</i>; or<br><br><li>No annotation of <i>A</i> &#39;s type is directly or indirectly<br>present on <i>E</i>, and <i>E</i> is a class, and <i>A</i>&#39;s type<br>is inheritable, and <i>A</i> is associated with the superclass of<br><i>E</i>.<br><br></ul>
+
+<p></ul></p>
+<p><p>The table below summarizes which kind of annotation presence<br>different methods in this interface examine.</p>
+<table border><br><caption>Overview of kind of presence detected by different AnnotatedElement methods</caption><br><tr><th colspan=2></th><th colspan=4>Kind of Presence</th><br><tr><th colspan=2>Method</th><th>Directly Present</th><th>Indirectly Present</th><th>Present</th><th>Associated</th><br><tr><td align=right>{@code T}</td><td>{@link #getAnnotation(Class) getAnnotation(Class&lt;T&gt;)}<br><td></td><td></td><td>X</td><td></td><br></tr><br><tr><td align=right>{@code Annotation[]}</td><td>{@link #getAnnotations getAnnotations()}<br><td></td><td></td><td>X</td><td></td><br></tr><br><tr><td align=right>{@code T[]}</td><td>{@link #getAnnotationsByType(Class) getAnnotationsByType(Class&lt;T&gt;)}<br><td></td><td></td><td></td><td>X</td><br></tr><br><tr><td align=right>{@code T}</td><td>{@link #getDeclaredAnnotation(Class) getDeclaredAnnotation(Class&lt;T&gt;)}<br><td>X</td><td></td><td></td><td></td><br></tr><br><tr><td align=right>{@code Annotation[]}</td><td>{@link #getDeclaredAnnotations getDeclaredAnnotations()}<br><td>X</td><td></td><td></td><td></td><br></tr><br><tr><td align=right>{@code T[]}</td><td>{@link #getDeclaredAnnotationsByType(Class) getDeclaredAnnotationsByType(Class&lt;T&gt;)}<br><td>X</td><td>X</td><td></td><td></td><br></tr><br></table>
+
+<p><p>For an invocation of {@code get[Declared]AnnotationsByType( Class &lt;<br>T &gt;)}, the order of annotations which are directly or indirectly<br>present on an element <i>E</i> is computed as if indirectly present<br>annotations on <i>E</i> are directly present on <i>E</i> in place<br>of their container annotation, in the order in which they appear in<br>the _value element of the container annotation.</p>
+<p><p>There are several compatibility concerns to keep in mind if an<br>annotation type <i>T</i> is originally <em>not</em> repeatable and<br>later modified to be repeatable.</p>
+<p>The containing annotation type for <i>T</i> is <i>TC</i>.</p>
+<ul><br><br><li>Modifying <i>T</i> to be repeatable is source and binary<br>compatible with existing uses of <i>T</i> and with existing uses<br>of <i>TC</i>.<br><br>That is, for source compatibility, source code with annotations of<br>type <i>T</i> or of type <i>TC</i> will still compile. For binary<br>compatibility, class files with annotations of type <i>T</i> or of<br>type <i>TC</i> (or with other kinds of uses of type <i>T</i> or of<br>type <i>TC</i>) will link against the modified version of <i>T</i><br>if they linked against the earlier version.<br><br>(An annotation type <i>TC</i> may informally serve as an acting<br>containing annotation type before <i>T</i> is modified to be<br>formally repeatable. Alternatively, when <i>T</i> is made<br>repeatable, <i>TC</i> can be introduced as a new type.)<br><br><li>If an annotation type <i>TC</i> is present on an element, and<br><i>T</i> is modified to be repeatable with <i>TC</i> as its<br>containing annotation type then:<br><br><ul><br><br><li>The change to <i>T</i> is behaviorally compatible with respect<br>to the {@code get[Declared]Annotation(Class<T>)} (called with an<br>argument of <i>T</i> or <i>TC</i>) and {@code<br>get[Declared]Annotations()} methods because the results of the<br>methods will not change due to <i>TC</i> becoming the containing<br>annotation type for <i>T</i>.<br><br><li>The change to <i>T</i> changes the results of the {@code<br>get[Declared]AnnotationsByType(Class<T>)} methods called with an<br>argument of <i>T</i>, because those methods will now recognize an<br>annotation of type <i>TC</i> as a container annotation for <i>T</i><br>and will &quot;look through&quot; it to expose annotations of type <i>T</i>.<br><br></ul>
+
+<p><li>If an annotation of type <i>T</i> is present on an<br>element and <i>T</i> is made repeatable and more annotations of<br>type <i>T</i> are added to the element:</p>
+<ul><br><br><li> The addition of the annotations of type <i>T</i> is both<br>source compatible and binary compatible.<br><br><li>The addition of the annotations of type <i>T</i> changes the results<br>of the {@code get[Declared]Annotation(Class<T>)} methods and {@code<br>get[Declared]Annotations()} methods, because those methods will now<br>only see a container annotation on the element and not see an<br>annotation of type <i>T</i>.<br><br><li>The addition of the annotations of type <i>T</i> changes the<br>results of the {@code get[Declared]AnnotationsByType(Class<T>)}<br>methods, because their results will expose the additional<br>annotations of type <i>T</i> whereas previously they exposed only a<br>single annotation of type <i>T</i>.<br><br></ul>
+
+<p></ul></p>
+<p><p>If an annotation returned by a method in this interface contains<br>(directly or indirectly) a {@link Class}-valued member referring to<br>a class that is not accessible in this VM, attempting to read the class<br>by calling the relevant Class-returning method on the returned annotation<br>will result in a {@link TypeNotPresentException}.</p>
+<p><p>Similarly, attempting to read an enum-valued member will result in<br>a {@link EnumConstantNotPresentException} if the enum constant in the<br>annotation is no longer present in the enum type.</p>
+<p><p>If an annotation type <i>T</i> is (meta-)annotated with an<br>{@code @Repeatable} annotation whose _value element indicates a type<br><i>TC</i>, but <i>TC</i> does not declare a {@code _value()} method<br>with a return type of <i>T</i>{@code []}, then an exception of type<br>{@link java.lang.annotation.AnnotationFormatError} is thrown.</p>
+<p><p>Finally, attempting to read a member whose definition has evolved<br>incompatibly will result in a {@link<br> java.lang.annotation.AnnotationTypeMismatchException} or an<br>{@link java.lang.annotation.IncompleteAnnotationException}.</p>
+
+            </p>
+
+
+
+    </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">export interface JAnnotatedElement {
+  /**
+   * Returns this element&#x27;s annotation for the specified type if
+   * such an annotation is &lt;em&gt;present&lt;/em&gt;, else null.
+   *
+   * @param &lt;T&gt; the type of the annotation to query for and return if present
+   * @param annotationClass the Class object corresponding to the
+   *        annotation type
+   * @return this element&#x27;s annotation for the specified annotation type if
+   *     present on this element, else null
+   * @throws NullPointerException if the given annotation class is null
+   * @since 1.5
+   */
+  // getAnnotation(annotationClass: JClass&lt;T&gt;): T;
+
+  /**
+   * Returns annotations that are &lt;em&gt;present&lt;/em&gt; on this element.
+   *
+   * If there are no annotations &lt;em&gt;present&lt;/em&gt; on this element, the return
+   * _value is an array of length 0.
+   *
+   * The caller of this method is free to modify the returned array; it will
+   * have no effect on the arrays returned to other callers.
+   *
+   * @return annotations present on this element
+   * @since 1.5
+   */
+  // getAnnotations(): JArray&lt;JAnnotation&gt;
+
+  /**
+   * Returns annotations that are &lt;em&gt;associated&lt;/em&gt; with this element.
+   *
+   * If there are no annotations &lt;em&gt;associated&lt;/em&gt; with this element, the return
+   * _value is an array of length 0.
+   *
+   * The difference between this method and {@link #getAnnotation(Class)}
+   * is that this method detects if its argument is a &lt;em&gt;repeatable
+   * annotation type&lt;/em&gt; (JLS 9.6), and if so, attempts to find one or
+   * more annotations of that type by &quot;looking through&quot; a container
+   * annotation.
+   *
+   * The caller of this method is free to modify the returned array; it will
+   * have no effect on the arrays returned to other callers.
+   *
+   * @implSpec The default implementation first calls {@link
+    * #getDeclaredAnnotationsByType(Class)} passing {@code
+   * annotationClass} as the argument. If the returned array has
+   * length greater than zero, the array is returned. If the returned
+   * array is zero-length and this {@code AnnotatedElement} is a
+   * class and the argument type is an inheritable annotation type,
+   * and the superclass of this {@code AnnotatedElement} is non-null,
+   * then the returned result is the result of calling {@link
+    * #getAnnotationsByType(Class)} on the superclass with {@code
+   * annotationClass} as the argument. Otherwise, a zero-length
+   * array is returned.
+   *
+   * @param &lt;T&gt; the type of the annotation to query for and return if present
+   * @param annotationClass the Class object corresponding to the
+   *        annotation type
+   * @return all this element&#x27;s annotations for the specified annotation type if
+   *     associated with this element, else an array of length zero
+   * @throws NullPointerException if the given annotation class is null
+   * @since 1.8
+   */
+  // getAnnotationsByType(annotationClass: JClass&lt;T&gt;): Jarray&lt;T&gt;; // TODO see default implementation?
+
+  /**
+   * Returns this element&#x27;s annotation for the specified type if
+   * such an annotation is &lt;em&gt;directly present&lt;/em&gt;, else null.
+   *
+   * This method ignores inherited annotations. (Returns null if no
+   * annotations are directly present on this element.)
+   *
+   * @implSpec The default implementation first performs a null check
+   * and then loops over the results of {@link
+    * #getDeclaredAnnotations} returning the first annotation whose
+   * annotation type matches the argument type.
+   *
+   * @param &lt;T&gt; the type of the annotation to query for and return if directly present
+   * @param annotationClass the Class object corresponding to the
+   *        annotation type
+   * @return this element&#x27;s annotation for the specified annotation type if
+   *     directly present on this element, else null
+   * @throws NullPointerException if the given annotation class is null
+   * @since 1.8
+   */
+  // getDeclaredAnnotation(annotationClass: JClass&lt;T&gt;): T; // TODO see default implementation?
+
+  /**
+   * Returns annotations that are &lt;em&gt;directly present&lt;/em&gt; on this element.
+   * This method ignores inherited annotations.
+   *
+   * If there are no annotations &lt;em&gt;directly present&lt;/em&gt; on this element,
+   * the return _value is an array of length 0.
+   *
+   * The caller of this method is free to modify the returned array; it will
+   * have no effect on the arrays returned to other callers.
+   *
+   * @return annotations directly present on this element
+   * @since 1.5
+   */
+  // getDeclaredAnnotations(): JArray&lt;JAnnotation&gt;;
+
+
+  /**
+   * Returns this element&#x27;s annotation(s) for the specified type if
+   * such annotations are either &lt;em&gt;directly present&lt;/em&gt; or
+   * &lt;em&gt;indirectly present&lt;/em&gt;. This method ignores inherited
+   * annotations.
+   *
+   * If there are no specified annotations directly or indirectly
+   * present on this element, the return _value is an array of length
+   * 0.
+   *
+   * The difference between this method and {@link
+    * #getDeclaredAnnotation(Class)} is that this method detects if its
+   * argument is a &lt;em&gt;repeatable annotation type&lt;/em&gt; (JLS 9.6), and if so,
+   * attempts to find one or more annotations of that type by &quot;looking
+   * through&quot; a container annotation if one is present.
+   *
+   * The caller of this method is free to modify the returned array; it will
+   * have no effect on the arrays returned to other callers.
+   *
+   * @implSpec The default implementation may call {@link
+    * #getDeclaredAnnotation(Class)} one or more times to find a
+   * directly present annotation and, if the annotation type is
+   * repeatable, to find a container annotation. If annotations of
+   * the annotation type {@code annotationClass} are found to be both
+   * directly and indirectly present, then {@link
+    * #getDeclaredAnnotations()} will get called to determine the
+   * order of the elements in the returned array.
+   *
+   * &lt;p&gt;Alternatively, the default implementation may call {@link
+    * #getDeclaredAnnotations()} a single time and the returned array
+   * examined for both directly and indirectly present
+   * annotations. The results of calling {@link
+    * #getDeclaredAnnotations()} are assumed to be consistent with the
+   * results of calling {@link #getDeclaredAnnotation(Class)}.
+   *
+   * @param &lt;T&gt; the type of the annotation to query for and return
+   * if directly or indirectly present
+   * @param annotationClass the Class object corresponding to the
+   *        annotation type
+   * @return all this element&#x27;s annotations for the specified annotation type if
+   *     directly or indirectly present on this element, else an array of length zero
+   * @throws NullPointerException if the given annotation class is null
+   * @since 1.8
+   */
+  // getDeclaredAnnotationsByType(annotationClass: JClass&lt;T&gt;): Jarray&lt;T&gt;; // TODO see implementation?
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
+
+    </body>
+</html>

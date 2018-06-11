@@ -1,0 +1,701 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>J2SE to JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+                 <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">J2SE to JavaScript</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">J2SE to JavaScript</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/JObject.html" >JObject</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/JThrowable.html" >JThrowable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jarray.html" >Jarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jboolean.html" >Jboolean</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchar.html" >Jchar</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchararray.html" >Jchararray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdouble.html" >Jdouble</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdoublearray.html"  class="active" >Jdoublearray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jint.html" >Jint</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jintarray.html" >Jintarray</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JComparable.html" >JComparable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JEquality.html" >JEquality</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JRelational.html" >JRelational</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JType.html" >JType</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JUnary.html" >JUnary</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">J2SE to JavaScript</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/JObject.html" >JObject</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/JThrowable.html" >JThrowable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jarray.html" >Jarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jboolean.html" >Jboolean</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchar.html" >Jchar</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchararray.html" >Jchararray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdouble.html" >Jdouble</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdoublearray.html"  class="active" >Jdoublearray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jint.html" >Jint</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jintarray.html" >Jintarray</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JComparable.html" >JComparable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JEquality.html" >JEquality</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JRelational.html" >JRelational</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JType.html" >JType</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JUnary.html" >JUnary</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>Jdoublearray</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>packages/java.lang/src/jarray_primitive.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>An array is a container object that holds a fixed number of values of a single type.<br>The length of an array is established when the array is created. After creation, its length is fixed.<br>Each item in an array is called an element, and each element is accessed by its numerical index.<br>Arrays are objects, are dynamically created, and may be assigned to variables of type JObject.<br>All methods of class JObject may be invoked on an array.</p>
+
+            </p>
+
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor(arg: <a href="../classes/Jint.html" >T[] | Jint</a>)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Initialize an empty array of the specified size.<br>Initialize an array with the specified values, inferring its size.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                <h3 id="methods">Methods</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> set</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>set(index: <a href="../classes/Jint.html" >Jint</a>, value: T)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Sets the specified value in the specified index of the array. The index bust be greater or equal to zero and less than the array size.<br>If index exceedes these bounds a JArrayOutOfBoundsException is thrown.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>index</b>
+                                                                    :     <code><a href="../classes/Jint.html" target="_self" >Jint</a></code>
+            
+                                                            </div>
+                                                            <div>
+                                                                <p>the position index of the array in which insert the new element.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <b>value</b>
+                                                                    :     <code>T</code>
+            
+                                                            </div>
+                                                            <div>
+                                                                <p>the value to insert.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>void</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> get</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>get(index: <a href="../classes/Jint.html" >Jint</a>)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns the element of the array in the specified index. The index bust be greater or equal to zero and less than the array size.<br>If index exceedes these bounds a JArrayOutOfBoundsException is thrown.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>index</b>
+                                                                    :     <code><a href="../classes/Jint.html" target="_self" >Jint</a></code>
+            
+                                                            </div>
+                                                            <div>
+                                                                <p>the position index of the array from which retrieve the element.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>T</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>the array element retrieved in the specified position index.</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> toString</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>toString()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>string</code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Protected</span> _array</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-lock"></span><code>_array:     <code>T[]</code>
+            </bcode>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> length</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-circle"></span><code>length:     <code><a href="../classes/Jint.html" target="_self" >Jint</a></code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>The size of the array.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import {is, Jboolean, jboolean} from &#x27;./jboolean_primitive&#x27;;
+import {jchar, Jchar} from &#x27;./jchar_primitive&#x27;;
+import {jdouble, Jdouble} from &#x27;./jdouble_primitive&#x27;;
+import {Jint, jint} from &#x27;./jint_primitive&#x27;;
+import {JObject} from &#x27;./jobject&#x27;;
+
+
+/**
+ * An array is a container object that holds a fixed number of values of a single type.
+ * The length of an array is established when the array is created. After creation, its length is fixed.
+ * Each item in an array is called an element, and each element is accessed by its numerical index.
+ * Arrays are objects, are dynamically created, and may be assigned to variables of type JObject.
+ * All methods of class JObject may be invoked on an array.
+ */
+export class Jarray&lt;T&gt; extends JObject {
+  protected _array: Array&lt;T&gt;;
+  /**
+   * The size of the array.
+   */
+  public length: Jint;
+
+  /**
+   * Initialize an empty array of the specified size.
+   * @param {Jint} size the size of the array.
+   */
+  public constructor(size: Jint);
+  /**
+   * Initialize an array with the specified values, inferring its size.
+   * @param {T[]} values the values with which initialize the array.
+   */
+  public constructor(values: T[]);
+
+  public constructor(arg: Jint | T[]) {
+    super();
+
+    if (Array.isArray(arg)) {
+      this._array &#x3D; arg;
+      this.length &#x3D; jint(arg.length.toString());
+    } else {
+      this._array &#x3D; Array.apply(null, Array(arg.value)).map((): null &#x3D;&gt; null);
+      this.length &#x3D; arg;
+    }
+  }
+
+  /**
+   * Sets the specified value in the specified index of the array. The index bust be greater or equal to zero and less than the array size.
+   * If index exceedes these bounds a JArrayOutOfBoundsException is thrown.
+   * @param {Jint} index the position index of the array in which insert the new element.
+   * @param {T} value the value to insert.
+   */
+  public set(index: Jint, value: T) {
+    if (is(index.ge(this.length).or(index.lt(jint(&#x27;0&#x27;))))) {
+      throw Error(&#x60;JArrayOutOfBoundsException: ${index.valueOf()}&#x60;); // TODO JArrayOutOfBoundsException
+    }
+
+    this._array[index.value] &#x3D; value;
+  }
+
+  /**
+   * Returns the element of the array in the specified index. The index bust be greater or equal to zero and less than the array size.
+   * If index exceedes these bounds a JArrayOutOfBoundsException is thrown.
+   * @param {Jint} index the position index of the array from which retrieve the element.
+   * @returns {T} the array element retrieved in the specified position index.
+   */
+  public get(index: Jint): T {
+    if (is(index.ge(this.length).or(index.lt(jint(&#x27;0&#x27;))))) {
+      throw Error(&#x60;JArrayOutOfBoundsException: ${index.valueOf()}&#x60;); // TODO JArrayOutOfBoundsException
+    }
+
+    return this._array[index.value];
+  }
+
+  // TODO mock, remove when getClass() in JObject is implemented
+  public toString(): string {
+    return &#x60;[I@${this.hashCode()}&#x60;;
+  }
+}
+
+export class Jintarray extends Jarray&lt;Jint&gt; {
+  public constructor(size: Jint) {
+    super(size);
+    this._array &#x3D; this._array.map(() &#x3D;&gt; jint());
+  }
+}
+
+export class Jdoublearray extends Jarray&lt;Jdouble&gt; {
+  public constructor(size: Jint) {
+    super(size);
+    this._array &#x3D; this._array.map(() &#x3D;&gt; jdouble());
+  }
+}
+
+export class Jchararray extends Jarray&lt;Jchar&gt; {
+  public constructor(size: Jint) {
+    super(size);
+    this._array &#x3D; this._array.map(() &#x3D;&gt; jchar());
+  }
+}
+
+export class Jbooleanarray extends Jarray&lt;Jboolean&gt; {
+  public constructor(size: Jint) {
+    super(size);
+    this._array &#x3D; this._array.map(() &#x3D;&gt; jboolean());
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
+
+    </body>
+</html>

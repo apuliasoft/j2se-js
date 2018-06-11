@@ -1,0 +1,848 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>J2SE to JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+                 <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">J2SE to JavaScript</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">J2SE to JavaScript</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/JObject.html" >JObject</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/JThrowable.html"  class="active" >JThrowable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jarray.html" >Jarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jboolean.html" >Jboolean</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchar.html" >Jchar</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jchararray.html" >Jchararray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdouble.html" >Jdouble</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jint.html" >Jint</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Jintarray.html" >Jintarray</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JComparable.html" >JComparable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JEquality.html" >JEquality</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JRelational.html" >JRelational</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JType.html" >JType</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/JUnary.html" >JUnary</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">J2SE to JavaScript</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/JObject.html" >JObject</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/JThrowable.html"  class="active" >JThrowable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jarray.html" >Jarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jboolean.html" >Jboolean</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jbooleanarray.html" >Jbooleanarray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchar.html" >Jchar</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jchararray.html" >Jchararray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdouble.html" >Jdouble</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jdoublearray.html" >Jdoublearray</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jint.html" >Jint</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Jintarray.html" >Jintarray</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/JAnnotatedElement.html" >JAnnotatedElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JArithmetic.html" >JArithmetic</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JComparable.html" >JComparable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JEquality.html" >JEquality</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JGenericDeclaration.html" >JGenericDeclaration</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JRelational.html" >JRelational</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JType.html" >JType</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/JUnary.html" >JUnary</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise-inverted.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>JThrowable</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>packages/java.lang/src/jthrowable.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The {@code Throwable} class is the superclass of all errors and<br>exceptions in the Java language. Only objects that are instances of this<br>class (or one of its subclasses) are thrown by the Java Virtual Machine or<br>can be thrown by the Java {@code throw} statement. Similarly, only<br>this class or one of its subclasses can be the argument type in a<br>{@code catch} clause.</p>
+<p>For the purposes of compile-time checking of exceptions, {@code<br>Throwable} and any subclass of {@code Throwable} that is not also a<br>subclass of either {@link RuntimeException} or {@link Error} are<br>regarded as checked exceptions.</p>
+<p><p>Instances of two subclasses, {@link java.lang.Error} and<br>{@link java.lang.Exception}, are conventionally used to indicate<br>that exceptional situations have occurred. Typically, these instances<br>are freshly created in the context of the exceptional situation so<br>as to include relevant information (such as stack trace data).</p>
+<p><p>A throwable contains a snapshot of the execution stack of its<br>thread at the time it was created. It can also contain a message<br>string that gives more information about the error. Over time, a<br>throwable can {@linkplain Throwable#addSuppressed suppress} other<br>throwables from being propagated.  Finally, the throwable can also<br>contain a <i>cause</i>: another throwable that caused this<br>throwable to be constructed.  The recording of this causal information<br>is referred to as the <i>chained exception</i> facility, as the<br>cause can, itself, have a cause, and so on, leading to a &quot;chain&quot; of<br>exceptions, each caused by another.</p>
+<p><p>One reason that a throwable may have a cause is that the class that<br>throws it is built atop a lower layered abstraction, and an operation on<br>the upper layer fails due to a failure in the lower layer.  It would be bad<br>design to let the throwable thrown by the lower layer propagate outward, as<br>it is generally unrelated to the abstraction provided by the upper layer.<br>Further, doing so would tie the API of the upper layer to the details of<br>its implementation, assuming the lower layer&#39;s exception was a checked<br>exception.  Throwing a &quot;wrapped exception&quot; (i.e., an exception containing a<br>cause) allows the upper layer to communicate the details of the failure to<br>its caller without incurring either of these shortcomings.  It preserves<br>the flexibility to change the implementation of the upper layer without<br>changing its API (in particular, the set of exceptions thrown by its<br>methods).</p>
+<p><p>A second reason that a throwable may have a cause is that the method<br>that throws it must conform to a general-purpose interface that does not<br>permit the method to throw the cause directly.  For example, suppose<br>a persistent collection conforms to the {@link java.util.Collection<br>Collection} interface, and that its persistence is implemented atop<br>{@code java.io}.  Suppose the internals of the {@code add} method<br>can throw an {@link java.io.IOException IOException}.  The implementation<br>can communicate the details of the {@code IOException} to its caller<br>while conforming to the {@code Collection} interface by wrapping the<br>{@code IOException} in an appropriate unchecked exception.  (The<br>specification for the persistent collection should indicate that it is<br>capable of throwing such exceptions.)</p>
+<p><p>A cause can be associated with a throwable in two ways: via a<br>constructor that takes the cause as an argument, or via the<br>{@link #initCause(Throwable)} method.  New throwable classes that<br>wish to allow causes to be associated with them should provide constructors<br>that take a cause and delegate (perhaps indirectly) to one of the<br>{@code Throwable} constructors that takes a cause.</p>
+<p>Because the {@code initCause} method is public, it allows a cause to be<br>associated with any throwable, even a &quot;legacy throwable&quot; whose<br>implementation predates the addition of the exception chaining mechanism to<br>{@code Throwable}.</p>
+<p><p>By convention, class {@code Throwable} and its subclasses have two<br>constructors, one that takes no arguments and one that takes a<br>{@code String} argument that can be used to produce a detail message.<br>Further, those subclasses that might likely have a cause associated with<br>them should have two more constructors, one that takes a<br>{@code Throwable} (the cause), and one that takes a<br>{@code String} (the detail message) and a {@code Throwable} (the<br>cause).</p>
+
+            </p>
+
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor(args: any[])</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Constructs a new throwable with {@code null} as its detail message.<br>The cause is not initialized, and may subsequently be initialized by a<br>call to {@link #initCause}.</p>
+            <p><p>The {@link #fillInStackTrace()} method is called to initialize<br>the stack trace data in the newly created throwable.<br>Constructs a new throwable with the specified detail message.  The<br>cause is not initialized, and may subsequently be initialized by<br>a call to {@link #initCause}.</p>
+            <p><p>The {@link #fillInStackTrace()} method is called to initialize<br>the stack trace data in the newly created throwable.<br>Constructs a new throwable with the specified detail message and<br>cause.  <p>Note that the detail message associated with<br>{@code cause} is <i>not</i> automatically incorporated in<br>this throwable&#39;s detail message.</p>
+            <p><p>The {@link #fillInStackTrace()} method is called to initialize<br>the stack trace data in the newly created throwable.<br>Constructs a new throwable with the specified cause and a detail<br>message of {@code (cause==null ? null : cause.toString())} (which<br>typically contains the class and detail message of {@code cause}).<br>This constructor is useful for throwables that are little more than<br>wrappers for other throwables (for example, {@link<br> java.security.PrivilegedActionException}).</p>
+            <p><p>The {@link #fillInStackTrace()} method is called to initialize<br>the stack trace data in the newly created throwable.<br>Constructs a new throwable with the specified detail message,<br>cause, {@linkplain #addSuppressed suppression} enabled or<br>disabled, and writable stack trace enabled or disabled.  If<br>suppression is disabled, {@link #getSuppressed} for this object<br>will return a zero-length array and calls to {@link</p>
+            <p> #addSuppressed} that would otherwise append an exception to the<br>suppressed list will have no effect.  If the writable stack<br>trace is false, this constructor will not call {@link</p>
+            <p> #fillInStackTrace()}, a {@code null} will be written to the<br>{@code stackTrace} field, and subsequent calls to {@code<br>fillInStackTrace} and {@link</p>
+            <p> #setStackTrace(StackTraceElement[])} will not set the stack<br>trace.  If the writable stack trace is false, {@link</p>
+            <p> #getStackTrace} will return a zero length array.</p>
+            <p><p>Note that the other constructors of {@code Throwable} treat<br>suppression as being enabled and the stack trace as being<br>writable.  Subclasses of {@code Throwable} should document any<br>conditions under which suppression is disabled and document<br>conditions under which the stack trace is not writable.<br>Disabling of suppression should only occur in exceptional<br>circumstances where special requirements exist, such as a<br>virtual machine reusing exception objects under low-memory<br>situations.  Circumstances where a given exception object is<br>repeatedly caught and rethrown, such as to implement control<br>flow between two sub-systems, is another situation where<br>immutable throwable objects would be appropriate.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                <h3 id="methods">Methods</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> getCause</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>getCause()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns the cause of this throwable or {@code null} if the<br>cause is nonexistent or unknown.  (The cause is the throwable that<br>caused this throwable to get thrown.)</p>
+            <p><p>This implementation returns the cause that was supplied via one of<br>the constructors requiring a {@code Throwable}, or that was set after<br>creation with the {@link #initCause(Throwable)} method.  While it is<br>typically unnecessary to override this method, a subclass can override<br>it to return a cause set by some other means.  This is appropriate for<br>a &quot;legacy chained throwable&quot; that predates the addition of chained<br>exceptions to {@code Throwable}.  Note that it is <i>not</i><br>necessary to override any of the {@code PrintStackTrace} methods,<br>all of which invoke the {@code getCause} method to determine the<br>cause of a throwable.</p>
+            </div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code><a href="../classes/JThrowable.html" target="_self" >JThrowable</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> getMessage</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>getMessage()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns the detail message string of this throwable.</p>
+            </div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>string</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Public</span> toString</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play circle">
+                                            <span class="fa fa-circle"></span>
+                                        </span>
+                                    <code>toString()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns a short description of this throwable.<br>The result is the concatenation of:</p>
+            <p><ul></p>
+            <p><li> the {@linkplain Class#getName() name} of the class of this object</p>
+            <p><li> &quot;: &quot; (a colon and a space)</p>
+            <p><li> the result of invoking this object&#39;s {@link #getLocalizedMessage}<br>      method<br></ul><br>If {@code getLocalizedMessage} returns {@code null}, then just<br>the class name is returned.</p>
+            </div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>string</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+
+    </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import {JSerializable} from &#x27;../../java.io/src/jserializable&#x27;;
+import {Jboolean, is} from &#x27;./jboolean_primitive&#x27;;
+import {JObject} from &#x27;./jobject&#x27;;
+
+/**
+ * The {@code Throwable} class is the superclass of all errors and
+ * exceptions in the Java language. Only objects that are instances of this
+ * class (or one of its subclasses) are thrown by the Java Virtual Machine or
+ * can be thrown by the Java {@code throw} statement. Similarly, only
+ * this class or one of its subclasses can be the argument type in a
+ * {@code catch} clause.
+ *
+ * For the purposes of compile-time checking of exceptions, {@code
+ * Throwable} and any subclass of {@code Throwable} that is not also a
+ * subclass of either {@link RuntimeException} or {@link Error} are
+ * regarded as checked exceptions.
+ *
+ * &lt;p&gt;Instances of two subclasses, {@link java.lang.Error} and
+ * {@link java.lang.Exception}, are conventionally used to indicate
+ * that exceptional situations have occurred. Typically, these instances
+ * are freshly created in the context of the exceptional situation so
+ * as to include relevant information (such as stack trace data).
+ *
+ * &lt;p&gt;A throwable contains a snapshot of the execution stack of its
+ * thread at the time it was created. It can also contain a message
+ * string that gives more information about the error. Over time, a
+ * throwable can {@linkplain Throwable#addSuppressed suppress} other
+ * throwables from being propagated.  Finally, the throwable can also
+ * contain a &lt;i&gt;cause&lt;/i&gt;: another throwable that caused this
+ * throwable to be constructed.  The recording of this causal information
+ * is referred to as the &lt;i&gt;chained exception&lt;/i&gt; facility, as the
+ * cause can, itself, have a cause, and so on, leading to a &quot;chain&quot; of
+ * exceptions, each caused by another.
+ *
+ * &lt;p&gt;One reason that a throwable may have a cause is that the class that
+ * throws it is built atop a lower layered abstraction, and an operation on
+ * the upper layer fails due to a failure in the lower layer.  It would be bad
+ * design to let the throwable thrown by the lower layer propagate outward, as
+ * it is generally unrelated to the abstraction provided by the upper layer.
+ * Further, doing so would tie the API of the upper layer to the details of
+ * its implementation, assuming the lower layer&#x27;s exception was a checked
+ * exception.  Throwing a &quot;wrapped exception&quot; (i.e., an exception containing a
+ * cause) allows the upper layer to communicate the details of the failure to
+ * its caller without incurring either of these shortcomings.  It preserves
+ * the flexibility to change the implementation of the upper layer without
+ * changing its API (in particular, the set of exceptions thrown by its
+ * methods).
+ *
+ * &lt;p&gt;A second reason that a throwable may have a cause is that the method
+ * that throws it must conform to a general-purpose interface that does not
+ * permit the method to throw the cause directly.  For example, suppose
+ * a persistent collection conforms to the {@link java.util.Collection
+ * Collection} interface, and that its persistence is implemented atop
+ * {@code java.io}.  Suppose the internals of the {@code add} method
+ * can throw an {@link java.io.IOException IOException}.  The implementation
+ * can communicate the details of the {@code IOException} to its caller
+ * while conforming to the {@code Collection} interface by wrapping the
+ * {@code IOException} in an appropriate unchecked exception.  (The
+ * specification for the persistent collection should indicate that it is
+ * capable of throwing such exceptions.)
+ *
+ * &lt;p&gt;A cause can be associated with a throwable in two ways: via a
+ * constructor that takes the cause as an argument, or via the
+ * {@link #initCause(Throwable)} method.  New throwable classes that
+ * wish to allow causes to be associated with them should provide constructors
+ * that take a cause and delegate (perhaps indirectly) to one of the
+ * {@code Throwable} constructors that takes a cause.
+ *
+ * Because the {@code initCause} method is public, it allows a cause to be
+ * associated with any throwable, even a &quot;legacy throwable&quot; whose
+ * implementation predates the addition of the exception chaining mechanism to
+ * {@code Throwable}.
+ *
+ * &lt;p&gt;By convention, class {@code Throwable} and its subclasses have two
+ * constructors, one that takes no arguments and one that takes a
+ * {@code String} argument that can be used to produce a detail message.
+ * Further, those subclasses that might likely have a cause associated with
+ * them should have two more constructors, one that takes a
+ * {@code Throwable} (the cause), and one that takes a
+ * {@code String} (the detail message) and a {@code Throwable} (the
+ * cause).
+ *
+ * @author  unascribed
+ * @author  Josh Bloch (Added exception chaining and programmatic access to
+ *          stack trace in 1.4.)
+ * @jls 11.2 Compile-Time Checking of Exceptions
+ * @since JDK1.0
+ */
+export class JThrowable extends JObject implements JSerializable {
+  private _detailMessage: string &#x3D; null;
+  private _cause: JThrowable &#x3D; this;
+  private _stackTrace: any; // TODO must be of type JStackTraceElement[]
+  private _suppressedExceptions: any; // TODO must be of type JList&lt;JThrowable&gt;
+
+  /**
+   * Constructs a new throwable with {@code null} as its detail message.
+   * The cause is not initialized, and may subsequently be initialized by a
+   * call to {@link #initCause}.
+   *
+   * &lt;p&gt;The {@link #fillInStackTrace()} method is called to initialize
+   * the stack trace data in the newly created throwable.
+   */
+  public constructor();
+
+  /**
+   * Constructs a new throwable with the specified detail message.  The
+   * cause is not initialized, and may subsequently be initialized by
+   * a call to {@link #initCause}.
+   *
+   * &lt;p&gt;The {@link #fillInStackTrace()} method is called to initialize
+   * the stack trace data in the newly created throwable.
+   *
+   * @param   message   the detail message. The detail message is saved for
+   *          later retrieval by the {@link #getMessage()} method.
+   */
+  // TODO message parameter of type JString
+  public constructor(message?: string);
+
+  /**
+   * Constructs a new throwable with the specified detail message and
+   * cause.  &lt;p&gt;Note that the detail message associated with
+   * {@code cause} is &lt;i&gt;not&lt;/i&gt; automatically incorporated in
+   * this throwable&#x27;s detail message.
+   *
+   * &lt;p&gt;The {@link #fillInStackTrace()} method is called to initialize
+   * the stack trace data in the newly created throwable.
+   *
+   * @param  message the detail message (which is saved for later retrieval
+   *         by the {@link #getMessage()} method).
+   * @param  cause the cause (which is saved for later retrieval by the
+   *         {@link #getCause()} method).  (A {@code null} value is
+   *         permitted, and indicates that the cause is nonexistent or
+   *         unknown.)
+   * @since  1.4
+   */
+  // TODO message parameter of type JString
+  public constructor(message: string, cause: JThrowable);
+
+  /**
+   * Constructs a new throwable with the specified cause and a detail
+   * message of {@code (cause&#x3D;&#x3D;null ? null : cause.toString())} (which
+   * typically contains the class and detail message of {@code cause}).
+   * This constructor is useful for throwables that are little more than
+   * wrappers for other throwables (for example, {@link
+    * java.security.PrivilegedActionException}).
+   *
+   * &lt;p&gt;The {@link #fillInStackTrace()} method is called to initialize
+   * the stack trace data in the newly created throwable.
+   *
+   * @param  cause the cause (which is saved for later retrieval by the
+   *         {@link #getCause()} method).  (A {@code null} value is
+   *         permitted, and indicates that the cause is nonexistent or
+   *         unknown.)
+   * @since  1.4
+   */
+  public constructor(cause?: JThrowable);
+
+  /**
+   * Constructs a new throwable with the specified detail message,
+   * cause, {@linkplain #addSuppressed suppression} enabled or
+   * disabled, and writable stack trace enabled or disabled.  If
+   * suppression is disabled, {@link #getSuppressed} for this object
+   * will return a zero-length array and calls to {@link
+    * #addSuppressed} that would otherwise append an exception to the
+   * suppressed list will have no effect.  If the writable stack
+   * trace is false, this constructor will not call {@link
+    * #fillInStackTrace()}, a {@code null} will be written to the
+   * {@code stackTrace} field, and subsequent calls to {@code
+   * fillInStackTrace} and {@link
+    * #setStackTrace(StackTraceElement[])} will not set the stack
+   * trace.  If the writable stack trace is false, {@link
+    * #getStackTrace} will return a zero length array.
+   *
+   * &lt;p&gt;Note that the other constructors of {@code Throwable} treat
+   * suppression as being enabled and the stack trace as being
+   * writable.  Subclasses of {@code Throwable} should document any
+   * conditions under which suppression is disabled and document
+   * conditions under which the stack trace is not writable.
+   * Disabling of suppression should only occur in exceptional
+   * circumstances where special requirements exist, such as a
+   * virtual machine reusing exception objects under low-memory
+   * situations.  Circumstances where a given exception object is
+   * repeatedly caught and rethrown, such as to implement control
+   * flow between two sub-systems, is another situation where
+   * immutable throwable objects would be appropriate.
+   *
+   * @param  message the detail message.
+   * @param cause the cause.  (A {@code null} value is permitted,
+   * and indicates that the cause is nonexistent or unknown.)
+   * @param enableSuppression whether or not suppression is enabled or disabled
+   * @param writableStackTrace whether or not the stack trace should be
+   *                           writable
+   *
+   * @see OutOfMemoryError
+   * @see NullPointerException
+   * @see ArithmeticException
+   * @since 1.7
+   */
+  // TODO must be protected! | message parameter of type JString
+  public constructor(message: string, cause: JThrowable, enableSuppression: Jboolean, writableStackTrace: Jboolean);
+
+  public constructor(...args: any[]) {
+    super();
+
+    switch (args.length) {
+      case 4:
+        if (is(args[3])) {
+          this.fillInStackTrace();
+        } else {
+          this._stackTrace &#x3D; null;
+        }
+        this._detailMessage &#x3D; args[0];
+        this._cause &#x3D; args[1];
+        if (is(args[2].not())) {
+          this._suppressedExceptions &#x3D; null;
+        }
+        break;
+
+      case 2:
+        this.fillInStackTrace();
+        this._detailMessage &#x3D; args[0];
+        this._cause &#x3D; args[1];
+        break;
+
+      case 1:
+        if (args[0] instanceof JThrowable) {
+          this.fillInStackTrace();
+          this._detailMessage &#x3D; (args[0] &#x3D;&#x3D;&#x3D; null ? null : args[0].toString());
+          this._cause &#x3D; args[0];
+        } else {
+          this.fillInStackTrace();
+          this._detailMessage &#x3D; args[0];
+        }
+        break;
+
+      case 0:
+        this.fillInStackTrace();
+        break;
+    }
+  }
+
+  /**
+   * Returns the cause of this throwable or {@code null} if the
+   * cause is nonexistent or unknown.  (The cause is the throwable that
+   * caused this throwable to get thrown.)
+   *
+   * &lt;p&gt;This implementation returns the cause that was supplied via one of
+   * the constructors requiring a {@code Throwable}, or that was set after
+   * creation with the {@link #initCause(Throwable)} method.  While it is
+   * typically unnecessary to override this method, a subclass can override
+   * it to return a cause set by some other means.  This is appropriate for
+   * a &quot;legacy chained throwable&quot; that predates the addition of chained
+   * exceptions to {@code Throwable}.  Note that it is &lt;i&gt;not&lt;/i&gt;
+   * necessary to override any of the {@code PrintStackTrace} methods,
+   * all of which invoke the {@code getCause} method to determine the
+   * cause of a throwable.
+   *
+   * @return  the cause of this throwable or {@code null} if the
+   *          cause is nonexistent or unknown.
+   * @since 1.4
+   */
+  public getCause(): JThrowable {
+    return (this._cause &#x3D;&#x3D;&#x3D; this ? null : this._cause);
+  }
+
+  /**
+   * Returns the detail message string of this throwable.
+   *
+   * @return  the detail message string of this {@code Throwable} instance
+   *          (which may be {@code null}).
+   */
+  // TODO must return JString
+  public getMessage(): string {
+    return this._detailMessage;
+  }
+
+  // TODO
+  private fillInStackTrace(): JThrowable {
+    return this;
+  }
+
+  /**
+   * Returns a short description of this throwable.
+   * The result is the concatenation of:
+   * &lt;ul&gt;
+   * &lt;li&gt; the {@linkplain Class#getName() name} of the class of this object
+   * &lt;li&gt; &quot;: &quot; (a colon and a space)
+   * &lt;li&gt; the result of invoking this object&#x27;s {@link #getLocalizedMessage}
+   *      method
+   * &lt;/ul&gt;
+   * If {@code getLocalizedMessage} returns {@code null}, then just
+   * the class name is returned.
+   *
+   * @return a string representation of this throwable.
+   */
+  // TODO must return JString
+  public toString(): string {
+    const s &#x3D; &#x27;java.lang.JThrowable&#x27;; /* this.getClass().getName(); */ // TODO getClass() | type must be JString
+    const message: string &#x3D; this.getMessage(); // TODO type must be JString | replace with getLocalizedMessage()
+    return (message !&#x3D;&#x3D; undefined) ? (s + &#x27;: &#x27; + message) : s;
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
+
+    </body>
+</html>
