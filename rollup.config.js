@@ -1,5 +1,5 @@
 import typescript from "rollup-plugin-typescript";
-import uglify from "rollup-plugin-uglify";
+import { uglify } from 'rollup-plugin-uglify';
 import * as tsc from "typescript";
 import { argv } from "yargs";
 
